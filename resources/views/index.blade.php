@@ -123,7 +123,7 @@
     <!-- Section D -->
     <section id="section-d" class="grid">
       <div class="content-wrap button-position">
-        <a href="#" class="button-ristretto">Ristretto</a>
+        <a href="#" class="button-ristretto">Conheça nosso bar café Ristretto</a>
         <img src="img/ristretto.jpg" alt="ristretto">
       </div>
     </section>
@@ -149,7 +149,7 @@
     <div>Project By <a href="#" target="_blank">Marcia da Silva</a></div>
   </footer>
 
-  <script src="{{ asset('js/app.js')}}"></script>
+  <script src="main.js"></script>
 
 </body>
 </html>

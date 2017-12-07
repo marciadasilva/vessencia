@@ -148,8 +148,14 @@ button{
 }
 
 /* Section D */
-#section-d .content-wrap img {
-  opacity: 0.7;
+#section-d {
+  .content-wrap{
+    padding: 1.5em;
+
+    img {
+      opacity: 0.7;
+    }
+  }
 }
 
 
@@ -263,10 +269,10 @@ button{
   #section-a .content-text {
     columns: 2;
     column-gap: 2em;
-  }
 
-  #section-a .content-text p {
-    padding-top: 0;
+    p {
+      padding-top: 0;
+    }
   }
 
   .content-wrap,
@@ -279,13 +285,15 @@ button{
     grid-column: span 2;
   }
 
-  #section-b ul {
-    display: flex;
-    justify-content: space-around;
-  }
+  #section-b {
+    ul {
+      display: flex;
+      justify-content: space-around;
+    }
 
-  #section-b li {
-    width: 23%;
+    li {
+      width: 23%;
+    }
   }
 
   #section-d div, #section-d img {
