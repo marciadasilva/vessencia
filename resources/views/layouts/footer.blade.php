@@ -1,5 +1,3 @@
-
-
 <!-- Footer -->
 <footer id="main-footer" class="grid">
   <div>5ª Essência Gastronomia e Eventos</div>

@@ -9,13 +9,11 @@
 </head>
 <body>
 
-  @include('layouts.header')
-
   @yield('content')
 
   @include('layouts.footer')
 
-  <script src="main.js"></script>
+  <script src="{{ asset('js/app.js')}}"></script>
 
 </body>
 </html>
