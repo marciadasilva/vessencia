@@ -149,7 +149,7 @@
     <div>Project By <a href="#" target="_blank">Marcia da Silva</a></div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="{{ asset('js/app.js')}}"></script>
 
 </body>
 </html>
