@@ -116,9 +116,9 @@
 
     <!-- Section D -->
     <section id="section-d" class="grid">
-      <div class="content-wrap button-position">
-        <a href="#" class="button-ristretto">Ristretto Grãos e Gastronomia</a>
-        <img src="img/ristretto.jpg" alt="ristretto">
+      <div class="content-wrap">
+        <h4>Ristretto Grãos e Gastronomia</h4>
+        <a href="#"><img src="img/ristretto.jpg" alt="ristretto"></a>
       </div>
     </section>
 

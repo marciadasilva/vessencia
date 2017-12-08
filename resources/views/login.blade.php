@@ -8,13 +8,7 @@
   <link rel="stylesheet" href="{{ asset('css/app.css')}}" type="text/css">
   <title>@yield('title')</title>
 </head>
-<body>
-
-  @yield('content')
-
-  @include('layouts.footer')
-
-  <script src="{{ asset('js/app.js')}}"></script>
+<body id="login-body">
 
 </body>
 </html>
