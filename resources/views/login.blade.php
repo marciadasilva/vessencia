@@ -9,6 +9,8 @@
   <title>@yield('title')</title>
 </head>
 <body id="login-body">
+<form class="" action="index.html" method="post">
 
+</form>
 </body>
 </html>

@@ -2,45 +2,43 @@
     <span class="open-slide">
       <a href="#" onclick="openSlideMenu()">
         <svg width="30" height="30">
-          <path d="M0,5 30,5" stroke="#fff"
+          <path d="M0,5 30,5" stroke="#383838"
           stroke-width="5"/>
-          <path d="M0,14 30,14" stroke="#fff"
+          <path d="M0,14 30,14" stroke="#383838"
           stroke-width="5"/>
-          <path d="M0,23 30,23" stroke="#fff"
+          <path d="M0,23 30,23" stroke="#383838"
           stroke-width="5"/>
         </svg>
       </a>
     </span>
 
     <ul class="navbar-nav">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Serviços</a></li>
+      <li><a href="#">Contato</a></li>
     </ul>
   </nav>
 
   <div id="side-menu" class="side-nav">
     <a href="#" class="btn-close"
     onclick="closeSlideMenu()">&times;</a>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Contact</a>
+    <a href="/">Home</a>
+    <a href="#">Sobre</a>
+    <a href="#">Serviços</a>
+    <a href="#">Contato</a>
   </div>
 
-  <div id="main">
-    <h1>Responsive Side Menu</h1>
-  </div>
+  <script type="text/javascript">
 
-  <script>
-    function openSlideMenu(){
-      document.getElementById('side-menu').style.width = '250px';
-      document.getElementById('main').style.marginLeft = '250px';
-    }
+  function openSlideMenu(){
+    document.getElementById('side-menu').style.width = '250px';
+    document.getElementById('main').style.marginLeft = '250px';
+  }
 
-    function closeSlideMenu(){
-      document.getElementById('side-menu').style.width = '0';
-      document.getElementById('main').style.marginLeft = '0';
-    }
+  function closeSlideMenu(){
+    document.getElementById('side-menu').style.width = '0';
+    document.getElementById('main').style.marginLeft = '0';
+  }
+
   </script>
