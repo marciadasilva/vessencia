@@ -2,13 +2,7 @@
 @section('title', '5ª Essência - Menus')
 
 @section('content')
-<header>
-  <a href="/"><img src="{{asset('img/logo.png')}}" alt="logo"></a>
-
-  <div class="navbar">
-    @include('navbar')
-  </div>
-</header>
+@include('layouts.header')
 
 <section id="cardapios">
   <ul>

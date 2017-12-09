@@ -2,8 +2,7 @@
 
 body {
   margin: 0;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  background: #383838;
+  font-family: 'Titillium Web', sans-serif;
   color: #fff;
   font-size: 1.1em;
   line-height: 1.5;
@@ -89,6 +88,11 @@ header{
   }
 }
 
+.header-menus{
+  background: #383838;
+}
+
+/*pagina de menus*/
 #cardapios{
   background-color: #383838;
   color: #383838;
@@ -150,6 +154,7 @@ header{
 /* Section B */
 #section-b{
   padding: 2em 1em 1em;
+  background: #383838;
 
   ul {
     list-style: none;
@@ -171,13 +176,14 @@ header{
 /* Section C */
 
 #section-c {
-  background: #fff;
+  background: #eaeaea;
   color: #383838;
   padding: 2em;
 }
 
 /* Section D */
 #section-d {
+  background: #383838;
   .content-wrap{
     padding: 1.5em;
 
@@ -192,6 +198,7 @@ header{
 
 #section-e .box{
   padding: 2em;
+  background: #383838;
   color: #fff;
 
   a {
@@ -219,17 +226,58 @@ header{
 }
 
 /* Login page */
+
 #login-body{
-  /* background: #4CA1AF;  fallback for old browsers
-  background: -webkit-linear-gradient(top, #C4E0E5, #4CA1AF);
-  background: -o-linear-gradient(top, #C4E0E5, #4CA1AF);
-  background: linear-gradient(to bottom, #C4E0E5, #4CA1AF);  /* Chrome 10-25, Safari 5.1-6 */
- /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background-image: url('../img/macaroon.jpg');
-  opacity: 0.3;
-  background-position: center;
-  background-size: cover;
   height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  #card-login{
+    background-color: rgba(0,0,0,0.7);
+
+    .form{
+      color: #69f0ae ;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
+
+      .group-custom{
+        display: block;
+
+        h1{
+          padding: 0;
+          margin:0 0 0.5em 0;
+          font-size: 2.4em;
+        }
+
+        input{
+          background-color: transparent;
+          color: #fff;
+          border: none;
+          width: 90%;
+          border-bottom: 1px solid #fff;
+          margin-bottom: 1em;
+          padding: 0.5em;
+          font-size: 1em;
+          outline: 0 none;
+        }
+
+        .btn-form{
+          background-color: #69f0ae;
+          border-radius: 0.5em;
+
+          button{
+            color: #383838;
+            padding: 0.5em;
+          }
+
+        }
+      }
+    }
+  }
 }
 
 /*  MODAL */
@@ -342,7 +390,7 @@ header{
     grid-column: 1/5;
   }
 
-  /* @media page Menus */
+  /* @media Menus page */
   #cardapios {
 
     padding: 2em 5em;
@@ -353,4 +401,42 @@ header{
       grid-gap: 1em 1em;
     }
   }
+
+  /*@media login page*/
+  //
+  // #login-body{
+  //   display: grid;
+  //   grid-template-columns: repeat(3, 1fr);
+  //   grid-template-rows: 1fr 4fr 1fr;
+  //
+  //   #card-login{
+  //     grid-column-start: 2;
+  //     grid-column-end: 3;
+  //     grid-row-start: 2;
+  //     grid-row-end: 3;
+  //   }
+  // }
+
+  /* Login page */
+
+  #login-body{
+    background-image: url('../img/menu.jpeg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+     " . . . "
+     " . form . "
+     " . form . "
+     " . . . ";
+
+    #card-login{
+      background-color: rgba(0,0,0,0.7);
+      grid-area: form;
+      border-radius: 0.5em;
+    }
+  }
+
 }
