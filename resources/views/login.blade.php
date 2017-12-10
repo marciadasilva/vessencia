@@ -10,24 +10,25 @@
 </head>
 <body id="login-body">
   <section id="card-login">
-    <form class="form" action="/admin" method="post">
-    <div class="group-custom">
-      <div class="">
-        <h1>Login</h1>
-      </div>
-      <div class="">
-        <label for="email">E-mail</label>
-        <input type="email" name="email" id="email" value="">
-      </div>
-      <div class="">
-        <label for="senha">Senha</label>
-        <input type="password" name="senha" id="senha" value="">
-      </div>
-      <div class="btn-form">
-        <button type="submit">Entrar</button>
-      </div>
+    <form class="form" action="/login" method="post">
+      {{ csrf_field() }}
+      <div class="group-custom">
+        <div class="">
+          <h1>Login</h1>
+        </div>
+        <div class="">
+          <label for="email">E-mail</label>
+          <input type="email" name="email" id="email" value="">
+        </div>
+        <div class="">
+          <label for="senha">Senha</label>
+          <input type="password" name="senha" id="senha" value="">
+        </div>
+        <div class="btn-form">
+          <button type="submit">Entrar</button>
+        </div>
 
-    </div>
+      </div>
     </form>
   </section>
 

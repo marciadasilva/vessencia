@@ -34,4 +34,12 @@ class LoginController extends Controller
     return redirect()->route('admin');
 
   }
+
+  public function login(){
+    return view('login');
+  }
+
+  public function validate(){
+    
+  }
 }

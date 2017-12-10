@@ -19,17 +19,17 @@ Route::get('/menus', function() {
     return view('menus');
 });
 
-// Route::get('/login', function(){
-//     return view('login');
-// });
-//
-// Route::get('/register', function(){
-//     return view('register');
-// });
+// Login Routes
+
+Route::get('/login', 'LoginController@login');
+
+Route::post('/login', 'LoginController@validate');
 
 Route::get('/register', 'LoginController@create');
 
 Route::post('/register', 'LoginController@store');
+
+// Admin Routes
 
 Route::get('/admin', function(){
   $admin = true;
