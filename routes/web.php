@@ -23,7 +23,7 @@ Route::get('/menus', function() {
 
 Route::get('/login', 'LoginController@login');
 
-Route::post('/login', 'LoginController@validate');
+// Route::post('/login', 'LoginController@validate');
 
 Route::get('/register', 'LoginController@create');
 
