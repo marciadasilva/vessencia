@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
   <link rel="stylesheet" href="{{ asset('css/app.css')}}" type="text/css">
-  <title>Login</title>
+  <title>Cadastre-se</title>
 </head>
 <body id="login-body">
   <section id="card-login">
@@ -14,7 +14,7 @@
       {{ csrf_field() }}
       <div class="group-custom">
         <div class="">
-          <h1>Login</h1>
+          <h1>Cadastre-se</h1>
         </div>
         <div class="">
           <label for="name">Nome</label>

@@ -58,49 +58,18 @@
     <!-- Section B -->
     <section id="section-b" class="grid">
       <ul>
+        @foreach($categories as $category)
           <li>
             <div class="cards">
-              <img src="img/shrimp.jpg" alt="card">
+              <img src="{{$category->image}}" alt="card">
               <div class="cards-content">
-                <h3 class="cards-title">Categoria 1</h3>
+                <h3 class="cards-title">{{$category->name}}</h3>
                 <hr>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  Velit, officiis, cumque.</p>
+                <p>{{$category->description}}</p>
               </div>
             </div>
           </li>
-
-          <li>
-            <div class="cards">
-              <img src="img/food.jpg" alt="card">
-              <div class="cards-content">
-                <h3 class="cards-title">Categoria 2</h3>
-                <hr>
-                <p>Reiciendis cupiditate laboriosam autem tempora illo doloremque tenetur illum. Velit, officiis, cumque.</p>
-              </div>
-            </div>
-          </li>
-
-          <li>
-            <div class="cards">
-              <img src="img/rice.jpg" alt="card">
-              <div class="cards-content">
-                <h3 class="cards-title">Categoria 3</h3>
-                <hr>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis cupiditate laboriosam autem tempora illo doloremque tenetur illum. Velit, officiis, cumque.</p>
-              </div>
-            </div>
-          </li>
-
-          <li>
-            <div class="cards">
-              <img src="img/red-rice.jpg" alt="card">
-              <div class="cards-content">
-                <h3 class="cards-title">Categoria 4</h3>
-                <hr>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis cupiditate laboriosam autem tempora illo doloremque tenetur illum. Velit, officiis, cumque.</p>
-              </div>
-            </div>
-          </li>
+        @endforeach
         </ul>
 
     </section>

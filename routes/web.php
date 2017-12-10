@@ -1,5 +1,7 @@
 <?php
 
+use App\Category;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,8 +14,9 @@
 */
 
 Route::get('/', function () {
-    return view('index');
-});
+    $categories = Category::latest()->get();
+    return view('index', compact('categories'));
+})->name('home');
 
 Route::get('/menus', function() {
     return view('menus');
@@ -21,27 +24,24 @@ Route::get('/menus', function() {
 
 // Login Routes
 
-Route::get('/login', 'LoginController@login');
+Route::get('/login', 'LoginController@login')->name('login');
 
-// Route::post('/login', 'LoginController@validate');
+Route::post('/login', 'LoginController@signIn');
 
 Route::get('/register', 'LoginController@create');
 
 Route::post('/register', 'LoginController@store');
 
+Route::get('/logout', 'LoginController@destroy');
+
 // Admin Routes
 
-Route::get('/admin', function(){
-  $admin = true;
-  return view('admin.index', compact('admin'));
-})->name('admin');
+Route::get('/admin', 'AdminController@index')->name('admin');
 
-Route::get('/admin/category', function(){
-  $admin = true;
-  return view('admin.category', compact('admin'));
-});
+Route::get('/admin/category', 'AdminController@showCategories')->name('categories');
 
-Route::get('/admin/menu', function(){
-  $admin = true;
-  return view('admin.menu', compact('admin'));
-});
+Route::get('/admin/category/create', 'AdminController@createCategory');
+
+Route::post('/admin/category/create', 'AdminController@storeCategory');
+
+Route::get('/admin/menu', 'AdminController@showMenu');

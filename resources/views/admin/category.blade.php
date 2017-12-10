@@ -7,12 +7,11 @@
 <main id="admin-category">
 
   <section>
-    <button type="button" name="button">Nova Categoria</button>
+    <button type="button" name="button"><a href="/admin/category/create">Nova Categoria</a></button>
     <ul>
-      <li><a href="#">categoria1</a></li>
-      <li><a href="#">categoria2</a></li>
-      <li><a href="#">categoria3</a></li>
-      <li><a href="#">categoria4</a></li>
+      @foreach($categories as $category)
+        <li><a href="/admin/categories/{{$category->id}}">{{$category->name}}</a></li>
+      @endforeach
 
     </ul>
   </section>

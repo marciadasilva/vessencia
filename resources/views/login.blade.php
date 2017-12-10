@@ -21,8 +21,8 @@
           <input type="email" name="email" id="email" value="">
         </div>
         <div class="">
-          <label for="senha">Senha</label>
-          <input type="password" name="senha" id="senha" value="">
+          <label for="password">Senha</label>
+          <input type="password" name="password" id="password" value="">
         </div>
         <div class="btn-form">
           <button type="submit">Entrar</button>

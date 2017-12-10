@@ -18,7 +18,7 @@
       <li><a href="/admin/menu">Cardápios</a></li>
       <li><a href="#">Treinamentos</a></li>
       <li><a href="#">Ajuda</a></li>
-      <li><a href="#">Sair</a></li>
+      <li><a href="/logout">Sair</a></li>
     </ul>
   </nav>
 
@@ -30,7 +30,7 @@
     <a href="/admin/menu">Cardápios</a>
     <a href="#">Treinamentos</a>
     <a href="#">Ajuda</a>
-    <a href="#">Sair</a>
+    <a href="/logout">Sair</a>
   </div>
 
   <script type="text/javascript">
