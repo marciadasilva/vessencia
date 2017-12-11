@@ -10,7 +10,7 @@
 </head>
 <body id="login-body">
   <section id="card-login">
-    <form class="form" action="/login" method="post">
+    <form action="/login" method="post">
       {{ csrf_field() }}
       <div class="group-custom">
         <div class="">
@@ -31,7 +31,5 @@
       </div>
     </form>
   </section>
-
-</form>
 </body>
 </html>

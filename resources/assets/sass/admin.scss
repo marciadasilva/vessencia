@@ -13,22 +13,6 @@
 }
 
 #admin-category{
-  display: grid;
-  grid-template-columns: 1fr;
-
-  .form-category{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-
-    .form-group{
-      display: block;
-    }
-  }
-
   a{
     text-decoration: none;
     color: #fff;
@@ -67,6 +51,47 @@
       background-color: #a72830;
     }
 
+  }
+}
+
+#admin-create-category{
+  display: grid;
+  grid-template-columns: 1fr;
+
+  section{
+    background: green;
+
+    form{
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5em;
+
+      .form-group{
+        display: block;
+      }
+
+      a{
+        text-decoration: none;
+        color: #fff;
+      }
+
+      label{
+        color: #383838;
+      }
+
+      button{
+        background: #383838;
+        padding: 0.5em;
+        margin: 0.5em;
+        font-size: 1.5em;
+        width: 92%;
+        &:hover{
+          background: #a72830;
+        }
+      }
+    }
   }
 }
 
