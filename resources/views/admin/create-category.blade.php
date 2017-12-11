@@ -7,12 +7,13 @@
 <main id="admin-category">
 
   <section>
-    <form class="" action="/admin/category/create" method="post" enctype="multipart/form-data">
+    <form class="form-category" action="/admin/category/create" method="post" enctype="multipart/form-data">
       {{ csrf_field() }}
-      <div class="">
+      <div class="form-group">
+        <div class="">
           <label for="name">Nome da Categoria</label>
           <input type="text" name="name" id="name" value="" required>
-      </div>
+        </div>
       <div class="">
           <label for="description">Descrição da Categoria</label>
           <input type="text" name="description" id="description" value="" required>
@@ -24,7 +25,7 @@
       <div class="">
           <button type="submit" name="button">Criar Categoria</button>
       </div>
-
+    </div>
     </form>
 
 

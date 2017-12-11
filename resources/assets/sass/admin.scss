@@ -13,6 +13,30 @@
 }
 
 #admin-category{
+  display: grid;
+  grid-template-columns: 1fr;
+
+  .form-category{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    .form-group{
+      display: block;
+    }
+  }
+
+  a{
+    text-decoration: none;
+    color: #fff;
+  }
+
+  label{
+    color: #383838;
+  }
 
   button{
     background: #383838;
@@ -21,9 +45,12 @@
     font-size: 1.5em;
     width: 92%;
 
+
     &:hover{
       background: #a72830;
     }
+
+
   }
 
   ul{
@@ -40,10 +67,6 @@
       background-color: #a72830;
     }
 
-    a{
-      text-decoration: none;
-      color: #fff;
-    }
   }
 }
 
