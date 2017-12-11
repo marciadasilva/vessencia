@@ -377,14 +377,20 @@ header{
   }
 
   #section-b {
-     ul {
-       display: flex;
-       justify-content: space-around;
-     }
-
-    li {
-      width: 23%;
-    }
+    // antigo
+    // ul {
+    //   display: flex;
+    //   justify-content: space-around;
+    // }
+    //
+    //li {
+    //  width: 23%;
+    //}
+      ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 0.5em;
+      }
   }
 
   #section-d div, #section-d img {
