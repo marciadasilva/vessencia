@@ -377,20 +377,42 @@ header{
   }
 
   #section-b {
-    // antigo
-    // ul {
-    //   display: flex;
-    //   justify-content: space-around;
-    // }
-    //
-    //li {
-    //  width: 23%;
-    //}
-      ul {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-gap: 0.5em;
-      }
+  // antigo
+  // ul {
+  // display: flex;
+  // justify-content: space-around;
+  // }
+  //
+  //li {
+  // width: 23%;
+  //}
+  }
+
+  .cardapio-3{
+  display: flex;
+  justify-content: space-around;
+
+  li {
+  width: 23%;
+  }
+  }
+
+  .cardapio-4{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 0.5em;
+  }
+
+  .cardapio-5{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 0.5em;
+  }
+
+  .cardapio-6{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0.5em;
   }
 
   #section-d div, #section-d img {

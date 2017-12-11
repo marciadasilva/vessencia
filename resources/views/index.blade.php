@@ -55,12 +55,22 @@
       </div>
     </section>
 
-    <!-- Section B -->
-    <section id="section-b" class="grid">
-      <ul>
-        @foreach($categories as $category)
-          <li>
-            <div class="cards">
+
+  <section id="section-b" class="grid">
+    @if(sizeof($categories) <= 3)
+      <ul class = "cardapio-3">
+        @elseif(sizeof($categories)== 4 || (sizeof($categories) % 4) == 0)
+        <ul class = "cardapio-4">
+          @elseif(sizeof($categories)== 5 || (sizeof($categories) % 5) == 0)
+          <ul class = "cardapio-5">
+            @elseif((sizeof($categories) % 3) == 0)
+            <ul class = "cardapio-6">
+              @else
+              <ul class = "cardapio-4">
+                @endif
+    @foreach($categories as $category)
+      <li>
+          <div class="cards">
               <img src="{{$category->image}}" alt="card">
               <div class="cards-content">
                 <h3 class="cards-title">{{$category->name}}</h3>
@@ -69,10 +79,9 @@
               </div>
             </div>
           </li>
-        @endforeach
-        </ul>
-
-    </section>
+    @endforeach
+    </ul>
+  </section>
 
     <!-- Section C -->
     <section id="section-c" class="grid">

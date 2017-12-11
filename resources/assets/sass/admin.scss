@@ -138,7 +138,7 @@
 }
 
 #admin-menu{
-  button{
+  .btn-new-menu{
     background: #383838;
     padding: 0.5em;
     margin: 0.5em;
@@ -147,6 +147,21 @@
 
     &:hover{
       background: #a72830;
+    }
+  }
+
+  .cards-content{
+    button{
+      background: rgba(0,0,0,.1);
+      color: #383838;
+      padding: 0.3em;
+      margin: 0.2em;
+      font-size: 0.6em;
+      width: 44%;
+
+      &:hover{
+        background: #a72830;
+      }
     }
   }
 
