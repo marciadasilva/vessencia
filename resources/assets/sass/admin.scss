@@ -55,41 +55,59 @@
 }
 
 #admin-create-category{
+  height: 75vh;
   display: grid;
   grid-template-columns: 1fr;
 
-  section{
-    background: green;
+
+    #card-create-category{
+      background-color: rgba(0,0,0,0.7);
 
     form{
+      color: #69f0ae ;
       height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0.5em;
+      padding-left: 0.5em;
+      padding-right: 0.5em;
 
       .form-group{
         display: block;
-      }
 
-      a{
-        text-decoration: none;
-        color: #fff;
-      }
-
-      label{
-        color: #383838;
-      }
-
-      button{
-        background: #383838;
-        padding: 0.5em;
-        margin: 0.5em;
-        font-size: 1.5em;
-        width: 92%;
-        &:hover{
-          background: #a72830;
+        a{
+          text-decoration: none;
+          color: #fff;
         }
+
+        label{
+          color: #383838;
+        }
+
+        input{
+          background-color: transparent;
+          color: #fff;
+          border: none;
+          width: 90%;
+          border-bottom: 1px solid #fff;
+          margin-bottom: 1em;
+          padding: 0.5em;
+          font-size: 1em;
+          outline: 0 none;
+        }
+
+        button{
+          background: #383838;
+          padding: 0.5em;
+          margin: 0.5em;
+          font-size: 1.5em;
+          width: 92%;
+
+          &:hover{
+            background: #a72830;
+          }
+        }
+
       }
     }
   }
