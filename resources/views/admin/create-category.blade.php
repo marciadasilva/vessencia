@@ -19,7 +19,7 @@
           <input type="text" name="description" id="description" value="" required>
         </div>
         <div class="">
-          <label for="image">Imagem da Categoria</label>
+          <label for="image" id="file"><i class="fa fa-upload" aria-hidden="true"></i> Imagem da Categoria</label>
           <input type="file" name="image" id="image">
         </div>
         <div class="">
