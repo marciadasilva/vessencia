@@ -10,7 +10,6 @@
     <button type="button" name="button" class="btn-new-menu">Novo Cardápio</button>
     <ul>
       <li>
-          <a href="#">
             <div class="cards">
               <img src="{{asset('img/shrimp.jpg')}}" alt="card">
               <div class="cards-content">
@@ -20,7 +19,6 @@
                 <button type="button" name="btnDeletar">Deletar</button>
               </div>
             </div>
-          </a>
       </li>
     </ul>
   </section>

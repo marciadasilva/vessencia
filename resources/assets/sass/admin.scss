@@ -147,6 +147,7 @@
 
     &:hover{
       background: #a72830;
+      cursor: pointer;
     }
   }
 
@@ -161,7 +162,10 @@
 
       &:hover{
         background: #a72830;
+        cursor: pointer;
+        color: #fff;
       }
+
     }
   }
 

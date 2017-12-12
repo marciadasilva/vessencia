@@ -60,4 +60,10 @@ class AdminController extends Controller
       $admin = true;
       return view('admin.menu', compact('admin'));
     }
+
+    public function deleteCategory(Category $category){
+      Category::find($category->id)->delete();
+
+      return redirect()->route('categories');
+    }
 }
