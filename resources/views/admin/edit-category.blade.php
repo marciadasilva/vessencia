@@ -1,12 +1,12 @@
 @extends('layouts.master')
 
-@section('title', 'Criar nova categoria - 5ª Essência')
+@section('title', 'Editar categoria - 5ª Essência')
 
 @include('layouts.header')
 
-<main class="admin-create-category">
+<main id="admin-edit-category">
 
-  <section class="card-create-category">
+  <section id="card-edit-category">
     <form action="/admin/category/create" method="post" enctype="multipart/form-data">
       {{ csrf_field() }}
       <div class="form-group">
@@ -19,7 +19,7 @@
           <input type="text" name="description" id="description" value="{{$category->description}}" required>
         </div>
         <div class="">
-          <img width="150px" src="{{asset($category->image)}}">
+          <img src="{{asset($category->image)}}">
         </div>
         <div class="">
           <label for="image">Mudar imagem</label>
