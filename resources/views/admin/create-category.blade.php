@@ -6,7 +6,7 @@
 
 <main class="admin-create-category">
 
-  <section id="card-create-category">
+  <section class="card-create-category">
     <form action="/admin/category/create" method="post" enctype="multipart/form-data">
       {{ csrf_field() }}
       <div class="form-group">

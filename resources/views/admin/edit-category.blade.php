@@ -6,7 +6,7 @@
 
 <main class="admin-create-category">
 
-  <section id="card-create-category">
+  <section class="card-create-category">
     <form action="/admin/category/create" method="post" enctype="multipart/form-data">
       {{ csrf_field() }}
       <div class="form-group">
@@ -19,7 +19,7 @@
           <input type="text" name="description" id="description" value="{{$category->description}}" required>
         </div>
         <div class="">
-          <img width="150" src="{{asset($category->image)}}">
+          <img width="150px" src="{{asset($category->image)}}">
         </div>
         <div class="">
           <label for="image">Mudar imagem</label>

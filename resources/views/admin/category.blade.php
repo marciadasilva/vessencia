@@ -21,10 +21,19 @@
       <tbody>
       @foreach($categories as $category)
       <tr>
-        <td>{{$category->name}}</td>
-        <td><img src="{{asset($category->image)}}" alt="{{$category->name}}"/></td>
-        <td><a href="/admin/category/edit/{{$category->id}}"><i class="fa fa-pencil"></i></td>
-        <td><a onclick="return confirm('Você tem certeza que quer deletar esta categoria?');" href="/admin/category/delete/{{$category->id}}"><i class="fa fa-trash-o"></i></td>
+        <td style="width:20%;">{{$category->name}}</td>
+        <td style="width:50%;"><img  src="{{asset($category->image)}}" alt="{{$category->name}}"/></td>
+        <td style="width:15%;">
+            <a href="/admin/category/edit/{{$category->id}}">
+              <i class="fa fa-pencil"></i>
+            </a>
+        </td>
+        <td style="width:15%;">
+            <a onclick="return confirm('Você tem certeza que quer deletar esta categoria?');"
+               href="/admin/category/delete/{{$category->id}}">
+              <i class="fa fa-trash-o"></i>
+            </a>
+        </td>
       </tr>
       @endforeach
 
