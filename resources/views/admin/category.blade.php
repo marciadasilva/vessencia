@@ -8,7 +8,7 @@
 
   <section>
     <button type="button" name="button"><a href="/admin/category/create">Nova Categoria</a></button>
-    <table>
+    <table align="center">
       <thead>
         <tr>
           <th>Título</th>
