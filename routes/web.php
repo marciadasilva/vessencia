@@ -42,8 +42,12 @@ Route::get('/admin/category', 'AdminController@showCategories')->name('categorie
 
 Route::get('/admin/category/create', 'AdminController@createCategory');
 
-Route::get('/admin/category/delete/{category}', 'AdminController@deleteCategory');
-
 Route::post('/admin/category/create', 'AdminController@storeCategory');
+
+Route::get('/admin/category/edit/{category}', 'AdminController@updateCategory');
+
+Route::post('/admin/category/edit/{category}', 'AdminController@storeUpdateCategory');
+
+Route::get('/admin/category/delete/{category}', 'AdminController@deleteCategory');
 
 Route::get('/admin/menu', 'AdminController@showMenu');

@@ -13,6 +13,36 @@
 }
 
 #admin-category{
+
+  table{
+    color: #383838;
+    text-align: center;
+    width: 100%;
+
+    td{
+      padding: 8px;
+    }
+
+    th{
+      padding: 1em;
+    }
+
+    tr{
+      &:nth-child(even){
+        background-color: #f2f2f2;
+      }
+
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+
+    img{
+      display: inline-block;
+      width: 100%;
+    }
+  }
+
   a{
     text-decoration: none;
     color: #fff;
@@ -41,7 +71,6 @@
     color: #383838;
     margin: 0.5em 0 1em 0;
     padding: 0;
-    width: 100%;
 
     li{
       padding: 0.5em;
@@ -54,7 +83,7 @@
   }
 }
 
-#admin-create-category{
+.admin-create-category{
   height: 75vh;
   display: grid;
   grid-template-columns: 1fr;
@@ -199,6 +228,38 @@
   }
 
   #admin-category{
+
+
+      table{
+        display: inline-block;
+        color: #383838;
+        text-align: center;
+
+        td{
+          padding: 8px;
+          color: #383838;
+          img{
+            display: inline-block;
+            width: 50%;
+          }
+        }
+
+        th{
+          padding: 1em;
+        }
+
+        tr{
+          &:nth-child(even){
+            background-color: #f2f2f2;
+          }
+
+          &:hover {
+            background-color: #ddd;
+          }
+        }
+
+
+      }
 
     button{
       width: 50%;

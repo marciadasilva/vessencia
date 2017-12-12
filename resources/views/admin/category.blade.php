@@ -11,24 +11,20 @@
     <table>
       <thead>
         <tr>
-          <th>Id</th>
           <th>Título</th>
-          <th>Descrição</th>
           <th>Imagem</th>
-          <th>Edição</th>
-          <th>deleção</th>
+          <th><i class="fa fa-pencil"></i></th>
+          <th><i class="fa fa-trash-o"></i></th>
         </tr>
       </thead>
 
       <tbody>
       @foreach($categories as $category)
       <tr>
-        <td>{{$category->id}}</td>
         <td>{{$category->name}}</td>
-        <td>{{$category->descricao}}</td>
-        <td><img height="60" src="{{asset($category->image)}}" alt="{{$category->name}}"/></td>
-        <td><a class="btn deep-orange" href="/admin/category/edit/{{$category->id}}">Editar</td>
-        <td><a class="btn red" onclick="return confirm('Você tem certeza que quer deletar esta categoria?');" href="/admin/category/delete/{{$category->id}}">Deletar</td>
+        <td><img src="{{asset($category->image)}}" alt="{{$category->name}}"/></td>
+        <td><a href="/admin/category/edit/{{$category->id}}"><i class="fa fa-pencil"></i></td>
+        <td><a onclick="return confirm('Você tem certeza que quer deletar esta categoria?');" href="/admin/category/delete/{{$category->id}}"><i class="fa fa-trash-o"></i></td>
       </tr>
       @endforeach
 

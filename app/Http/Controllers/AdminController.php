@@ -61,6 +61,12 @@ class AdminController extends Controller
       return view('admin.menu', compact('admin'));
     }
 
+    public function updateCategory(Category $category){
+      $admin = true;
+
+      return view('admin.edit-category', compact(['admin', 'category']));
+    }
+
     public function deleteCategory(Category $category){
       Category::find($category->id)->delete();
 
