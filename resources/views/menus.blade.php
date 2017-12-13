@@ -6,60 +6,18 @@
 
 <section id="cardapios">
   <ul>
+    @foreach($menus as $menu)
       <li>
         <div class="cards">
-          <img src="img/shrimp.jpg" alt="card">
+          <img src="{{$menu->image}}" alt="card">
           <div class="cards-content">
-            <h3 class="cards-title">Categoria 1</h3>
+            <h3 class="cards-title">{{$menu->name}}</h3>
             <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  Velit, officiis, cumque.</p>
+            <p>{{$menu->description}}</p>
           </div>
         </div>
       </li>
-
-      <li>
-        <div class="cards">
-          <img src="img/shrimp.jpg" alt="card">
-          <div class="cards-content">
-            <h3 class="cards-title">Categoria 1</h3>
-            <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  Velit, officiis, cumque.</p>
-          </div>
-        </div>
-      </li>
-
-      <li>
-        <div class="cards">
-          <img src="img/shrimp.jpg" alt="card">
-          <div class="cards-content">
-            <h3 class="cards-title">Categoria 1</h3>
-            <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  Velit, officiis, cumque.</p>
-          </div>
-        </div>
-      </li>
-
-      <li>
-        <div class="cards">
-          <img src="img/shrimp.jpg" alt="card">
-          <div class="cards-content">
-            <h3 class="cards-title">Categoria 1</h3>
-            <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  Velit, officiis, cumque.</p>
-          </div>
-        </div>
-      </li>
-
-      <li>
-        <div class="cards">
-          <img src="img/shrimp.jpg" alt="card">
-          <div class="cards-content">
-            <h3 class="cards-title">Categoria 1</h3>
-            <hr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.  Velit, officiis, cumque.</p>
-          </div>
-        </div>
-      </li>
+    @endforeach
     </ul>
 </section>
 

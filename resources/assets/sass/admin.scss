@@ -109,6 +109,27 @@
       .form-group{
         display: block;
 
+      .select{
+        select{
+          margin: 1em 0 2.5em 0;
+          background: transparent;
+          border: none;
+          border-bottom: 1px solid #383838;
+          font-size: 0.9em;
+          height: 2em;
+          width: 71%;
+
+          option {
+            font-weight: normal;
+            display: block;
+            white-space: pre;
+            min-height: 1.2em;
+            padding: 0px 2px 1px;
+          }
+        }
+      }
+
+
         a{
           text-decoration: none;
           color: #fff;

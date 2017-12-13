@@ -18,7 +18,7 @@
           <label for="description">Descrição do Cardápio</label>
           <input type="text" name="description" id="description" value="" required>
         </div>
-        <div class="">
+        <div class="select">
           <label>Categoria</label>
           <select class="browser-default" name="category_id" id="category_id">
             <option value="" disabled selected>Escolher...</option>

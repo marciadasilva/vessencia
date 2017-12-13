@@ -20,7 +20,8 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/menus', function() {
-    return view('menus');
+    $menus = Menu::latest()->get();
+    return view('menus', compact('menus'));
 });
 
 // Login Routes
