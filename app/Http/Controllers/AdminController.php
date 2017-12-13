@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Category;
+use App\Menu;
 
 class AdminController extends Controller
 {
@@ -16,6 +17,7 @@ class AdminController extends Controller
       return view('admin.index', compact('admin'));
     }
 
+    //Controllers Categories
     public function showCategories(){
       $categories = Category::latest()->get();
 
@@ -54,11 +56,6 @@ class AdminController extends Controller
       Category::create($dados);
 
       return redirect()->route('categories');
-    }
-
-    public function showMenu(){
-      $admin = true;
-      return view('admin.menu', compact('admin'));
     }
 
     public function updateCategory(Category $category){
@@ -107,4 +104,14 @@ class AdminController extends Controller
 
       return redirect()->route('categories');
     }
+
+    //Controllers Menu
+    public function showMenu(){
+      $menus = Menu::latest()->get();
+
+      $admin = true;
+      return view('admin.menu', compact(['admin', 'menus']));
+    }
+
+
 }

@@ -50,4 +50,4 @@ Route::post('/admin/category/edit/{category}', 'AdminController@storeUpdateCateg
 
 Route::get('/admin/category/delete/{category}', 'AdminController@deleteCategory');
 
-Route::get('/admin/menu', 'AdminController@showMenu');
+Route::get('/admin/menu', 'AdminController@showMenu')->name('menus');
