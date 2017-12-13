@@ -12,9 +12,9 @@
     <thead>
       <tr>
         <th>Título</th>
-        <th>Imagem</th>
-        <th><i class="fa fa-pencil"></i></th>
-        <th><i class="fa fa-trash-o"></i></th>
+        <th><i class="fa fa-camera" aria-hidden="true"></i></th>
+        <th>Categoria</th>
+        <th><i class="fa fa-cogs" aria-hidden="true"></i></th>
       </tr>
     </thead>
 
@@ -22,16 +22,15 @@
       @foreach($menus as $menu)
       <tr>
         <td style="width:20%;">{{$menu->name}}</td>
-        <td style="width:50%;"><img  src="{{asset($menu->image)}}" alt="{{$menu->name}}"/></td>
-        <td style="width:15%;">
+        <td style="width:45%;"><img  src="{{asset($menu->image)}}" alt="{{$menu->name}}"/></td>
+        <td style="width:15%;">{{$menu->category->name}}</td>
+        <td style="width:20%;">
             <a href="/admin/menu/edit/{{$menu->id}}">
               <i class="fa fa-pencil"></i>
             </a>
-        </td>
-        <td style="width:15%;">
             <a onclick="return confirm('Você tem certeza que quer deletar este cardápio?');"
                href="/admin/menu/delete/{{$menu->id}}">
-              <i class="fa fa-trash-o"></i>
+               <i class="fa fa-trash-o"></i>
             </a>
         </td>
       </tr>

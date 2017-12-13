@@ -13,4 +13,8 @@ class Menu extends Model
     'user_id',
     'description',
   ];
+
+  public function category(){
+    return $this->belongsTo(Category::class);
+  }
 }

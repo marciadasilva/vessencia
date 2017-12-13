@@ -12,23 +12,20 @@
       <thead>
         <tr>
           <th>Título</th>
-          <th>Imagem</th>
-          <th><i class="fa fa-pencil"></i></th>
-          <th><i class="fa fa-trash-o"></i></th>
+          <th><i class="fa fa-camera" aria-hidden="true"></i></th>
+            <th><i class="fa fa-cogs" aria-hidden="true"></i></th>
         </tr>
       </thead>
 
       <tbody>
       @foreach($categories as $category)
       <tr>
-        <td style="width:20%;">{{$category->name}}</td>
+        <td style="width:25%;">{{$category->name}}</td>
         <td style="width:50%;"><img  src="{{asset($category->image)}}" alt="{{$category->name}}"/></td>
-        <td style="width:15%;">
+        <td style="width:25%;">
             <a href="/admin/category/edit/{{$category->id}}">
               <i class="fa fa-pencil"></i>
             </a>
-        </td>
-        <td style="width:15%;">
             <a onclick="return confirm('Você tem certeza que quer deletar esta categoria?');"
                href="/admin/category/delete/{{$category->id}}">
               <i class="fa fa-trash-o"></i>

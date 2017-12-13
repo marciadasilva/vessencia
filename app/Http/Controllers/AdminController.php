@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Category;
 use App\Menu;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
@@ -108,8 +109,12 @@ class AdminController extends Controller
     //Controllers Menu
     public function showMenu(){
       $menus = Menu::latest()->get();
-
       $admin = true;
+
+      // $categoryType = DB::table('categories')
+      //   ->leftjoin('menus', 'categories.id', '=', 'menus.category_id')
+      //   ->select('categories.name')->get();
+
       return view('admin.menu', compact(['admin', 'menus']));
     }
 
