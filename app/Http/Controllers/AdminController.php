@@ -67,6 +67,41 @@ class AdminController extends Controller
       return view('admin.edit-category', compact(['admin', 'category']));
     }
 
+    public function storeUpdateCategory(Category $category){
+
+      $this->validate(request(), [
+          'name' => 'required',
+          'description' => 'required'
+      ]);
+
+      $dados = request()->all();
+
+      if(request()->hasFile('image')){
+          $imagem = request()->file('image');
+          $num = rand(1111, 9999);
+          $dir = "img/categories/";
+          $ex = $imagem->guessClientExtension();
+          $nomeImagem = "image_".$num.".".$ex;
+          $imagem->move($dir, $nomeImagem);
+
+          $dados['image'] = $dir . "/" . $nomeImagem;
+      }else{
+        $imagedb = Category::where('id', $category->id)->first()->image;
+        $dados['image'] = $imagedb;
+      }
+
+      $dados['user_id'] = auth()->user()->id;
+
+      Category::where('id', $category->id)->update([
+        'name' => request('name'),
+        'description' => request('description'),
+        'image' => $dados['image'],
+        'user_id' => $dados['user_id']
+      ]);
+
+      return redirect()->route('categories');
+    }
+
     public function deleteCategory(Category $category){
       Category::find($category->id)->delete();
 

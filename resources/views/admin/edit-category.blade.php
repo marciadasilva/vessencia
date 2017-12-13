@@ -7,7 +7,7 @@
 <main id="admin-edit-category">
 
   <section id="card-edit-category">
-    <form action="/admin/category/create" method="post" enctype="multipart/form-data">
+    <form action="/admin/category/edit/{{$category->id}}" method="post" enctype="multipart/form-data">
       {{ csrf_field() }}
       <div class="form-group">
         <div class="">
