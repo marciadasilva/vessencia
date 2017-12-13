@@ -12,7 +12,7 @@
   }
 }
 
-#admin-category{
+.admin-table{
 
   table{
     color: #383838;
@@ -249,60 +249,6 @@
         }
 
       }
-    }
-  }
-}
-
-
-#admin-menu{
-  .btn-new-menu{
-    background: #383838;
-    padding: 0.5em;
-    margin: 0.5em;
-    font-size: 1.5em;
-    width: 92%;
-
-    &:hover{
-      background: #a72830;
-      cursor: pointer;
-    }
-  }
-
-  .cards-content{
-    button{
-      background: rgba(0,0,0,.1);
-      color: #383838;
-      padding: 0.3em;
-      margin: 0.2em;
-      font-size: 0.6em;
-      width: 44%;
-
-      &:hover{
-        background: #a72830;
-        cursor: pointer;
-        color: #fff;
-      }
-
-    }
-  }
-
-  ul{
-    color: #383838;
-    margin: 0.5em 0 1em 0;
-    padding: 0;
-    width: 100%;
-
-    li{
-      padding: 0.5em;
-      margin: 0.5em;
-      font-size: 1.5em;
-      list-style: none;
-      background-color: #f5f5f5;
-    }
-
-    a{
-      text-decoration: none;
-      color: #383838;
     }
   }
 }

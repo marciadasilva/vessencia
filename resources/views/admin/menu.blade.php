@@ -4,11 +4,11 @@
 
 @include('layouts.header')
 
-<main id="admin-menu">
+<main class="admin-table">
 
   <section>
     <button type="button" name="button"><a href="/admin/menu/create">Novo Cardápio</a></button>
-
+    <table align="center">
     <thead>
       <tr>
         <th>Título</th>
@@ -38,19 +38,5 @@
       @endforeach
     </tbody>
   </table>
-
-    <!-- <ul>
-      <li>
-            <div class="cards">
-              <img src="{{asset('img/shrimp.jpg')}}" alt="card">
-              <div class="cards-content">
-                <h3 class="cards-title">Cardápio 1</h3>
-                <hr>
-                <button type="button" name="btnEditar">Editar</button>
-                <button type="button" name="btnDeletar">Deletar</button>
-              </div>
-            </div>
-      </li>
-    </ul> -->
   </section>
 </main>

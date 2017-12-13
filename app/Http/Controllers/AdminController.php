@@ -113,5 +113,85 @@ class AdminController extends Controller
       return view('admin.menu', compact(['admin', 'menus']));
     }
 
+    public function createMenu(){
+      $admin = true;
+      return view('admin.create-menu', compact('admin'));
+    }
+
+    public function storeMenu(){
+
+      $this->validate(request(), [
+          'name' => 'required',
+          'image' => 'required',
+          'description' => 'required',
+      ]);
+
+      $dados = request()->all();
+
+      if(request()->hasFile('image')){
+          $imagem = request()->file('image');
+          $num = rand(1111, 9999);
+          $dir = "img/menus/";
+          $ex = $imagem->guessClientExtension();
+          $nomeImagem = "image_".$num.".".$ex;
+          $imagem->move($dir, $nomeImagem);
+
+          $dados['image'] = $dir . "/" . $nomeImagem;
+      }
+
+      $dados['user_id'] = auth()->user()->id;
+
+      Menu::create($dados);
+
+      return redirect()->route('menus');
+    }
+
+    public function updateMenu(Menu $menu){
+      $admin = true;
+
+      return view('admin.edit-menu', compact(['admin', 'menu']));
+    }
+
+    public function storeUpdateMenu(Menu $menu){
+
+      $this->validate(request(), [
+          'name' => 'required',
+          'description' => 'required'
+      ]);
+
+      $dados = request()->all();
+
+      if(request()->hasFile('image')){
+          $imagem = request()->file('image');
+          $num = rand(1111, 9999);
+          $dir = "img/menus/";
+          $ex = $imagem->guessClientExtension();
+          $nomeImagem = "image_".$num.".".$ex;
+          $imagem->move($dir, $nomeImagem);
+
+          $dados['image'] = $dir . "/" . $nomeImagem;
+      }else{
+        $imagedb = Menu::where('id', $menu->id)->first()->image;
+        $dados['image'] = $imagedb;
+      }
+
+      $dados['user_id'] = auth()->user()->id;
+
+      Menu::where('id', $menu->id)->update([
+        'name' => request('name'),
+        'description' => request('description'),
+        'image' => $dados['image'],
+        'user_id' => $dados['user_id']
+      ]);
+
+      return redirect()->route('menus');
+    }
+
+    public function deleteMenu(Menu $menu){
+      Menu::find($menu->id)->delete();
+
+      return redirect()->route('menus');
+    }
+
 
 }
