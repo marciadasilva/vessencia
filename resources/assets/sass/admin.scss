@@ -19,82 +19,82 @@
     text-align: center;
     width: 50%;
 
-    td{
-      padding: 8px;
-    }
-
-    th{
-      padding: 1em;
-    }
-
-    tr{
-      width: 100%;
-      &:nth-child(even){
-        background-color: #f2f2f2;
+      td{
+        padding: 8px;
       }
 
-      &:hover {
-        background-color: #ddd;
+      th{
+        padding: 1em;
       }
 
-      i{
-        color: #383838;
-      }
+      tr{
+          width: 100%;
+          &:nth-child(even){
+            background-color: #f2f2f2;
+          }
+
+          &:hover {
+            background-color: #ddd;
+          }
+
+          i{
+            color: #383838;
+          }
+        }
+
+        img{
+          display: inline-block;
+          width: 100%;
+        }
     }
 
-    img{
-      display: inline-block;
-      width: 100%;
-    }
-  }
-
-  a{
-    text-decoration: none;
-    color: #fff;
-  }
-
-  label{
-    color: #383838;
-  }
-
-  button{
-    background: #383838;
-    padding: 0.5em;
-    margin: 0.5em;
-    font-size: 1.5em;
-    width: 92%;
-
-
-    &:hover{
-      background: #a72830;
+    a{
+      text-decoration: none;
+      color: #fff;
     }
 
+    label{
+      color: #383838;
+    }
 
-  }
-
-  ul{
-    color: #383838;
-    margin: 0.5em 0 1em 0;
-    padding: 0;
-
-    li{
+    button{
+      background: #383838;
       padding: 0.5em;
       margin: 0.5em;
       font-size: 1.5em;
-      list-style: none;
-      background-color: #a72830;
+      width: 92%;
+
+
+      &:hover{
+        background: #a72830;
+      }
+
+
     }
 
-  }
+    ul{
+      color: #383838;
+      margin: 0.5em 0 1em 0;
+      padding: 0;
+
+      li{
+        padding: 0.5em;
+        margin: 0.5em;
+        font-size: 1.5em;
+        list-style: none;
+        background-color: #a72830;
+      }
+
+    }
 }
 
-#admin-create-category{
+.admin-create{
   height: 75vh;
   display: grid;
   grid-template-columns: 1fr;
 
 
-  #card-create-category{
+  .card-create{
       background-color: #fff;
 
     form{
@@ -171,11 +171,11 @@
   }
 }
 
-#admin-edit-category{
+.admin-edit{
   display: grid;
   grid-template-columns: 1fr;
 
-  #card-edit-category{
+  .card-edit{
     padding-top: 1em;
     background-color: #fff;
 
@@ -310,7 +310,7 @@
     }
   }
 
-  #admin-edit-category {
+  .admin-edit {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-areas:
@@ -319,14 +319,17 @@
             " . form-edit . "
             " . . . ";
 
-    #card-edit-category {
+    .card-edit {
       grid-area: form-edit;
     }
 
   }
 
-  #admin-menu{
-
+  .admin-table{
+    button{
+      width: 50%;
+    }
   }
+
 
 }

@@ -4,9 +4,9 @@
 
 @include('layouts.header')
 
-<main id="admin-create-menu">
+<main class="admin-create">
 
-  <section id="card-create-menu">
+  <section class="card-create">
     <form action="/admin/menu/create" method="post" enctype="multipart/form-data">
       {{ csrf_field() }}
       <div class="form-group">
