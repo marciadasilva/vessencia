@@ -18,6 +18,19 @@
           <label for="description">Descrição do Cardápio</label>
           <input type="text" name="description" id="description" value="{{$menu->description}}" required>
         </div>
+        <select class="browser-default" name="category_id" id="category_id">
+          @foreach($categories as $category)
+            @if($menu->category_id == $category->id)
+              <option name="category_id" value="{{$category->id}} " selected>
+                {{$category->name}}
+              </option>
+              @else
+              <option name="category_id" value="{{$category->id}}">
+                {{$category->name}}
+              </option>
+              @endif
+          @endforeach
+        </select>
         <div class="">
           <img src="{{asset($menu->image)}}">
         </div>

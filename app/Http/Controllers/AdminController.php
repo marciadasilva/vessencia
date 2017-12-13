@@ -151,14 +151,16 @@ class AdminController extends Controller
 
     public function updateMenu(Menu $menu){
       $admin = true;
+      $categories = Category::latest()->get();
 
-      return view('admin.edit-menu', compact(['admin', 'menu']));
+      return view('admin.edit-menu', compact(['admin', 'menu', 'categories']));
     }
 
     public function storeUpdateMenu(Menu $menu){
 
       $this->validate(request(), [
           'name' => 'required',
+          'category_id' => 'required',
           'description' => 'required'
       ]);
 
@@ -183,6 +185,7 @@ class AdminController extends Controller
       Menu::where('id', $menu->id)->update([
         'name' => request('name'),
         'description' => request('description'),
+        'category_id'=>request('category_id'),
         'image' => $dados['image'],
         'user_id' => $dados['user_id']
       ]);
