@@ -115,7 +115,9 @@ class AdminController extends Controller
 
     public function createMenu(){
       $admin = true;
-      return view('admin.create-menu', compact('admin'));
+      $categories = Category::latest()->get();
+
+      return view('admin.create-menu', compact(['admin', 'categories']));
     }
 
     public function storeMenu(){

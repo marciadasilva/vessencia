@@ -16,9 +16,11 @@ class CreateMenusTable extends Migration
         Schema::create('menus', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
+            $table->integer('category_id');
             $table->string('name');
             $table->string('image');
             $table->string('description');
+
             $table->timestamps();
         });
     }
