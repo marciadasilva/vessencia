@@ -4,9 +4,9 @@
 
 @include('layouts.header')
 
-<main id="admin-edit-category">
+<main class="admin-edit">
 
-  <section id="card-edit-category">
+  <section class="card-edit">
     <form action="/admin/menu/edit/{{$menu->id}}" method="post" enctype="multipart/form-data">
       {{ csrf_field() }}
       <div class="form-group">
