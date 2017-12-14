@@ -68,19 +68,21 @@
               @else
               <ul class = "cardapio-4">
                 @endif
-    @foreach($categories as $category)
-      <li>
-          <div class="cards">
-              <img src="{{$category->image}}" alt="card">
-              <div class="cards-content">
-                <h3 class="cards-title">{{$category->name}}</h3>
-                <hr>
-                <p>{{$category->description}}</p>
-              </div>
-            </div>
-          </li>
-    @endforeach
-    </ul>
+                @foreach($categories as $category)
+                  {{--<a href="">--}}
+                    <li>
+                     <div class="cards">
+                      <img src="{{$category->image}}" alt="card">
+                      <div class="cards-content">
+                        <h3 class="cards-title">{{$category->name}}</h3>
+                        <hr>
+                        <p>{{$category->description}}</p>
+                      </div>
+                     </div>
+                    </li>
+                  {{--</a>--}}
+                @endforeach
+              </ul>
   </section>
 
     <!-- Section C -->
