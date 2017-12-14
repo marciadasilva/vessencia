@@ -1,5 +1,8 @@
+$dark_gray: #383838;
+$dark_red: #a72830;
+
 #admin-page{
-  color: #383838;
+  color: $dark_gray;
   height: 75%;
   display: flex;
   align-items: center;
@@ -15,7 +18,7 @@
 .admin-table{
 
   table{
-    color: #383838;
+    color: $dark_gray;
     text-align: center;
     width: 50%;
 
@@ -38,7 +41,7 @@
           }
 
           i{
-            color: #383838;
+            color: $dark_gray;
           }
         }
 
@@ -58,11 +61,11 @@
     }
 
     label{
-      color: #383838;
+      color: $dark_gray;
     }
 
     button{
-      background: #383838;
+      background:$dark_gray;
       padding: 0.5em;
       margin: 0.5em;
       font-size: 1.5em;
@@ -70,14 +73,14 @@
 
 
       &:hover{
-        background: #a72830;
+        background: $dark_red;
       }
 
 
     }
 
     ul{
-      color: #383838;
+      color: $dark_gray;
       margin: 0.5em 0 1em 0;
       padding: 0;
 
@@ -86,7 +89,7 @@
         margin: 0.5em;
         font-size: 1.5em;
         list-style: none;
-        background-color: #a72830;
+        background-color: $dark_red;
       }
 
     }
@@ -118,7 +121,7 @@
           margin: 1em 0 2.5em 0;
           background: transparent;
           border: none;
-          border-bottom: 1px solid #383838;
+          border-bottom: 1px solid $dark_gray;
           font-size: 0.9em;
           height: 2em;
           width: 71%;
@@ -140,12 +143,12 @@
         }
 
         label{
-          color: #383838;
+          color: $dark_gray;
           font-weight: 700;
         }
 
         #file {
-          background-color: #a72830;
+          background-color: $dark_red;
           border-radius: 5px;
           color: #fff;
           cursor: pointer;
@@ -160,10 +163,10 @@
 
         input{
           background-color: transparent;
-          color: #383838;
+          color: $dark_gray;
           border: none;
           width: 90%;
-          border-bottom: 1px solid #383838;
+          border-bottom: 1px solid $dark_gray;
           margin-bottom: 1em;
           padding: 0.5em;
           font-size: 1em;
@@ -180,14 +183,14 @@
         }
 
         button{
-          background: #383838;
+          background: $dark_gray;
           padding: 0.5em;
           margin: 0.5em;
           font-size: 1.5em;
           width: 92%;
 
           &:hover{
-            background: #a72830;
+            background: $dark_red;
           }
         }
 
@@ -222,12 +225,12 @@
         }
 
         label{
-          color: #383838;
+          color: $dark_gray;
           font-weight: 700;
         }
 
         #file {
-          background-color: #a72830;
+          background-color: $dark_red;
           border-radius: 5px;
           color: #fff;
           cursor: pointer;
@@ -242,10 +245,10 @@
 
         input{
           background-color: transparent;
-          color: #383838;
+          color: $dark_gray;
           border: none;
           width: 90%;
-          border-bottom: 1px solid #383838;
+          border-bottom: 1px solid $dark_gray;
           margin-bottom: 1em;
           padding: 0.5em;
           font-size: 1em;
@@ -262,14 +265,14 @@
         }
 
         button{
-          background: #383838;
+          background: $dark_gray;
           padding: 0.5em;
           margin: 0.5em;
           font-size: 1.5em;
           width: 92%;
 
           &:hover{
-            background: #a72830;
+            background: $dark_red;
           }
         }
 
@@ -290,12 +293,12 @@
 
       table{
         display: inline-block;
-        color: #383838;
+        color: $dark_gray;
         text-align: center;
 
         td{
           padding: 8px;
-          color: #383838;
+          color: $dark_gray;
           img{
             display: inline-block;
             width: 50%;

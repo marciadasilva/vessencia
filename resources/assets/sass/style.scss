@@ -1,5 +1,7 @@
-/*Core Styles*/
+$dark_gray: #383838;
+$dark_red: #a72830;
 
+/*Core Styles*/
 body {
   margin: 0;
   font-family: 'Titillium Web', sans-serif;
@@ -47,7 +49,7 @@ button{
 
   &:hover {
     background: rgba(227, 224, 207, 0.8);
-    color: #383838;
+    color: $dark_gray;
   }
 }
 
@@ -76,7 +78,7 @@ button{
 
   &:hover{
     background: rgba(227, 224, 207, 0.8);
-    color: #383838;
+    color: $dark_gray;
   }
 }
 
@@ -89,13 +91,13 @@ header{
 }
 
 .header-menus{
-  background: #383838;
+  background: $dark_gray;
 }
 
 /*pagina de menus*/
 #cardapios{
-  background-color: #383838;
-  color: #383838;
+  background-color: $dark_gray;
+  color: $dark_gray;
   padding: 2em 1em 1em;
 
   ul {
@@ -107,7 +109,7 @@ header{
   li {
     margin-bottom: 1em;
     background: #fff;
-    color: #383838;
+    color: $dark_gray;
   }
 }
 
@@ -119,7 +121,7 @@ header{
 
   .bg-image{
     position: absolute;
-    background: #383838 url('../img/capa.png');
+    background: $dark_gray url('../img/capa.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -143,7 +145,7 @@ header{
 /* Section A */
 #section-a {
   background: #eaeaea;
-  color: #383838;
+  color: $dark_gray;
   padding-bottom: 2em;
   p{
     text-align: justify;
@@ -154,7 +156,7 @@ header{
 /* Section B */
 #section-b{
   padding: 2em 1em 1em;
-  background: #383838;
+  background: $dark_gray;
 
   ul {
     list-style: none;
@@ -162,10 +164,13 @@ header{
     padding: 0;
   }
 
+  a {
+    text-decoration: none;
+  }
+
   li {
-    margin-bottom: 1em;
     background: #fff;
-    color: #383838;
+    color: $dark_gray;
   }
 }
 
@@ -177,13 +182,13 @@ header{
 
 #section-c {
   background: #eaeaea;
-  color: #383838;
+  color: $dark_gray;
   padding: 2em;
 }
 
 /* Section D */
 #section-d {
-  background: #383838;
+  background: $dark_gray;
   .content-wrap{
     padding: 1.5em;
 
@@ -198,7 +203,7 @@ header{
 
 #section-e .box{
   padding: 2em;
-  background: #383838;
+  background: $dark_gray;
   color: #fff;
 
   a {
@@ -208,7 +213,7 @@ header{
 }
 
 #section-e .box:first-child{
-  background: #a72830;
+  background: $dark_red;
 }
 
 
@@ -220,7 +225,7 @@ header{
   text-align: center;
 
   a {
-    color: #a72830;
+    color: $dark_red;
     text-decoration: none;
   }
 }
@@ -270,7 +275,7 @@ header{
           border-radius: 0.5em;
 
           button{
-            color: #383838;
+            color: $dark_gray;
             padding: 0.5em;
             width: 100%;
           }
@@ -316,7 +321,16 @@ header{
 
 .modal-body{
   padding: 10px 20px;
-  color: #383838;
+  color: $dark_gray;
+
+  .body-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    img{
+      width: 30%;
+    }
+  }
+
 }
 
 .modal-footer{
