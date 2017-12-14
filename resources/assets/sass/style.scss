@@ -107,7 +107,6 @@ header{
   }
 
   li {
-    margin-bottom: 1em;
     background: #fff;
     color: $dark_gray;
   }
@@ -406,7 +405,7 @@ header{
   display: flex;
   justify-content: space-around;
 
-    li {
+    a {
     width: 23%;
     }
   }
