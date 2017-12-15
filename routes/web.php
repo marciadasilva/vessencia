@@ -24,6 +24,10 @@ Route::get('/menus', function() {
     return view('menus', compact('menus'));
 });
 
+Route::get('/contact', function(){
+  return view('contact');
+});
+
 // Login Routes
 
 Route::get('/login', 'LoginController@login')->name('login');
