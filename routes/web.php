@@ -1,8 +1,5 @@
 <?php
 
-use App\Category;
-use App\Menu;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,19 +11,13 @@ use App\Menu;
 |
 */
 
-Route::get('/', function () {
-    $categories = Category::latest()->get();
-    return view('index', compact('categories'));
-})->name('home');
+Route::get('/', 'SiteController@index')->name('home');
 
-Route::get('/menus', function() {
-    $menus = Menu::latest()->get();
-    return view('menus', compact('menus'));
-});
+Route::get('/menus', 'SiteController@menus');
 
-Route::get('/contact', function(){
-  return view('contact');
-});
+Route::get('/menus/{category}', 'SiteController@menu');
+
+Route::get('/contact','SiteController@contact');
 
 // Login Routes
 

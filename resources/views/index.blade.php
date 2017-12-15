@@ -57,8 +57,7 @@
               <ul class = "cardapio-4">
                 @endif
                 @foreach($categories as $category)
-                <!-- passar o category_id na rota -->
-                  <a href="/menus">
+                  <a href="/menus/{{$category->id}}">
                     <li>
                      <div class="cards">
                       <img src="{{$category->image}}" alt="card">

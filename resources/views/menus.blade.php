@@ -9,7 +9,7 @@
     @foreach($menus as $menu)
       <li>
         <div class="cards">
-          <img src="{{$menu->image}}" alt="card">
+          <img src="{{asset($menu->image)}}" alt="card">
           <div class="cards-content">
             <h3 class="cards-title">{{$menu->name}}</h3>
             <hr>
