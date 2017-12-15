@@ -6,58 +6,51 @@
 
   <section id="contact">
     <form action="#" method="post">
-      <fieldset class="group-custom">
-        <div class="field">
-          <label for="name">Nome</label>
-          <input type="text" name="name" id="name">
+        <div class="group-custom">
+            <div>
+                <label for="name">Nome</label>
+                <input type="text" name="name" id="name">
+            </div>
+
+            <div>
+                <label for="lastName">Sobrenome</label>
+                <input type="text" name="lastName" id="LastName">
+            </div>
+
+            <div>
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email">
+            </div>
+
+            <div>
+                <label for="phone">Telefone</label>
+                <input type="text" name="phone" id="phone">
+            </div>
+
+            <div>
+                <label for="city">Cidade</label>
+                <input type="text" id="city" name="city">
+            </div>
+
+            <div>
+                <label for="state">Estado</label>
+                <input type="text" id="state" name="state">
+                {{-- Colocar HINT no input --}}
+                {{--<select name="state" id="state">--}}
+                    {{--<option value="">--</option>--}}
+                    {{--<option value="PR">PR</option>--}}
+                {{--</select>--}}
+            </div>
+
+            <div>
+                <label for="message">Mensagem</label>
+                <textarea rows="6" id="message" name="message"></textarea>
+            </div>
+
+            <div class="btn-form">
+                <button type="submit">Enviar</button>
+            </div>
         </div>
-        <div class="">
-          <label for="lastName">Sobrenome</label>
-          <input type="text" name="lastName" id="LastName">
-      </div>
-      </fieldset>
-      <label class="checkbox">
-        <input type="radio" name="sex" value="male"> Masculino
-      </label>
-      <label class="checkbox">
-        <input type="radio" name="sex" value="female"> Feminino
-      </label>
-
-      <div class="">
-              <label for="email">E-mail</label>
-              <input type="text" id="email" name="email" style="width: 20em" value="">
-          </div>
-          <div class="">
-              <label for="phone">Telefone</label>
-              <input type="text" id="phone" name="phone" style="width: 10em" value="">
-          </div>
-
-          <fieldset class="grupo">
-              <div class="campo">
-                  <label for="city">Cidade</label>
-                  <input type="text" id="city" name="city" style="width: 10em" value="">
-              </div>
-              <div class="campo">
-                  <label for="state">Estado</label>
-                  <select name="state" id="state">
-                      <option value="">--</option>
-                      <option value="PR">PR</option>
-                  </select>
-              </div>
-          </fieldset>
-
-          <div class="">
-              <label for="message">Mensagem</label>
-              <textarea rows="6" style="width: 20em" id="message" name="message"></textarea>
-          </div>
-
-          <div class="">
-              <label>Newsletter</label>
-              <label>
-                  <input type="checkbox" name="newsletter" value="1"> Gostaria de receber a Newsletter da empresa
-              </label>
-          </div>
-      <button type="submit" class="botao submit">Enviar</button>
     </form>
   </section>
 

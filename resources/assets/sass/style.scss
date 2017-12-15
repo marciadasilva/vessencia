@@ -287,15 +287,11 @@ header{
 
 /* CONTACT PAGE */
 #contact{
-  height: 70vh;
-  display: grid;
-  grid-template-columns: 1fr;
+  background: $dark_gray;
 
   form{
-    color: $dark_gray ;
-    height: 100%;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    padding: 0.5em;
+    color: white;
 
     .group-custom{
       display: block;
@@ -307,7 +303,7 @@ header{
         font-size: 2.4em;
       }
 
-      input{
+      input, textarea{
         background-color: transparent;
         color: #fff;
         border: none;
@@ -428,31 +424,17 @@ header{
     }
   }
 
-  .content-wrap,
-  #section-b ul {
+  .content-wrap, #section-b ul {
     grid-column: 2/4;
   }
 
-  .box,
-  #main-footer div {
+  .box, #main-footer div {
     grid-column: span 2;
   }
 
-  #section-b {
-  // antigo
-  // ul {
-  // display: flex;
-  // justify-content: space-around;
-  // }
-  //
-  //li {
-  // width: 23%;
-  //}
-  }
-
   .cardapio-3{
-  display: flex;
-  justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
 
     a {
     width: 23%;
@@ -460,21 +442,21 @@ header{
   }
 
   .cardapio-4{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 0.5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0.5em;
   }
 
   .cardapio-5{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 0.5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 0.5em;
   }
 
   .cardapio-6{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 0.5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0.5em;
   }
 
   #section-d div, #section-d img {
@@ -492,21 +474,6 @@ header{
       grid-gap: 1em 1em;
     }
   }
-
-  /*@media login page*/
-  //
-  // #login-body{
-  //   display: grid;
-  //   grid-template-columns: repeat(3, 1fr);
-  //   grid-template-rows: 1fr 4fr 1fr;
-  //
-  //   #card-login{
-  //     grid-column-start: 2;
-  //     grid-column-end: 3;
-  //     grid-row-start: 2;
-  //     grid-row-end: 3;
-  //   }
-  // }
 
   /* Login page */
 
@@ -529,5 +496,24 @@ header{
       border-radius: 0.5em;
     }
   }
+
+  /* CONTACT PAGE */
+  #contact {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:
+            " . . . "
+            " . form . "
+            " . form . "
+            " . . . ";
+
+    padding: 0.5em;
+
+    form {
+      background: gray;
+      grid-area: form;
+    }
+  }
+
 
 }
