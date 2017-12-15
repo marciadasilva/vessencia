@@ -16,7 +16,7 @@
       <li><a href="/">Home</a></li>
       <li><a href="#">Sobre</a></li>
       <li><a href="#">Serviços</a></li>
-      <li><a href="#">Contato</a></li>
+      <li><a href="/contact">Contato</a></li>
     </ul>
   </nav>
 
@@ -26,7 +26,7 @@
     <a href="/">Home</a>
     <a href="#">Sobre</a>
     <a href="#">Serviços</a>
-    <a href="#">Contato</a>
+    <a href="/contact">Contato</a>
   </div>
 
   <script type="text/javascript">

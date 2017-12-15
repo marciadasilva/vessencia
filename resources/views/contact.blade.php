@@ -7,6 +7,9 @@
   <section id="contact">
     <form action="#" method="post">
         <div class="group-custom">
+          <div>
+              <h1>Entre em contato conosco</h1>
+          </div>
             <div>
                 <label for="name">Nome</label>
                 <input type="text" name="name" id="name">
