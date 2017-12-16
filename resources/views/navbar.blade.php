@@ -1,4 +1,6 @@
-  <nav class="navbar">
+@include('layouts.modal')
+
+<nav class="navbar">
     <span class="open-slide">
       <a href="#" onclick="openSlideMenu()">
         <svg width="30" height="30">
@@ -14,8 +16,8 @@
 
     <ul class="navbar-nav">
       <li><a href="/">Home</a></li>
-      <li><a href="#">Sobre</a></li>
-      <li><a href="#">Serviços</a></li>
+      <li><a id="modalBtn">Sobre</a></li>
+      <li><a href="/services">Serviços</a></li>
       <li><a href="/contact">Contato</a></li>
     </ul>
   </nav>
@@ -24,8 +26,8 @@
     <a href="#" class="btn-close"
     onclick="closeSlideMenu()">&times;</a>
     <a href="/">Home</a>
-    <a href="#">Sobre</a>
-    <a href="#">Serviços</a>
+    <!--<a>Sobre</a>-->
+    <a href="/services">Serviços</a>
     <a href="/contact">Contato</a>
   </div>
 

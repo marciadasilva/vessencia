@@ -204,5 +204,12 @@ class AdminController extends Controller
       return redirect()->route('menus');
     }
 
+    public function showServices(){
+      //$services = Service::latest()->get();
+      
+            $admin = true;
+            return view('admin.service', compact('admin'));
+    }
+
 
 }

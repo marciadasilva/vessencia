@@ -19,6 +19,10 @@ Route::get('/menus/{category}', 'SiteController@menu');
 
 Route::get('/contact','SiteController@contact');
 
+Route::get('/services', function(){
+    return view('services');
+});
+
 // Login Routes
 
 Route::get('/login', 'LoginController@login')->name('login');
@@ -48,3 +52,5 @@ Route::post('/admin/menu/create', 'AdminController@storeMenu');
 Route::get('/admin/menu/edit/{menu}', 'AdminController@updateMenu');
 Route::post('/admin/menu/edit/{menu}', 'AdminController@storeUpdateMenu');
 Route::get('/admin/menu/delete/{menu}', 'AdminController@deleteMenu');
+
+Route::get('/admin/services', 'AdminController@showServices')->name('services');

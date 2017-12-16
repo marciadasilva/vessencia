@@ -5,56 +5,66 @@
 @include('layouts.header')
 
   <section id="contact">
-    <form action="#" method="post">
-        <div class="group-custom">
-          <div>
-              <h1>Entre em contato conosco</h1>
-          </div>
+    <div id="contact-form">
+        <form action="#" method="post">
+            <div class="group-custom">
             <div>
-                <label for="name">Nome</label>
-                <input type="text" name="name" id="name">
+                <h1>Entre em contato conosco</h1>
             </div>
+                <div>
+                    <!--<label for="name">Nome</label>-->
+                    <input type="text" name="name" id="name" placeholder="Nome">
+                </div>
 
-            <div>
-                <label for="lastName">Sobrenome</label>
-                <input type="text" name="lastName" id="LastName">
-            </div>
+                <div>
+                    <input type="email" name="email" id="email" placeholder="E-mail">
+                </div>
 
-            <div>
-                <label for="email">E-mail</label>
-                <input type="email" name="email" id="email">
-            </div>
+                <div>
+                    <input type="text" name="phone" id="phone" placeholder="Telefone">
+                </div>
 
-            <div>
-                <label for="phone">Telefone</label>
-                <input type="text" name="phone" id="phone">
-            </div>
+                <div>
+                    <input type="text" id="city" name="city" placeholder="Cidade">
+                </div>
 
-            <div>
-                <label for="city">Cidade</label>
-                <input type="text" id="city" name="city">
-            </div>
+                <div>
+                    <textarea rows="6" id="message" name="message" placeholder="Sua mensagem"></textarea>
+                </div>
 
-            <div>
-                <label for="state">Estado</label>
-                <input type="text" id="state" name="state">
-                {{-- Colocar HINT no input --}}
-                {{--<select name="state" id="state">--}}
-                    {{--<option value="">--</option>--}}
-                    {{--<option value="PR">PR</option>--}}
-                {{--</select>--}}
+                <div class="btn-form">
+                    <button type="submit">Enviar</button>
+                </div>
             </div>
-
-            <div>
-                <label for="message">Mensagem</label>
-                <textarea rows="6" id="message" name="message"></textarea>
-            </div>
-
-            <div class="btn-form">
-                <button type="submit">Enviar</button>
-            </div>
+        </form>
+    </div>
+    
+    <div id="contact-text">
+        <div>
+            <h1>Formas de Contato</h1>
         </div>
-    </form>
+        <p>
+            Prefere conversar conosco? Estamos à sua disposição, para entrar em contato você pode ligar ou
+            mandar e-mail ou visitar a nossa loja para conhecer nossos serviços.
+        </p>
+
+        <hr>
+
+        <p><span>Endereço:</span> Passo Fundo.</p>
+        <p><span>Telefone:</span> (55) 9 9955-9990</p>
+        <p><span>E-mail:</span> vessencia@outlook.com</p>
+
+        <hr>
+
+        <p><span>Horário de Atendimento: </span>
+        De segunda a sábado: 08:00 – 18:00</p>
+            
+        <hr>
+        
+        <a href="https://www.facebook.com/vessencia/" target="_blank">
+            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+        </a>
+    </div> 
   </section>
 
 

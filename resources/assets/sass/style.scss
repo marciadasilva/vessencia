@@ -27,7 +27,7 @@ p{
   padding: 1em 0;
 }
 hr{
-  border-color: #fcfcfc;
+  border: 1px solid $dark_red;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
 }
 
@@ -183,6 +183,72 @@ header{
   background: #eaeaea;
   color: $dark_gray;
   padding: 2em;
+
+  .wrap{
+    position: relative;
+ 
+    .slide-content {
+      position: absolute;
+      top: 45%; 
+      left: 0; 
+      width: 100%; 
+  
+      a {
+        text-shadow: 1px 1px .8em rgba(0,0,0,.5);
+        text-decoration: none;
+        padding: 0.5em;
+        margin: 0 auto;
+        border: 1px solid $dark_gray;
+        color: #f4f4f4;
+        font-size: 1em;
+        box-shadow: 1px 1px 1em rgba(255, 255, 255, .7);
+        background-color: $dark_red;
+        font-weight: 600;
+  
+        &:hover{
+          border: 1px solid white;
+          background: rgba(255, 255, 255, .7);
+          color: $dark_gray;
+          text-shadow: none;
+        }
+      }
+  
+      span {
+        font-size: 1.5rem;
+      }
+  
+      h1{
+        font-size: 3rem;
+      }
+  
+    }
+  
+    .arrow{
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      margin-top: -35px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+  
+    #arrow-left{
+      border-width: 15px 20px 15px 0;
+      border-color: transparent #fff transparent transparent;
+      left: 0;
+      margin-left: 30px;
+    }
+  
+    #arrow-right{
+      border-width: 15px 0px 15px 20px;
+      border-color: transparent transparent transparent #fff;
+      right: 0;
+      margin-right: 30px;
+    }
+  
+  }
+
 }
 
 /* Section D */
@@ -287,70 +353,102 @@ header{
 
 /* CONTACT PAGE */
 #contact{
-  background: $dark_gray;
 
-  form{
-    background: gray;
-    padding: 0.5em;
-    color: white;
+  #contact-form{
+  background: #fff;
 
-    .group-custom{
-      display: block;
-      border: none;
+    form{
+      padding: 0.5em;
+      color: $dark_gray;
 
       h1{
         padding: 0;
-        margin:0 0 0.5em 0;
         font-size: 2.4em;
       }
 
-      input{
-        background-color: transparent;
-        color: #fff;
+      .group-custom{
+        display: block;
         border: none;
-        width: 91%;
-        border-bottom: 1px solid #fff;
-        margin-bottom: 1em;
-        padding: 0.5em;
-        font-size: 1em;
-        outline: 0 none;
 
-        &:focus{
-          transition: 0.5s;
-          border-bottom: 1px solid #00e676;
-        }
-      }
-
-      textarea{
-        background-color: transparent;
-        color: #fff;
-        width: 91%;
-        border: 1px solid #fff;
-        margin-bottom: 1em;
-        padding: 0.5em;
-        font-size: 1em;
-        outline: 0 none;
-
-        &:focus{
-          transition: 0.5s;
-          border: 1px solid #00e676;
-        }
-      }
-
-      .btn-form{
-        background-color: #69f0ae;
-        border-radius: 0.5em;
-
-        button{
-          color: $dark_gray;
+        input{
+          background-color: transparent;
+          color: $dark_red;
+          border: none;
+          width: 91%;
+          border-bottom: 1px solid $dark_gray;
+          margin-bottom: 1em;
           padding: 0.5em;
-          width: 100%;
+          font-size: 1em;
+          outline: 0 none;
+
+          &:focus{
+            transition: 0.5s;
+            border-bottom: 1px solid $dark_red;
+          }
         }
 
+        textarea{
+          background-color: transparent;
+          color: $dark_red;
+          width: 91%;
+          border: 1px solid $dark_gray;
+          margin-bottom: 1em;
+          padding: 0.5em;
+          font-size: 1.5em;
+          outline: 0 none;
+
+          &:focus{
+            transition: 0.5s;
+            border: 1px solid $dark_red;
+          }
+        }
+
+        .btn-form{
+          background-color: $dark_red;
+          border-radius: 0.5em;
+
+          button{
+            color: #fff;
+            padding: 0.5em;
+            width: 100%;
+          }
+
+        }
       }
     }
   }
+
+  #contact-text{
+    color: $dark_gray;
+    text-align: center;
+    padding: 0.5em;
+
+    hr {
+      border: 0.5px solid $dark_red;
+    }
+
+    p{
+      text-align: justify;
+    }
+
+    h1{
+      padding: 0;
+      font-size: 2.4em;
+    }
+
+    span{
+      color: $dark_red;
+    }
+
+    i{
+      padding: 0;
+      font-size: 4em;
+    }
+
+  }
 }
+
+/* end of contact page */
 
 /*  MODAL */
 .modal {
@@ -380,7 +478,7 @@ header{
 }
 
 .modal-header{
-  background: #a72830;
+  background: $dark_red;
   padding: 15px;
   color: white;
 }
@@ -400,7 +498,7 @@ header{
 }
 
 .modal-footer{
-  background: #a72830;
+  background: $dark_red;
   padding: 10px;
   color: white;
   text-align: center;
@@ -425,6 +523,36 @@ header{
 }
 
 /* FIM MODAL*/
+
+/* SERVICES PAGE */
+
+#services{
+
+  header{
+    background: $dark_gray;
+    width: 100%;
+    height: 4em;
+  }
+
+  a > div{
+    color: white;
+    padding: 1em;
+    position: relative;
+
+    span{
+      font-size: 2em;
+      position: absolute; 
+      top: 45%; 
+      left: 0; 
+      width: 100%; 
+    }
+  
+    &:hover{
+      filter: grayscale(70%);
+      transition: 1s;
+    }
+  }
+}
 
 /* Media Queries */
 @media (min-width: 700px) {
@@ -459,7 +587,7 @@ header{
     justify-content: space-around;
 
     a {
-    width: 23%;
+      width: 23%;
     }
   }
 
@@ -522,19 +650,69 @@ header{
   /* CONTACT PAGE */
   #contact {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 5fr 1fr 5fr 1fr;
     grid-template-areas:
-            " . . . "
-            " . form . "
-            " . form . "
-            " . . . ";
+            " . . . . ."
+            " . form . text . "
+            " . form . text . "
+            " . . . . .";
 
     padding: 0.5em;
 
-    form {
+    #contact-form {
       grid-area: form;
+    }
+
+    #contact-text {
+      grid-area: text;
+    }
+    
+  }
+
+  /* SERVICES PAGE */
+
+  #services{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+
+    img{
+      height: 75vh;
+    }
+
+  }
+
+  /* Section C */
+
+  #section-c {
+
+    .wrap{
+  
+      .slide-content {
+    
+        a {
+          padding: 1em;
+          font-size: 1.5em;
+          font-weight: 600;
+        }    
+      } 
     }
   }
 
+  /* Sectopm E */
+  #section-e{
+
+      #two-col{
+        columns: 2;
+        padding-bottom: 1em;
+      }
+
+      #center-col{
+        p{
+          text-align: justify;
+        }
+      }
+    
+  }
 
 }

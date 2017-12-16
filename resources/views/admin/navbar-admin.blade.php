@@ -16,7 +16,7 @@
       <li><a href="/">Home</a></li>
       <li><a href="/admin/category">Categorias</a></li>
       <li><a href="/admin/menu">Cardápios</a></li>
-      <li><a href="#">Treinamentos</a></li>
+      <li><a href="/admin/services">Serviços</a></li>
       <li><a href="#">Ajuda</a></li>
       <li><a href="/logout">Sair</a></li>
     </ul>
@@ -28,7 +28,7 @@
     <a href="/">Home</a>
     <a href="/admin/category">Categorias</a>
     <a href="/admin/menu">Cardápios</a>
-    <a href="#">Treinamentos</a>
+    <a href="/admin/services">Serviços</a>
     <a href="#">Ajuda</a>
     <a href="/logout">Sair</a>
   </div>
