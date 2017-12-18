@@ -14,7 +14,18 @@
     @endif
 
   </header>
-  <ul>
+
+    @if(sizeof($menus) <= 3)
+      <ul class = "cardapio-3">
+    @elseif(sizeof($menus)== 4 || (sizeof($menus) % 4) == 0)
+      <ul class = "cardapio-4">
+    @elseif(sizeof($menus)== 5 || (sizeof($menus) % 5) == 0)
+      <ul class = "cardapio-5">
+    @elseif((sizeof($menus) % 3) == 0)
+      <ul class = "cardapio-6">
+    @else
+      <ul class = "cardapio-4">
+    @endif
     @foreach($menus as $menu)
       <li>
         <div class="cards">

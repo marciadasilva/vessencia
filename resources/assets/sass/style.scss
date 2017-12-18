@@ -661,6 +661,10 @@ header{
     a {
       width: 23%;
     }
+
+    li{
+      width: 23%;
+    }
   }
 
   .cardapio-4{
@@ -683,18 +687,6 @@ header{
 
   #section-d div, #section-d img {
     grid-column: 1/5;
-  }
-
-  /* @media Menus page */
-  #cardapios {
-
-    //padding: 2em 5em;
-
-    ul{
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-gap: 1em 1em;
-    }
   }
 
   /* Login page */
