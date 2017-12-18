@@ -60,5 +60,4 @@ class SiteController extends Controller
 
     return redirect()->route('contact');
   }
-
 }

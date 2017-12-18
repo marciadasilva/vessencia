@@ -18,6 +18,7 @@ Route::get('/menus', 'SiteController@menus');
 Route::get('/menus/{category}', 'SiteController@menu');
 
 Route::get('/contact','SiteController@contact')->name('contact');
+
 Route::post('/contact', 'SiteController@store');
 
 Route::get('/services', function(){
@@ -55,3 +56,5 @@ Route::post('/admin/menu/edit/{menu}', 'AdminController@storeUpdateMenu');
 Route::get('/admin/menu/delete/{menu}', 'AdminController@deleteMenu');
 
 Route::get('/admin/services', 'AdminController@showServices')->name('services');
+Route::get('/admin/help', 'AdminController@help')->name('help');
+Route::get('/admin/company', 'AdminController@company')->name('company');

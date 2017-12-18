@@ -226,5 +226,13 @@ class AdminController extends Controller
             return view('admin.service', compact('admin'));
     }
 
+    public function help(){
+        $admin = true;
+        return view('admin.help', compact('admin'));
+    }
 
+    public function company(){
+        $admin = true;
+        return view('admin.company', compact('admin'));
+    }
 }
