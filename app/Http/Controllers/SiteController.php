@@ -16,12 +16,12 @@ class SiteController extends Controller
   }
 
   public function menus(){
-    $menus = Menu::latest()->paginate(2);
+    $menus = Menu::latest()->paginate(6);
     return view('menus', compact('menus'));
   }
 
   public function menu(Category $category){
-    $menus = Menu::where('category_id', '=', $category->id)->latest()->paginate(2);
+    $menus = Menu::where('category_id', '=', $category->id)->latest()->paginate(6);
     return view('menus', compact(['menus', 'category']));
   }
 

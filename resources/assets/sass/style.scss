@@ -102,7 +102,9 @@ header{
   //padding: 2em 1em 1em;
 
   header{
+    color: #fff;
     background: $dark_red;
+    background-image: url("https://www.transparenttextures.com/patterns/wavecut.png");
     padding: 1em;
     font-size: 1.5em;
     text-transform: uppercase;
@@ -232,7 +234,7 @@ header{
 
     .slide-content {
       position: absolute;
-      top: 80%; //45 centraliza
+      top: 45%; //45 centraliza
       left: 0;
       width: 100%;
 
@@ -607,21 +609,24 @@ header{
   list-style: none;
   padding: 0;
   margin: 0;
-  background: $dark_red;
+  color: #fff;
+  background: $dark_gray;
+  //background-image: url("https://www.transparenttextures.com/patterns/wavecut.png");
 
   li {
-    background: $dark_red;
     display:inline-block;
     font-size: 1.2em;
     padding: 1em 0.5em;
   }
 
   .active, .disabled{
-    color: $dark_gray;
+    color: $dark_red;
+    font-weight: 700;
+    font-size: 1.5em;
   }
 
   a{
-    color: black;
+    color: #fff;
     text-decoration: none;
   }
 }
