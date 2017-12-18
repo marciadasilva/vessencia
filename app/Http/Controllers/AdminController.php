@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Category;
 use App\Menu;
+use Session;
 use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
@@ -32,6 +33,9 @@ class AdminController extends Controller
     }
 
     public function storeCategory(){
+
+        Session::put('name-category', request('name'));
+        Session::put('description-category', request('description'));
 
       $this->validate(request(), [
           'name' => 'required',
@@ -66,6 +70,9 @@ class AdminController extends Controller
     }
 
     public function storeUpdateCategory(Category $category){
+
+        Session::put('name-category-edit', request('name'));
+        Session::put('description-category-edit', request('description'));
 
       $this->validate(request(), [
           'name' => 'required',
@@ -127,6 +134,10 @@ class AdminController extends Controller
 
     public function storeMenu(){
 
+        Session::put('name-menu', request('name'));
+        Session::put('description-menu', request('description'));
+        Session::put('category_id-menu', request('category_id'));
+
       $this->validate(request(), [
           'name' => 'required',
           'category_id' => 'required',
@@ -162,6 +173,10 @@ class AdminController extends Controller
     }
 
     public function storeUpdateMenu(Menu $menu){
+
+        Session::put('name-menu-edit', request('name'));
+        Session::put('description-menu-edit', request('description'));
+        Session::put('category_id-menu-edit', request('category_id'));
 
       $this->validate(request(), [
           'name' => 'required',

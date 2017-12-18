@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', '5ª Essência')
+@section('title', '5ª Essência - Contato')
 
 @section('content')
 @include('layouts.header')
@@ -15,10 +15,6 @@
 
 
                 @if ($errors->any())
-                    {{--{{ $errors->first('name') }}--}}
-                    {{--{{ $errors->first('email') }}--}}
-                    {{--{{ $errors->first('subject') }}--}}
-                    {{--{{ $errors->first('message') }}--}}
                     <div>
                         <input
                            type="text"

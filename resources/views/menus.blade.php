@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', '5ª Essência - Menus')
+@section('title', '5ª Essência - Cardápios')
 
 @section('content')
 @include('layouts.header')
