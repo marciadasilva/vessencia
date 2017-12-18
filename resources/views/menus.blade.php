@@ -5,6 +5,15 @@
 @include('layouts.header')
 
 <section id="cardapios">
+  <header>
+
+    @if(isset($category))
+        {{$category->name}}
+      @else
+        Todas as Categorias
+    @endif
+
+  </header>
   <ul>
     @foreach($menus as $menu)
       <li>

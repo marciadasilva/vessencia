@@ -22,7 +22,7 @@ class SiteController extends Controller
 
   public function menu(Category $category){
     $menus = Menu::where('category_id', '=', $category->id)->latest()->get();
-    return view('menus', compact('menus'));
+    return view('menus', compact(['menus', 'category']));
   }
 
   public function contact(){

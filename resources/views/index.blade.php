@@ -53,7 +53,7 @@
                     </li>
                   </a>
                 @endforeach
-              </ul>
+      </ul>
   </section>
 
     <!-- Section C -->
@@ -71,14 +71,14 @@
               </div>
 
               <div class="slide">
-                <img src="{{asset('img/restaurante.jpg')}}" alt="">
+                <img src="{{asset('img/consultoria.jpg')}}" alt="">
                 <div class="slide-content">
                     <a href="#" role="button">Veja Mais</a>
                 </div>
               </div>
 
               <div class="slide">
-                <img src="{{asset('img/restaurante.jpg')}}" alt="">
+                <img src="{{asset('img/workshop-carne-e-molho.jpg')}}" alt="">
                 <div class="slide-content">
                     <a href="#" role="button">Agente uma Visita</a>
                 </div>
@@ -93,7 +93,9 @@
     <section id="section-d" class="grid">
       <div class="content-wrap">
         <h4>Ristretto Grãos e Gastronomia</h4>
-        <a href="https://www.facebook.com/ristrettograosegastronomia/" target="_blank"><img src="img/ristretto.jpg" alt="ristretto"></a>
+        <a href="https://www.facebook.com/ristrettograosegastronomia/" target="_blank">
+          <img src="img/ristretto.jpg" alt="ristretto">
+        </a>
       </div>
     </section>
 
@@ -102,14 +104,26 @@
       <div class="box">
         <div> <h2 class="content-title">Contate-nos</h2> </div>
         <div id="two-col">
-          <p><i class="fa fa-whatsapp" aria-hidden="true"></i> (55) 9 9955-9990</p>
-          <p><a href="https://www.facebook.com/vessencia/" target="_blank">
-              <i class="fa fa-facebook-official" aria-hidden="true"></i> facebook.com/vessencia/</a></p>
-          <p><a href="/contact"<i class="fa fa-envelope-o" aria-hidden="true"></i> vessencia@outlook.com</a></p>
+          <p>
+            <i class="fa fa-whatsapp" aria-hidden="true"></i> (55) 9 9955-9990
+          </p>
+
+          <p> <a href="https://www.facebook.com/vessencia/" target="_blank">
+                <i class="fa fa-facebook-official" aria-hidden="true"></i> facebook.com/vessencia/
+              </a>
+          </p>
+
+          <p> <a href="/contact">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i> vessencia@outlook.com
+              </a>
+          </p>
+
           <p>Aberto de segunda à sabado</p>
+
           <p>Horário de Atendimento: 08:00 às 18:00</p>
         </div>
       </div>
+
       <div class="box">
         <div id="center-col">
           <button id="modalBtn"><h2 class="content-title">Sobre a nossa Empresa</h2>

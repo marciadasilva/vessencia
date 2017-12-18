@@ -98,17 +98,45 @@ header{
 #cardapios{
   background-color: $dark_gray;
   color: $dark_gray;
-  padding: 2em 1em 1em;
+  padding-bottom: 0.5em;
+  //padding: 2em 1em 1em;
+
+  header{
+    background: $dark_red;
+    padding: 1em;
+    font-size: 1.5em;
+    text-transform: uppercase;
+  }
 
   ul {
     list-style: none;
-    margin: 0;
+    margin: 0.5em;
     padding: 0;
   }
 
   li {
     background: #fff;
     color: $dark_gray;
+    margin-bottom: 0.5em;
+  }
+
+  .cards{
+    margin-bottom: 1em;
+    height: 75vh;
+
+    img{
+      height: 45vh;
+      background-size: cover;
+    }
+
+    .cards-content {
+      height: 100vh;
+      padding: 1.5em;
+
+      p{
+        padding: 0.5em 0;
+      }
+    }
   }
 }
 
@@ -171,10 +199,26 @@ header{
     background: #fff;
     color: $dark_gray;
   }
-}
 
-.cards-content {
-  padding: 1.5em;
+  .cards{
+    margin-bottom: 1em;
+    height: 75vh;
+
+    img{
+      height: 45vh;
+      background-size: cover;
+    }
+
+    .cards-content {
+      height: 100vh;
+      padding: 1.5em;
+
+      p{
+        padding: 0.5em 0;
+      }
+    }
+  }
+
 }
 
 /* Section C */
@@ -182,14 +226,15 @@ header{
 #section-c {
   background: #eaeaea;
   color: $dark_gray;
-  padding: 2em;
+  //padding: 2em;
 
   .wrap{
     position: relative;
+    width: 100%;
 
     .slide-content {
       position: absolute;
-      top: 45%;
+      top: 80%; //45 centraliza
       left: 0;
       width: 100%;
 
@@ -619,7 +664,7 @@ header{
   /* @media Menus page */
   #cardapios {
 
-    padding: 2em 5em;
+    //padding: 2em 5em;
 
     ul{
       display: grid;
@@ -689,16 +734,23 @@ header{
 
   #section-c {
 
-    .wrap{
+    .content-wrap{
+      grid-column: 1/5;
+      .wrap{
 
-      .slide-content {
+        .slide-content {
 
-        a {
-          padding: 1em;
-          font-size: 1.5em;
-          font-weight: 600;
+          a {
+            padding: 1em;
+            font-size: 1.5em;
+            font-weight: 600;
+          }
         }
       }
+    }
+
+    img{
+      height: 95vh;
     }
   }
 
