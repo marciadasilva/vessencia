@@ -31,6 +31,11 @@ class SiteController extends Controller
 
   public function store(){
 
+      Session::put('name-contact', request('name'));
+      Session::put('email-contact', request('email'));
+      Session::put('subject-contact', request('subject'));
+      Session::put('message-contact', request('message'));
+
     $this->validate(request(), [
         'name' => 'required',
         'email' => 'required|email',
@@ -52,7 +57,6 @@ class SiteController extends Controller
     });
 
     Session::flash('success', 'Sua mensagem foi enviada com sucesso! Em breve estaremos lendo seu comentário.');
-
 
     return redirect()->route('contact');
   }
