@@ -27,7 +27,7 @@
       <ul class = "cardapio-4">
     @endif
     @foreach($menus as $menu)
-      <li>
+      <li class="menus-li">
         <div class="cards">
           <img src="{{asset($menu->image)}}" alt="card">
           <div class="cards-content">
