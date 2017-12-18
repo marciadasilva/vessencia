@@ -30,7 +30,7 @@
     </ul>
 </section>
 
-<section id="pagination">
+<section>
   {{ $menus->links() }}
 </section>
 @endsection

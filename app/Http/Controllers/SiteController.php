@@ -21,7 +21,7 @@ class SiteController extends Controller
   }
 
   public function menu(Category $category){
-    $menus = Menu::where('category_id', '=', $category->id)->latest()->get();
+    $menus = Menu::where('category_id', '=', $category->id)->latest()->paginate(2);
     return view('menus', compact(['menus', 'category']));
   }
 
