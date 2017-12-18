@@ -202,10 +202,10 @@ header{
 
   .cards{
     margin-bottom: 1em;
-    height: 75vh;
+    height: 60vh;
 
     img{
-      height: 45vh;
+      height: 30vh;
       background-size: cover;
     }
 
@@ -730,11 +730,10 @@ header{
 
   }
 
-  /* Section C */
-
   #section-c {
 
     .content-wrap{
+      padding: 1.5em;
       grid-column: 1/5;
       .wrap{
 
