@@ -66,21 +66,21 @@
               <div class="slide">
                 <img src="{{asset('img/restaurante.jpg')}}" alt="">
                 <div class="slide-content">
-                    <a href="#" role="button">Confira o Estoque</a>
+                    <a href="#" role="button">Restaurante</a>
                 </div>
               </div>
 
               <div class="slide">
                 <img src="{{asset('img/consultoria.jpg')}}" alt="">
                 <div class="slide-content">
-                    <a href="#" role="button">Veja Mais</a>
+                    <a href="#" role="button">Consultoria</a>
                 </div>
               </div>
 
               <div class="slide">
                 <img src="{{asset('img/workshop-carne-e-molho.jpg')}}" alt="">
                 <div class="slide-content">
-                    <a href="#" role="button">Agente uma Visita</a>
+                    <a href="#" role="button">Workshop</a>
                 </div>
               </div>
           </div>
