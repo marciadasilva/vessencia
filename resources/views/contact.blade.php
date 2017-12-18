@@ -6,13 +6,13 @@
 
   <section id="contact">
     <div id="contact-form">
-        <form action="#" method="post">
+        <form action="/contact" method="post">
+          {{csrf_field()}}
             <div class="group-custom">
             <div>
                 <h1>Entre em contato conosco</h1>
             </div>
                 <div>
-                    <!--<label for="name">Nome</label>-->
                     <input type="text" name="name" id="name" placeholder="Nome">
                 </div>
 
@@ -21,11 +21,7 @@
                 </div>
 
                 <div>
-                    <input type="text" name="phone" id="phone" placeholder="Telefone">
-                </div>
-
-                <div>
-                    <input type="text" id="city" name="city" placeholder="Cidade">
+                    <input type="text" name="subject" id="subject" placeholder="Assunto">
                 </div>
 
                 <div>
@@ -38,7 +34,7 @@
             </div>
         </form>
     </div>
-    
+
     <div id="contact-text">
         <div>
             <h1>Formas de Contato</h1>
@@ -58,13 +54,13 @@
 
         <p><span>Horário de Atendimento: </span>
         De segunda a sábado: 08:00 – 18:00</p>
-            
+
         <hr>
-        
+
         <a href="https://www.facebook.com/vessencia/" target="_blank">
             <i class="fa fa-facebook-official" aria-hidden="true"></i>
         </a>
-    </div> 
+    </div>
   </section>
 
 

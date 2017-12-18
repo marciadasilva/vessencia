@@ -62,7 +62,7 @@
         <div class="wrap">
           <div id="arrow-left" class="arrow"></div>
 
-          <div>              
+          <div>
               <div class="slide">
                 <img src="{{asset('img/restaurante.jpg')}}" alt="">
                 <div class="slide-content">
@@ -99,13 +99,13 @@
 
     <!-- Section E -->
     <section id="section-e" class="grid">
-      <div class="box">        
+      <div class="box">
         <div> <h2 class="content-title">Contate-nos</h2> </div>
         <div id="two-col">
           <p><i class="fa fa-whatsapp" aria-hidden="true"></i> (55) 9 9955-9990</p>
           <p><a href="https://www.facebook.com/vessencia/" target="_blank">
               <i class="fa fa-facebook-official" aria-hidden="true"></i> facebook.com/vessencia/</a></p>
-          <p><i class="fa fa-envelope-o" aria-hidden="true"></i> vessencia@outlook.com</p>
+          <p><a href="/contact"<i class="fa fa-envelope-o" aria-hidden="true"></i> vessencia@outlook.com</a></p>
           <p>Aberto de segunda à sabado</p>
           <p>Horário de Atendimento: 08:00 às 18:00</p>
         </div>

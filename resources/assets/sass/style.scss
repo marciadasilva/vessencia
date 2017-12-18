@@ -186,13 +186,13 @@ header{
 
   .wrap{
     position: relative;
- 
+
     .slide-content {
       position: absolute;
-      top: 45%; 
-      left: 0; 
-      width: 100%; 
-  
+      top: 45%;
+      left: 0;
+      width: 100%;
+
       a {
         text-shadow: 1px 1px .8em rgba(0,0,0,.5);
         text-decoration: none;
@@ -204,7 +204,7 @@ header{
         box-shadow: 1px 1px 1em rgba(255, 255, 255, .7);
         background-color: $dark_red;
         font-weight: 600;
-  
+
         &:hover{
           border: 1px solid white;
           background: rgba(255, 255, 255, .7);
@@ -212,17 +212,17 @@ header{
           text-shadow: none;
         }
       }
-  
+
       span {
         font-size: 1.5rem;
       }
-  
+
       h1{
         font-size: 3rem;
       }
-  
+
     }
-  
+
     .arrow{
       cursor: pointer;
       position: absolute;
@@ -232,21 +232,21 @@ header{
       height: 0;
       border-style: solid;
     }
-  
+
     #arrow-left{
       border-width: 15px 20px 15px 0;
       border-color: transparent #fff transparent transparent;
       left: 0;
       margin-left: 30px;
     }
-  
+
     #arrow-right{
       border-width: 15px 0px 15px 20px;
       border-color: transparent transparent transparent #fff;
       right: 0;
       margin-right: 30px;
     }
-  
+
   }
 
 }
@@ -364,6 +364,7 @@ header{
       h1{
         padding: 0;
         font-size: 2.4em;
+        margin-bottom: 1em;
       }
 
       .group-custom{
@@ -396,6 +397,7 @@ header{
           padding: 0.5em;
           font-size: 1.5em;
           outline: 0 none;
+          resize: none;
 
           &:focus{
             transition: 0.5s;
@@ -434,6 +436,7 @@ header{
     h1{
       padding: 0;
       font-size: 2.4em;
+      margin-bottom: 1em;
     }
 
     span{
@@ -541,12 +544,12 @@ header{
 
     span{
       font-size: 2em;
-      position: absolute; 
-      top: 45%; 
-      left: 0; 
-      width: 100%; 
+      position: absolute;
+      top: 45%;
+      left: 0;
+      width: 100%;
     }
-  
+
     &:hover{
       filter: grayscale(70%);
       transition: 1s;
@@ -666,7 +669,7 @@ header{
     #contact-text {
       grid-area: text;
     }
-    
+
   }
 
   /* SERVICES PAGE */
@@ -687,15 +690,15 @@ header{
   #section-c {
 
     .wrap{
-  
+
       .slide-content {
-    
+
         a {
           padding: 1em;
           font-size: 1.5em;
           font-weight: 600;
-        }    
-      } 
+        }
+      }
     }
   }
 
@@ -712,7 +715,7 @@ header{
           text-align: justify;
         }
       }
-    
+
   }
 
 }

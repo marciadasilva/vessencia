@@ -17,7 +17,8 @@ Route::get('/menus', 'SiteController@menus');
 
 Route::get('/menus/{category}', 'SiteController@menu');
 
-Route::get('/contact','SiteController@contact');
+Route::get('/contact','SiteController@contact')->name('contact');
+Route::post('/contact', 'SiteController@store');
 
 Route::get('/services', function(){
     return view('services');
