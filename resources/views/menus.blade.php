@@ -31,6 +31,6 @@
 </section>
 
 <section id="pagination">
-  Este é o pagination
+  {{ $menus->links() }}
 </section>
 @endsection

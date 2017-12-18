@@ -16,7 +16,7 @@ class SiteController extends Controller
   }
 
   public function menus(){
-    $menus = Menu::latest()->get();
+    $menus = Menu::latest()->paginate(2);
     return view('menus', compact('menus'));
   }
 
