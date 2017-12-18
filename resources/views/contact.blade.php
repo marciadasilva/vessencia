@@ -9,9 +9,9 @@
         <form action="/contact" method="post">
           {{csrf_field()}}
             <div class="group-custom">
-            <div>
-                <h1>Entre em contato conosco</h1>
-            </div>
+                <div>
+                    <h1>Entre em contato conosco</h1>
+                </div>
                 <div>
                     <input type="text" name="name" id="name" placeholder="Nome">
                 </div>
@@ -32,6 +32,8 @@
                     <button type="submit">Enviar</button>
                 </div>
             </div>
+
+            @include('layouts.errors')
         </form>
     </div>
 
