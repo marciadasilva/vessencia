@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Category;
 use App\Menu;
+use App\Service;
 use Mail;
 use Session;
 
@@ -12,7 +13,8 @@ class SiteController extends Controller
 {
   public function index(){
     $categories = Category::latest()->get();
-    return view('index', compact('categories'));
+    $services = Service::latest()->get();
+    return view('index', compact(['categories', 'services']));
   }
 
   public function menus(){
@@ -60,4 +62,13 @@ class SiteController extends Controller
 
     return redirect()->route('contact');
   }
+
+  public function services(){
+      $services = Service::latest()->get();
+      return view('services', compact('services'));
+  }
+
+    public function service(Service $service){
+        return view('detail-service', compact('service'));
+    }
 }

@@ -21,9 +21,9 @@ Route::get('/contact','SiteController@contact')->name('contact');
 
 Route::post('/contact', 'SiteController@store');
 
-Route::get('/services', function(){
-    return view('services');
-});
+Route::get('/services', 'SiteController@services');
+
+Route::get('/services/{service}', 'SiteController@service');
 
 // Login Routes
 
@@ -56,5 +56,11 @@ Route::post('/admin/menu/edit/{menu}', 'AdminController@storeUpdateMenu');
 Route::get('/admin/menu/delete/{menu}', 'AdminController@deleteMenu');
 
 Route::get('/admin/services', 'AdminController@showServices')->name('services');
+Route::get('/admin/service/create', 'AdminController@createService');
+Route::post('/admin/service/create', 'AdminController@storeService');
+Route::get('/admin/service/edit/{service}', 'AdminController@updateService');
+Route::post('/admin/service/edit/{service}', 'AdminController@storeUpdateService');
+Route::get('/admin/service/delete/{service}', 'AdminController@deleteService');
+
 Route::get('/admin/help', 'AdminController@help')->name('help');
 Route::get('/admin/company', 'AdminController@company')->name('company');

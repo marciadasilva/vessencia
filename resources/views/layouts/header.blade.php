@@ -1,5 +1,5 @@
 <header class="header-menus">
-  <a href="/"><img src="{{asset('img/logo.png')}}" alt="logo"></a>
+  <a href="/"><img class="img-header" src="{{asset('img/logo.png')}}" alt="logo"></a>
 
   <div class="navbar">
     @if(isset($admin))

@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Editar categoria - 5ª Essência')
+@section('title', 'Editar cardápio - 5ª Essência')
 
 @include('layouts.header')
 

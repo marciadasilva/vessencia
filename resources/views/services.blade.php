@@ -1,20 +1,20 @@
 @extends('layouts.master')
-@section('title', '5ª Essência - Menus')
+@section('title', 'Serviços - 5ª Essência')
 
 @section('content')
 @include('layouts.header')
 
 <section id="services">
-    <header> Teste </header>
-    <div>
-        <a href=""><div><img src="{{asset('img/restaurante.jpg')}}" alt=""><span>Serviço 1</span></div></a>
-    </div>
-    <div>
-        <a href=""><div><img src="{{asset('img/buffet.jpg')}}" alt=""><span>Serviço 2</span></div></a>
-    </div>
-    <div>
-        <a href=""><div><img src="{{asset('img/consultoria.jpg')}}" alt=""><span>Serviço 3</span></div></a>
-    </div>
-
+    <header> Serviços </header>
+    @foreach($services as $service)
+        <div>
+            <a href="/services/{{$service->id}}">
+                <div>
+                    <img src="{{asset($service->image)}}" alt="{{$service->name}}">
+                    <span>{{$service->name}}</span>
+                </div>
+            </a>
+        </div>
+    @endforeach
 </section>
 @endsection

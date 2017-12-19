@@ -63,26 +63,14 @@
           <div id="arrow-left" class="arrow"></div>
 
           <div>
-              <div class="slide">
-                <img src="{{asset('img/restaurante.jpg')}}" alt="">
-                <div class="slide-content">
-                    <a href="#" role="button">Restaurante</a>
-                </div>
-              </div>
-
-              <div class="slide">
-                <img src="{{asset('img/consultoria.jpg')}}" alt="">
-                <div class="slide-content">
-                    <a href="#" role="button">Consultoria</a>
-                </div>
-              </div>
-
-              <div class="slide">
-                <img src="{{asset('img/workshop-carne-e-molho.jpg')}}" alt="">
-                <div class="slide-content">
-                    <a href="#" role="button">Workshop</a>
-                </div>
-              </div>
+              @foreach($services as $service)
+                  <div class="slide">
+                      <img src="{{asset($service->image)}}" alt="">
+                      <div class="slide-content">
+                          <a href="/services" role="button">{{$service->name}}</a>
+                      </div>
+                  </div>
+              @endforeach
           </div>
           <div id="arrow-right" class="arrow"></div>
         </div>
