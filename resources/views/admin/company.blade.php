@@ -17,10 +17,10 @@
                   rows="6"
                   id="description"
                   name="description"
-                  @if($errors->first('message'))
-                      placeholder="{{$errors->first('message')}}"
+                  @if($errors->first('description'))
+                      placeholder="{{$errors->first('description')}}"
                   @else
-                      placeholder="{{Session::get('message-contact')}}"
+                      placeholder="{{Session::get('description-company')}}"
                   @endif>
           </textarea>
         </div>
@@ -30,12 +30,24 @@
                   rows="6"
                   id="about"
                   name="about"
-                  @if($errors->first('message'))
-                      placeholder="{{$errors->first('message')}}"
+                  @if($errors->first('about'))
+                      placeholder="{{$errors->first('about')}}"
                   @else
-                      placeholder="{{Session::get('message-contact')}}"
+                      placeholder="{{Session::get('about-company')}}"
                   @endif>
           </textarea>
+        </div>
+        <div>
+            <label for="phone">Telefone</label>
+            <input
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    @if($errors->first('phone'))
+                      value=" {{$errors->first('phone')}}"
+                    @else
+                      value=" {{Session::get('phone-company')}}">
+                    @endif>
         </div>
         <div>
             <label for="description">Descrição da Categoria</label>
@@ -73,19 +85,29 @@
               <textarea rows="6" id="about" name="about" placeholder="Sobre a empresa"></textarea>
           </div>
           <div>
-            <label for="description">WhatsApp</label>
-            <input type="text" name="description" id="description" required>
+            <label for="phone">telefone</label>
+            <input type="text" name="phone" id="phone" required>
           </div>
           <div>
-            <label for="image" id="file">
-              <i class="fa fa-upload" aria-hidden="true"></i> Imagem da Categoria</label>
-            <input type="file" name="image" id="image">
+            <label for="facebook">Facebook</label>
+            <input type="text" name="facebook" id="facebook" required>
           </div>
-
+          <div>
+            <label for="email">E-mail</label>
+            <input type="text" name="email" id="email" required>
+          </div>
+          <div>
+            <label for="atendimento">Horário de Atendimento</label>
+            <input type="text" name="atendimento" id="atendimento" required>
+          </div>
+          <div>
+            <label for="atendimento">Endereço</label>
+            <input type="text" name="atendimento" id="atendimento" required>
+          </div>
         @endif
 
         <div class="">
-          <button type="submit" name="button">Criar Categoria</button>
+          <button type="submit" name="button">Atualizar informações</button>
         </div>
 
 

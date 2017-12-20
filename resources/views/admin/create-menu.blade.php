@@ -93,7 +93,7 @@
           </div>
           <div>
             <label for="image" id="file">
-              <i class="fa fa-upload" aria-hidden="true"></i> Imagem da Categoria</label>
+              <i class="fa fa-upload" aria-hidden="true"></i> Imagem do Cardápio</label>
             <input type="file" name="image" id="image">
           </div>
         @endif
