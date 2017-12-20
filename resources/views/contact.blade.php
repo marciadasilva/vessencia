@@ -34,9 +34,9 @@
                            name="email"
                            id="email"
                            @if($errors->first('email'))
-                           value=" {{$errors->first('email')}}"
+                            value=" {{$errors->first('email')}}"
                            @else
-                           value=" {{Session::get('email-contact')}}"
+                            value=" {{Session::get('email-contact')}}"
                            @endif
                         >
                     </div>

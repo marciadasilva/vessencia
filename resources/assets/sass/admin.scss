@@ -96,7 +96,6 @@ $dark_red: #a72830;
 }
 
 .admin-create{
-  height: 75vh;
   display: grid;
   grid-template-columns: 1fr;
 
@@ -105,7 +104,7 @@ $dark_red: #a72830;
       background-color: #fff;
 
     form{
-      color: #69f0ae ;
+      color: $dark_gray;
       height: 100%;
       display: flex;
       align-items: center;
@@ -180,6 +179,23 @@ $dark_red: #a72830;
 
         input[type='file'] {
           display: none;
+        }
+
+        textarea{
+          background-color: transparent;
+          color: $dark_gray;
+          width: 100%;
+          border: 1px solid $dark_gray;
+          margin-bottom: 1em;
+          padding: 0.5em;
+          font-size: 1.5em;
+          outline: 0 none;
+          resize: none;
+
+          &:focus{
+            transition: 0.5s;
+            border: 1px solid #00e676;
+          }
         }
 
         button{
