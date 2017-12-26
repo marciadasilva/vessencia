@@ -11,71 +11,79 @@
       {{ csrf_field() }}
       <div class="form-group">
 
-        @if ($errors->any())
-
           <div>
             <label for="name">Nome da Categoria</label>
-            <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    @if($errors->first('name'))
-                    value=" {{$errors->first('name')}}"
-                    @else
-                    value=" {{Session::get('name-category-edit')}}"
-                    @endif
-                    required
+            <input type="text"
+                   name="name"
+                   id="name"
+                   required
+                   @if ($errors->any())
+                       @if (Session::get('name-category-edit'))
+                           value="{{Session::get('name-category-edit')}}"
+                       @else
+                           value="{{$category->name}}"
+                       @endif
+                   @else
+                       value="{{$category->name}}"
+                   @endif
             >
           </div>
+
+          @if ($errors->any())
+              <div>
+                  @if($errors->first('name'))
+                      <span>{{$errors->first('name')}}</span>
+                  @endif
+              </div>
+          @endif
 
           <div>
             <label for="description">Descrição da Categoria</label>
-            <input
-                    type="text"
-                    name="description"
-                    id="description"
-                    @if($errors->first('description'))
-                    value=" {{$errors->first('description')}}"
-                    @else
-                    value=" {{Session::get('description-category-edit')}}"
-                    @endif
-                    required
+            <input type="text"
+                   name="description"
+                   id="description"
+                   required
+                   @if ($errors->any())
+                       @if (Session::get('description-category-edit'))
+                            value="{{Session::get('description-category-edit')}}"
+                       @else
+                            value="{{$category->description}}"
+                       @endif
+                   @else
+                       value="{{$category->description}}"
+                   @endif
             >
           </div>
 
-          <div class="">
+          @if ($errors->any())
+              <div>
+                  @if($errors->first('description'))
+                      <span>{{$errors->first('description')}}</span>
+                  @endif
+              </div>
+          @endif
+
+          <div>
             <img src="{{asset($category->image)}}">
           </div>
 
-          <div class="">
+          <div>
             <label for="image">Mudar imagem</label>
             <input type="file" name="image" id="image">
           </div>
 
-        @else
-          <div class="">
-            <label for="name">Nome da Categoria</label>
-            <input type="text" name="name" id="name" value="{{$category->name}}" required>
-          </div>
-          <div class="">
-            <label for="description">Descrição da Categoria</label>
-            <input type="text" name="description" id="description" value="{{$category->description}}" required>
-          </div>
-          <div class="">
-            <img src="{{asset($category->image)}}">
-          </div>
-          <div class="">
-            <label for="image">Mudar imagem</label>
-            <input type="file" name="image" id="image">
-          </div>
-        @endif
+          @if ($errors->any())
+              <div>
+                  @if($errors->first('image'))
+                      <span>{{$errors->first('image')}}</span>
+                  @endif
+              </div>
+          @endif
 
-          <div class="">
+          <div>
             <button type="submit" name="button">Salvar</button>
           </div>
       </div>
     </form>
-
-
   </section>
 </main>

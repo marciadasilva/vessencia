@@ -334,8 +334,6 @@ $dark_red: #a72830;
             background-color: #ddd;
           }
         }
-
-
       }
 
     button{
@@ -372,6 +370,38 @@ $dark_red: #a72830;
   .admin-table{
     button{
       width: 50%;
+    }
+  }
+
+  .admin-create{
+
+    .card-create{
+      form{
+        .grid-company{
+          display: grid;
+          grid-template-areas: ". part1 part1 ."
+                               ". part2 part3 ."
+                               ". part4 part4 .";
+          grid-gap: 1em;
+        }
+
+        .part1{
+          grid-area: part1;
+        }
+
+        .part2{
+          grid-area: part2;
+        }
+
+        .part3{
+          grid-area: part3;
+          align-self: center;
+        }
+
+        .part4{
+          grid-area: part4;
+        }
+      }
     }
   }
 

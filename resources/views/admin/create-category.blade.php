@@ -11,73 +11,75 @@
       {{ csrf_field() }}
       <div class="form-group">
 
-        @if ($errors->any())
-
           <div>
             <label for="name">Nome da Categoria</label>
-            <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    @if($errors->first('name'))
-                      value=" {{$errors->first('name')}}"
-                    @else
-                      value=" {{Session::get('name-category')}}"
+
+            <input type="text"
+                   name="name"
+                   id="name"
+                   required
+                    @if ($errors->any())
+                        @if (Session::get('name-category'))
+                            value="{{Session::get('name-category')}}"
+                        @endif
                     @endif
-                    required
             >
           </div>
+
+          @if ($errors->any())
+              <div>
+                  @if($errors->first('name'))
+                      <span>{{$errors->first('name')}}</span>
+                  @endif
+              </div>
+          @endif
+
           <div>
             <label for="description">Descrição da Categoria</label>
-            <input
-                    type="text"
-                    name="description"
-                    id="description"
-                    @if($errors->first('description'))
-                      value=" {{$errors->first('description')}}"
-                    @else
-                      value=" {{Session::get('description-category')}}"
+            <input type="text"
+                   name="description"
+                   id="description"
+                   required
+                    @if ($errors->any())
+                        @if (Session::get('description-category'))
+                            value="{{Session::get('description-category')}}"
+                        @endif
                     @endif
-                    required
             >
           </div>
+
+          @if ($errors->any())
+              <div>
+                  @if($errors->first('description'))
+                      <span>{{$errors->first('description')}}</span>
+                  @endif
+              </div>
+          @endif
+
           <div>
             <label for="image" id="file">
-              <i class="fa fa-upload" aria-hidden="true"></i> Imagem da Categoria</label>
-            <input type="file" name="image" id="image">
+              <i class="fa fa-upload" aria-hidden="true"></i> Imagem da Categoria
+            </label>
+            <input type="file"
+                   name="image"
+                   id="image"
+            >
           </div>
 
-          <div>
-            <br>
-            @if($errors->first('image'))
-              {{$errors->first('image')}}
-            @endif
-          </div>
-
-        @else
-          {{-- QUANDO NÃO TEM NENHUM ERRO --}}
-          <div>
-            <label for="name">Nome da Categoria</label>
-            <input type="text" name="name" id="name" required>
-          </div>
-          <div>
-            <label for="description">Descrição da Categoria</label>
-            <input type="text" name="description" id="description" required>
-          </div>
-          <div>
-            <label for="image" id="file">
-              <i class="fa fa-upload" aria-hidden="true"></i> Imagem da Categoria</label>
-            <input type="file" name="image" id="image">
-          </div>
-
-        @endif
+          @if ($errors->any())
+              <div>
+                  @if($errors->first('image'))
+                      <span>{{$errors->first('image')}}</span>
+                  @endif
+              </div>
+          @endif
 
         <div class="">
           <button type="submit" name="button">Criar Categoria</button>
         </div>
 
-
       </div>
+
     </form>
 
 

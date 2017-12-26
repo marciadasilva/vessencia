@@ -9,78 +9,96 @@
         <form action="/contact" method="post">
           {{csrf_field()}}
             <div class="group-custom">
+
                 <div>
                     <h1>Entre em contato conosco</h1>
                 </div>
 
+                <div>
+                    <input type="text"
+                           name="name"
+                           id="name"
+                           placeholder="Nome"
+                           required
+                            @if ($errors->any())
+                                @if (Session::get('name-contact'))
+                                    value="{{Session::get('name-contact')}}"
+                                @endif
+                            @endif
+                    >
+                </div>
 
                 @if ($errors->any())
                     <div>
-                        <input
-                           type="text"
-                           name="name"
-                           id="name"
-                           @if($errors->first('name'))
-                            value=" {{$errors->first('name')}}"
-                           @else
-                            value=" {{Session::get('name-contact')}}"
-                           @endif
-                        >
+                        @if($errors->first('name'))
+                            <span>{{$errors->first('name')}}</span>
+                        @endif
                     </div>
+                @endif
 
-                    <div>
-                        <input
-                           type="email"
+                <div>
+                    <input type="email"
                            name="email"
                            id="email"
-                           @if($errors->first('email'))
-                            value=" {{$errors->first('email')}}"
-                           @else
-                            value=" {{Session::get('email-contact')}}"
-                           @endif
-                        >
-                    </div>
+                           placeholder="E-mail"
+                           required
+                            @if ($errors->any())
+                                @if (Session::get('email-contact'))
+                                    value="{{Session::get('email-contact')}}"
+                                @endif
+                            @endif
+                    >
+                </div>
 
+                @if ($errors->any())
                     <div>
-                        <input
-                           type="text"
+                        @if($errors->first('email'))
+                            <span>{{$errors->first('email')}}</span>
+                        @endif
+                    </div>
+                @endif
+
+                <div>
+                    <input type="text"
                            name="subject"
                            id="subject"
-                           @if($errors->first('subject'))
-                            value=" {{$errors->first('subject')}}"
-                           @else
-                            value=" {{Session::get('subject-contact')}}"
-                           @endif
-                        >
-                    </div>
+                           placeholder="Assunto"
+                           required
+                            @if ($errors->any())
+                                @if (Session::get('subject-contact'))
+                                    value="{{Session::get('subject-contact')}}"
+                                @endif
+                            @endif
+                    >
+                </div>
 
+                @if ($errors->any())
                     <div>
-                        <textarea
-                                rows="6"
-                                id="message"
-                                name="message"
-                                @if($errors->first('message'))
-                                    placeholder="{{$errors->first('message')}}"
-                                @else
-                                    placeholder="{{Session::get('message-contact')}}"
-                                @endif></textarea>
+                        @if($errors->first('subject'))
+                            <span>{{$errors->first('subject')}}</span>
+                        @endif
                     </div>
-                @else
-                    {{-- QUANDO NÃO TEM ERROS VEM PARA ESTA PARTE --}}
-                    <div>
-                        <input type="text" name="name" id="name" placeholder="Nome">
-                    </div>
+                @endif
 
-                    <div>
-                        <input type="email" name="email" id="email" placeholder="E-mail">
-                    </div>
+                <div>
+                    <textarea rows="6"
+                              id="message"
+                              name="message"
+                              placeholder="Sua mensagem">
 
-                    <div>
-                        <input type="text" name="subject" id="subject" placeholder="Assunto">
-                    </div>
+                            @if ($errors->any())
+                                @if (Session::get('message-contact'))
+                                    {{Session::get('message-contact')}}
+                                @endif
+                            @endif
+                    </textarea>
+                </div>
 
+                @if ($errors->any())
                     <div>
-                        <textarea rows="6" id="message" name="message" placeholder="Sua mensagem"></textarea>
+                        @if($errors->first('message'))
+                            <span>{{$errors->first('message')}}</span>
+                        @endif
                     </div>
                 @endif
 
