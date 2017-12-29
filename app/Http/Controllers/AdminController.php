@@ -28,6 +28,13 @@ class AdminController extends Controller
       return view('admin.category', compact(['admin', 'categories']));
     }
 
+    public function showCategoriesIgor(){
+      $categories = Category::latest()->get();
+
+      $admin = true;
+      return view('admin.category-igor', compact(['admin', 'categories']));
+    }
+
     public function createCategory(){
       $admin = true;
       return view('admin.create-category', compact('admin'));
@@ -124,6 +131,17 @@ class AdminController extends Controller
       //   ->select('categories.name')->get();
 
       return view('admin.menu', compact(['admin', 'menus']));
+    }
+
+    public function showMenuIgor(){
+      $menus = Menu::latest()->get();
+      $admin = true;
+
+      // $categoryType = DB::table('categories')
+      //   ->leftjoin('menus', 'categories.id', '=', 'menus.category_id')
+      //   ->select('categories.name')->get();
+
+      return view('admin.menu-igor', compact(['admin', 'menus']));
     }
 
     public function createMenu(){

@@ -5,7 +5,7 @@
 @include('layouts.header')
 
 <main class="admin-table">
-
+  
   <section>
     <button type="button" name="button"><a href="/admin/category/create">Nova Categoria</a></button>
     <table align="center">
