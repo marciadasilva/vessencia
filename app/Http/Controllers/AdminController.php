@@ -7,6 +7,7 @@ use App\Category;
 use App\Menu;
 use App\Service;
 use Session;
+use Alert;
 use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
@@ -251,6 +252,12 @@ class AdminController extends Controller
         return view('admin.service', compact(['admin', 'services']));
     }
 
+    public function showServicesIgor(){
+        $services = Service::latest()->get();
+        $admin = true;
+        return view('admin.service-igor', compact(['admin', 'services']));
+    }
+
     public function createService(){
         $admin = true;
         $services = Service::latest()->get();
@@ -333,8 +340,8 @@ class AdminController extends Controller
     }
 
     public function deleteService(Service $service){
+        //Alert::success('Serviço removido com sucesso!','Sucesso')->persistent('Close');
         Service::find($service->id)->delete();
-
         return redirect()->route('services');
     }
 

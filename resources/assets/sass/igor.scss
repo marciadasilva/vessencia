@@ -17,7 +17,8 @@ $dark_red: #a72830;
     font-weight: 900;
     font-size: 10px;
     color: $dark_gray;
-
+    padding-left: 3em;
+    padding-right: 3em;
 
   .show-card {
     display: grid;
@@ -43,7 +44,9 @@ $dark_red: #a72830;
 
       .card_img {
         grid-area: image;
-        width: 100%;
+        //width: 100%;
+        height: 150px;
+        width: 200px;
       }
 
       .card_description{
@@ -95,6 +98,16 @@ $dark_red: #a72830;
     }
   }
 
+}
+
+// navbar-admin
+.item-checked{
+  //background: $dark_red;
+  padding-bottom: 0.5em !important;
+  border-bottom: 5px solid $dark_red;
+  //color: white !important;
+  transition: 0.2s;
+  //border-radius: 5px;
 }
 
 // Create

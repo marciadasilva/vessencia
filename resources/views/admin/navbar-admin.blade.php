@@ -1,4 +1,4 @@
-  <nav class="navbar">
+  <nav class="navbar navbar-admin">
     <span class="open-slide">
       <a href="#" onclick="openSlideMenu()">
         <svg width="30" height="30">
@@ -46,5 +46,4 @@
     document.getElementById('side-menu').style.width = '0';
     document.getElementById('main').style.marginLeft = '0';
   }
-
   </script>

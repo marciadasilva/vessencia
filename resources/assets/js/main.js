@@ -1,3 +1,24 @@
+window.onload = function () {
+
+    const items = Array.from(document.querySelectorAll('.navbar-admin .navbar-nav li a'));
+
+    var url_atual = window.location.href;
+
+    if (url_atual.search("category") != -1){
+        items[1].setAttribute('class', 'item-checked')
+    } else if (url_atual.search("menu") != -1){
+        items[2].setAttribute('class', 'item-checked')
+    } else if (url_atual.search("services") != -1){
+        items[3].setAttribute('class', 'item-checked')
+    } else if (url_atual.search("company") != -1){
+        items[4].setAttribute('class', 'item-checked')
+    } else if (url_atual.search("help") != -1){
+        items[5].setAttribute('class', 'item-checked')
+    } else{
+        items[0].setAttribute('class', 'item-checked')
+    }
+};
+
 //Get modal element
 var modal = document.getElementsByClassName('simpleModal')[0];
 //Get open modal button
@@ -16,26 +37,26 @@ window.addEventListener('click', clickOutside);
 
 //function to open modal
 function openModal(){
-  modal.style.display = 'block';
+    modal.style.display = 'block';
 }
 
 //function to close modal
 function closeModal(){
-  modal.style.display = 'none';
+    modal.style.display = 'none';
 }
 
 //function to close modal if outside clickOutside
 function clickOutside(e){
-  if(e.target == modal){
-      modal.style.display = 'none';
-  }
+    if(e.target == modal){
+        modal.style.display = 'none';
+    }
 }
 
 // Slider
 var sliderImages = document.querySelectorAll(".slide"),
-arrowLeft = document.querySelector("#arrow-left"),
-arrowRight = document.querySelector("#arrow-right"),
-current = 0;
+    arrowLeft = document.querySelector("#arrow-left"),
+    arrowRight = document.querySelector("#arrow-right"),
+    current = 0;
 
 // Clear all images
 function reset() {

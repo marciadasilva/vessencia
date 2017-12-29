@@ -59,6 +59,7 @@ Route::post('/admin/menu/edit/{menu}', 'AdminController@storeUpdateMenu');
 Route::get('/admin/menu/delete/{menu}', 'AdminController@deleteMenu');
 
 Route::get('/admin/services', 'AdminController@showServices')->name('services');
+Route::get('/admin/servicesIgor', 'AdminController@showServicesIgor');
 Route::get('/admin/service/create', 'AdminController@createService');
 Route::post('/admin/service/create', 'AdminController@storeService');
 Route::get('/admin/service/edit/{service}', 'AdminController@updateService');

@@ -9,13 +9,15 @@
   <link rel="stylesheet" href="{{ asset('css/app.css')}}" type="text/css">
   <title>@yield('title')</title>
 </head>
-<body>
+  <body>
 
-  @yield('content')
+    @yield('content')
 
-  @include('layouts.footer')
+    @include('layouts.footer')
 
-  <script src="{{ asset('js/app.js')}}"></script>
+    <script src="{{ asset('js/app.js')}}"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-</body>
+    @include('sweet::alert')
+  </body>
 </html>
