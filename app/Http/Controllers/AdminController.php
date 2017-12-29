@@ -40,6 +40,11 @@ class AdminController extends Controller
       return view('admin.create-category', compact('admin'));
     }
 
+    public function createCategoryIgor(){
+        $admin = true;
+        return view('admin.create-category-igor', compact('admin'));
+    }
+
     public function storeCategory(){
 
         Session::put('name-category', request('name'));

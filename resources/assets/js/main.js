@@ -81,3 +81,21 @@ arrowRight.addEventListener("click", function() {
 });
 
 startSlide();
+
+
+// Show image on select file
+
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            const panel = document.getElementById('file-selected');
+            panel.setAttribute('src', e.target.result);
+            panel.setAttribute('width',150);
+            panel.setAttribute('height', 200);
+        };
+        document.getElementById('file-selected').removeAttribute('style');
+        reader.readAsDataURL(input.files[0]);
+    }
+}
