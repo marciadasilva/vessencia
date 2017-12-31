@@ -23,7 +23,7 @@ class AdminController extends Controller
 
     //Controllers Categories
     public function showCategories(){
-      $categories = Category::latest()->paginate(2);
+      $categories = Category::latest()->paginate(3);
 
       $admin = true;
       return view('admin.category', compact(['admin', 'categories']));
@@ -122,7 +122,7 @@ class AdminController extends Controller
 
     //Controllers Menu
     public function showMenu(){
-      $menus = Menu::latest()->get();
+      $menus = Menu::latest()->paginate(3);
       $admin = true;
 
       // $categoryType = DB::table('categories')
@@ -333,7 +333,6 @@ class AdminController extends Controller
     }
 
     public function deleteService(Service $service){
-        //Alert::success('Serviço removido com sucesso!','Sucesso')->persistent('Close');
         Service::find($service->id)->delete();
         return redirect()->route('services');
     }

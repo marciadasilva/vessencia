@@ -4,38 +4,57 @@
 
 @include('layouts.header')
 
-<main class="admin-table">
+<main class="all-cards">
 
-  <section>
-    <button type="button" name="button"><a href="/admin/service/create">Novo Serviço</a></button>
-    <table align="center">
-      <thead>
-      <tr>
-        <th>Título</th>
-        <th><i class="fa fa-camera" aria-hidden="true"></i></th>
-        <th><i class="fa fa-cogs" aria-hidden="true"></i></th>
-      </tr>
-      </thead>
+  <button type="button" name="button">
+    <a href="/admin/service/create">Novo Serviço</a>
+  </button>
 
-      <tbody>
-      @foreach($services as $service)
-        <tr>
-          <td style="width:25%;">{{$service->name}}</td>
-          <td style="width:50%;"><img  src="{{asset($service->image)}}" alt="{{$service->name}}"/></td>
-          <td style="width:25%;">
-            <a href="/admin/service/edit/{{$service->id}}">
-              <i class="fa fa-pencil"></i>
-            </a>
-            <a onclick="return confirm('Você tem certeza que quer deletar este serviço?');"
-               href="/admin/service/delete/{{$service->id}}">
-              <i class="fa fa-trash-o"></i>
-            </a>
-          </td>
-        </tr>
-      @endforeach
+  <div class="show-card">
+    @foreach($services as $service)
+      <div class="card-items">
+        <img class="card_img" src="{{asset($service->image)}}" alt="{{$service->name}}">
+        <div class="card_description">
+          <h2>{{$service->name}}</h2>
+          <p>{{$service->description}}</p>
+        </div>
 
-      </tbody>
-    </table>
+        <div class="card_buttons">
+          <a href="/admin/service/edit/{{$service->id}}">
+            <i class="fa fa-pencil"></i>
+          </a>
 
-  </section>
+          {{--<a onclick="return confirm('Você tem certeza que quer deletar este serviçoa?');"--}}
+          <a onclick="deleteItem({{$service->id}})">
+            <i class="fa fa-trash-o"></i>
+          </a>
+        </div>
+
+        {{--href="/admin/service/delete/{{$service->id}}" --}}
+      </div>
+    @endforeach
+  </div>
+
+
+  <script>
+      function deleteItem(id) {
+          swal({
+              title: 'Você tem certeza?',
+              text: "Não será possível reverter a remoção!",
+              icon: 'warning',
+              buttons: ["Cancelar", "Remover"]
+          })
+              .then((willDelete) => {
+                  if (willDelete) {
+                      swal("O serviço foi removido!", {
+                          icon: "success",
+                          timer: 5000
+                      });
+                      window.location.href = "service/delete/"+id;
+                  } else {
+                      swal("O serviço não foi removido!");
+                  }
+              })
+      }
+  </script>
 </main>

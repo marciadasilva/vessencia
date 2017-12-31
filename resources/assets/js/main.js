@@ -8,7 +8,7 @@ window.onload = function () {
         items[1].setAttribute('class', 'item-checked')
     } else if (url_atual.search("menu") != -1){
         items[2].setAttribute('class', 'item-checked')
-    } else if (url_atual.search("services") != -1){
+    } else if (url_atual.search("service") != -1){
         items[3].setAttribute('class', 'item-checked')
     } else if (url_atual.search("company") != -1){
         items[4].setAttribute('class', 'item-checked')
