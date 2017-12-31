@@ -4,38 +4,55 @@
 
 @include('layouts.header')
 
-<main class="admin-table">
-  
-  <section>
-    <button type="button" name="button"><a href="/admin/category/create">Nova Categoria</a></button>
-    <table align="center">
-      <thead>
-        <tr>
-          <th>Título</th>
-          <th><i class="fa fa-camera" aria-hidden="true"></i></th>
-            <th><i class="fa fa-cogs" aria-hidden="true"></i></th>
-        </tr>
-      </thead>
+<main class="all-cards">
 
-      <tbody>
-      @foreach($categories as $category)
-      <tr>
-        <td style="width:25%;">{{$category->name}}</td>
-        <td style="width:50%;"><img  src="{{asset($category->image)}}" alt="{{$category->name}}"/></td>
-        <td style="width:25%;">
-            <a href="/admin/category/edit/{{$category->id}}">
-              <i class="fa fa-pencil"></i>
-            </a>
-            <a onclick="return confirm('Você tem certeza que quer deletar esta categoria?');"
-               href="/admin/category/delete/{{$category->id}}">
-              <i class="fa fa-trash-o"></i>
-            </a>
-        </td>
-      </tr>
-      @endforeach
+  <button type="button" name="button"
+    onclick="window.location.href='/admin/category/create'">
+      Nova Categoria
+  </button>
 
-      </tbody>
-    </table>
+  <div class="show-card">
+    @foreach($categories as $category)
+      <div class="card-items">
+        <img class="card_img" src="{{asset($category->image)}}" alt="{{$category->name}}">
+        <div class="card_description">
+          <h2>{{$category->name}}</h2>
+          <p>{{$category->description}}</p>
+        </div>
 
-  </section>
+        <div class="card_buttons">
+          <a href="/admin/category/edit/{{$category->id}}">
+            <i class="fa fa-pencil"></i>
+          </a>
+
+          <a onclick="deleteItem({{$category->id}})">
+            <i class="fa fa-trash-o"></i>
+          </a>
+        </div>
+      </div>
+    @endforeach
+  </div>
+
+  <div>
+    {{$categories->links()}}
+  </div>
+
+  <script>
+        function deleteItem(id){
+          swal({
+            title:'Tem certeza que deseja excluir?',
+            text:'Não será possivel reverter a exclusão!',
+            icon:'warning',
+            buttons:["Cancelar", "Excluir"]
+          }).then((willDelete)=>{
+            if(willDelete){
+              swal("A categoria será excluída.", {
+                icon:'success',
+                timer:10000
+              });
+              window.location.href="category/delete/"+id;
+            }
+          })
+        }
+  </script>
 </main>

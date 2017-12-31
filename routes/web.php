@@ -42,9 +42,7 @@ Route::get('/logout', 'LoginController@destroy');
 Route::get('/admin', 'AdminController@index')->name('admin');
 
 Route::get('/admin/category', 'AdminController@showCategories')->name('categories');
-Route::get('/admin/categoryIgor', 'AdminController@showCategoriesIgor'); ////////
 Route::get('/admin/category/create', 'AdminController@createCategory');
-Route::get('/admin/category/createIgor', 'AdminController@createCategoryIgor');
 Route::post('/admin/category/create', 'AdminController@storeCategory');
 Route::get('/admin/category/edit/{category}', 'AdminController@updateCategory');
 Route::post('/admin/category/edit/{category}', 'AdminController@storeUpdateCategory');

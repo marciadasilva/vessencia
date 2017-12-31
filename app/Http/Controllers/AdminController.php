@@ -23,27 +23,15 @@ class AdminController extends Controller
 
     //Controllers Categories
     public function showCategories(){
-      $categories = Category::latest()->get();
+      $categories = Category::latest()->paginate(2);
 
       $admin = true;
       return view('admin.category', compact(['admin', 'categories']));
     }
 
-    public function showCategoriesIgor(){
-      $categories = Category::latest()->get();
-
-      $admin = true;
-      return view('admin.category-igor', compact(['admin', 'categories']));
-    }
-
     public function createCategory(){
       $admin = true;
       return view('admin.create-category', compact('admin'));
-    }
-
-    public function createCategoryIgor(){
-        $admin = true;
-        return view('admin.create-category-igor', compact('admin'));
     }
 
     public function storeCategory(){
@@ -103,6 +91,8 @@ class AdminController extends Controller
           $nomeImagem = "image_".$num.".".$ex;
           $imagem->move($dir, $nomeImagem);
 
+          $imageToRemove = Category::where('id', $category->id)->first()->image;
+          unlink($imageToRemove);
           $dados['image'] = $dir . "/" . $nomeImagem;
       }else{
         $imagedb = Category::where('id', $category->id)->first()->image;
@@ -118,10 +108,13 @@ class AdminController extends Controller
         'user_id' => $dados['user_id']
       ]);
 
+      Alert::success('Categoria alterada com sucesso!', 'Sucesso')->persistent('Close');
       return redirect()->route('categories');
     }
 
     public function deleteCategory(Category $category){
+      $imageToRemove = Category::where('id', $category->id)->first()->image;
+      unlink($imageToRemove);
       Category::find($category->id)->delete();
 
       return redirect()->route('categories');

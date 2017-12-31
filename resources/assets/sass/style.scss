@@ -621,9 +621,11 @@ header{
 .pagination{
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 25em;
   color: #fff;
   background: $dark_gray;
+  border-radius: 0.75%;
+
   //background-image: url("https://www.transparenttextures.com/patterns/wavecut.png");
 
   li {
@@ -669,9 +671,11 @@ header{
     padding: 0 5em;
   }
 
-  .content-wrap, #section-b .cardapio-5 {
+  #section-b .cardapio-5 {
     grid-column: 1/5;
   }
+
+
 
   .box, #main-footer div {
     grid-column: span 2;
