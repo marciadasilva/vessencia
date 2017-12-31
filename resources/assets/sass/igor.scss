@@ -12,13 +12,13 @@ $dark_red: #a72830;
 	letter-spacing: -1px;
   /* border-box box model allows add padding and border to our
     elements without increasing their size */
-    box-sizing: border-box;
-    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
-    font-weight: 900;
-    font-size: 10px;
-    color: $dark_gray;
-    padding-left: 3em;
-    padding-right: 3em;
+  box-sizing: border-box;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
+  font-weight: 900;
+  font-size: 10px;
+  color: $dark_gray;
+  padding-left: 3em;
+  padding-right: 3em;
 
   .show-card {
     display: grid;
@@ -35,18 +35,19 @@ $dark_red: #a72830;
       font-size: 1.5em;
 
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       grid-template-areas:
-              "image description"
-              "buttons buttons";
+              "image"
+              "description"
+              "buttons";
       grid-gap: 1em;
       align-items: center;
 
       .card_img {
         grid-area: image;
-        //width: 100%;
+        width: 100%;
         height: 150px;
-        width: 200px;
+        //width: 200px;
       }
 
       .card_description{
@@ -264,6 +265,19 @@ $dark_red: #a72830;
   .all-cards{
     .show-card {
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      .card-items{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+                        "image description"
+                        "buttons buttons";
+
+        .card_img {
+          grid-area: image;
+          height: 150px;
+          width: 200px;
+        }
+      }
     }
   }
 

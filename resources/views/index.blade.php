@@ -27,7 +27,9 @@
     </section>
 
 
-  <section id="section-b" class="grid">
+  <section id="section-b" class="">
+    <h1>Especialidades do Chef</h1>
+
     @if(sizeof($categories) <= 3)
       <ul class = "cardapio-3">
         @elseif(sizeof($categories)== 4 || (sizeof($categories) % 4) == 0)
@@ -42,14 +44,14 @@
                 @foreach($categories as $category)
                   <a href="/menus/{{$category->id}}">
                     <li>
-                     <div class="cards">
-                      <img src="{{$category->image}}" alt="card">
-                      <div class="cards-content">
-                        <h3 class="cards-title">{{$category->name}}</h3>
-                        <hr>
-                        <p>{{$category->description}}</p>
+                      <div class="cards">
+                        <img src="{{$category->image}}" alt="card">
+                        <div class="cards-content">
+                          <h3 class="cards-title">{{$category->name}}</h3>
+                          <hr>
+                          <p>{{$category->description}}</p>
+                        </div>
                       </div>
-                     </div>
                     </li>
                   </a>
                 @endforeach
@@ -59,21 +61,18 @@
     <!-- Section C -->
     <section id="section-c" class="grid">
       <div class="content-wrap">
-        <div class="wrap">
-          <div id="arrow-left" class="arrow"></div>
-
-          <div>
-              @foreach($services as $service)
-                  <div class="slide">
-                      <img src="{{asset($service->image)}}" alt="">
-                      <div class="slide-content">
-                          <a href="/services" role="button">{{$service->name}}</a>
-                      </div>
-                  </div>
-              @endforeach
+        @foreach($services as $service)
+          <div class="card-service">
+            <div class="description-service">
+              <h1>{{$service->name}}</h1>
+              <P>{{$service->description}}</P>
+            </div>
+            <div class="image-service">
+                <a href="/services"><img src="{{asset($service->image)}}" alt=""></a>
+            </div>
           </div>
-          <div id="arrow-right" class="arrow"></div>
-        </div>
+
+        @endforeach
       </div>
     </section>
 
