@@ -51,8 +51,6 @@
                           timer: 5000
                       });
                       window.location.href = "service/delete/"+id;
-                  } else {
-                      swal("O serviço não foi removido!");
                   }
               })
       }

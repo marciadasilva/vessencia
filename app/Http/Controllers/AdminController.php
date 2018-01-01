@@ -212,6 +212,8 @@ class AdminController extends Controller
           $nomeImagem = "image_".$num.".".$ex;
           $imagem->move($dir, $nomeImagem);
 
+          $imageToRemove = Category::where('id', $menu->id)->first()->image;
+          unlink($imageToRemove);
           $dados['image'] = $dir . "/" . $nomeImagem;
       }else{
         $imagedb = Menu::where('id', $menu->id)->first()->image;
@@ -228,11 +230,14 @@ class AdminController extends Controller
         'user_id' => $dados['user_id']
       ]);
 
+        Alert::success('Cardápio alterado com sucesso!', 'Sucesso')->persistent('Close');
       return redirect()->route('menus');
     }
 
     public function deleteMenu(Menu $menu){
-      Menu::find($menu->id)->delete();
+        $imageToRemove = Category::where('id', $menu->id)->first()->image;
+        unlink($imageToRemove);
+        Menu::find($menu->id)->delete();
 
       return redirect()->route('menus');
     }
@@ -329,6 +334,7 @@ class AdminController extends Controller
             'user_id' => $dados['user_id']
         ]);
 
+        Alert::success('Categoria alterada com sucesso!', 'Sucesso')->persistent('Close');
         return redirect()->route('services');
     }
 

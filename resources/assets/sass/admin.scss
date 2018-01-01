@@ -74,6 +74,10 @@ $dark_red: #a72830;
         p{
           padding: 0;
         }
+
+        h2 {
+          text-transform: capitalize;
+        }
       }
 
       .card_buttons{
@@ -179,7 +183,7 @@ $dark_red: #a72830;
             position:absolute;
             top: 0;
             left: 0;
-            color: #383838;
+            color: $dark_gray;
             transition: .5s;
             pointer-events: none;
             font-size: 1.5em;
@@ -189,7 +193,7 @@ $dark_red: #a72830;
           input:valid ~ label{
             top: -1em;
             left: 0;
-            color: #a72830;
+            color: $dark_red;
             font-size: 1.5em;
             font-weight: bold;
           }
@@ -202,6 +206,26 @@ $dark_red: #a72830;
         a{
           text-decoration: none;
           color: #fff;
+        }
+
+        .select{
+          margin: 1em 0 4em 0;
+          font-size: 1.5em;
+
+          label{
+            padding: 0.5em;
+          }
+
+          select {
+            padding: 5px 8px;
+            border: 1px solid $dark_gray;
+            border-radius: 3px;
+            background: transparent;
+
+            &:focus {
+              outline: none;
+            }
+          }
         }
 
         #file {

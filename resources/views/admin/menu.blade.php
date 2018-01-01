@@ -6,10 +6,10 @@
 
 <main class="all-cards">
 
-
-  <button type="button" name="button">
-    <a href="/admin/menu/create">Novo Cardápio</a>
-  </button>
+    <button type="button" name="button"
+            onclick="window.location.href='/admin/menu/create'">
+                Novo Cardápio
+    </button>
 
   <div class="show-card">
     @foreach($menus as $menu)
