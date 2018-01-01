@@ -17,9 +17,9 @@
     <ul class="navbar-nav">
       <li><a href="/">Home</a></li>
       <li><a href="/menus">Cardápios</a>
-      <li><a id="modalBtn">Sobre</a></li>
       <li><a href="/services">Serviços</a></li>
       <li><a href="/contact">Contato</a></li>
+      <li><a id="modalBtn">Sobre</a></li>
     </ul>
   </nav>
 
@@ -27,7 +27,7 @@
     <a href="#" class="btn-close"
     onclick="closeSlideMenu()">&times;</a>
     <a href="/">Home</a>
-    <li><a href="/menus">Cardápios</a></li>
+    <a href="/menus">Cardápios</a>
     <a href="/services">Serviços</a>
     <a href="/contact">Contato</a>
   </div>

@@ -24,17 +24,19 @@
             <i class="fa fa-pencil"></i>
           </a>
 
-          {{--<a onclick="return confirm('Você tem certeza que quer deletar este serviçoa?');"--}}
           <a onclick="deleteItem({{$service->id}})">
             <i class="fa fa-trash-o"></i>
           </a>
         </div>
 
-        {{--href="/admin/service/delete/{{$service->id}}" --}}
+
       </div>
     @endforeach
   </div>
 
+  <div>
+    {{$services->links()}}
+  </div>
 
   <script>
       function deleteItem(id) {

@@ -21,7 +21,8 @@ class AdminController extends Controller
       return view('admin.index', compact('admin'));
     }
 
-    //Controllers Categories
+//    %%%%%%%%%%%%%%%% Controllers Categorias %%%%%%%%%%%%%%%%
+
     public function showCategories(){
       $categories = Category::latest()->paginate(3);
 
@@ -120,27 +121,12 @@ class AdminController extends Controller
       return redirect()->route('categories');
     }
 
-    //Controllers Menu
+//    %%%%%%%%%%%%%%%% Controllers Cardápios %%%%%%%%%%%%%%%%
+
     public function showMenu(){
       $menus = Menu::latest()->paginate(3);
       $admin = true;
-
-      // $categoryType = DB::table('categories')
-      //   ->leftjoin('menus', 'categories.id', '=', 'menus.category_id')
-      //   ->select('categories.name')->get();
-
       return view('admin.menu', compact(['admin', 'menus']));
-    }
-
-    public function showMenuIgor(){
-      $menus = Menu::latest()->get();
-      $admin = true;
-
-      // $categoryType = DB::table('categories')
-      //   ->leftjoin('menus', 'categories.id', '=', 'menus.category_id')
-      //   ->select('categories.name')->get();
-
-      return view('admin.menu-igor', compact(['admin', 'menus']));
     }
 
     public function createMenu(){
@@ -235,25 +221,19 @@ class AdminController extends Controller
     }
 
     public function deleteMenu(Menu $menu){
-        $imageToRemove = Category::where('id', $menu->id)->first()->image;
+        $imageToRemove = Menu::where('id', $menu->id)->first()->image;
         unlink($imageToRemove);
         Menu::find($menu->id)->delete();
 
       return redirect()->route('menus');
     }
 
-    //Controllers Services
+//    %%%%%%%%%%%%%%%% Controllers Services %%%%%%%%%%%%%%%%
 
     public function showServices(){
-        $services = Service::latest()->get();
+        $services = Service::latest()->paginate(3);
         $admin = true;
         return view('admin.service', compact(['admin', 'services']));
-    }
-
-    public function showServicesIgor(){
-        $services = Service::latest()->get();
-        $admin = true;
-        return view('admin.service-igor', compact(['admin', 'services']));
     }
 
     public function createService(){
@@ -325,6 +305,9 @@ class AdminController extends Controller
             $dados['image'] = $imagedb;
         }
 
+        $imageToRemove = Service::where('id', $service->id)->first()->image;
+        unlink($imageToRemove);
+
         $dados['user_id'] = auth()->user()->id;
 
         Service::where('id', $service->id)->update([
@@ -339,6 +322,8 @@ class AdminController extends Controller
     }
 
     public function deleteService(Service $service){
+        $imageToRemove = Service::where('id', $service->id)->first()->image;
+        unlink($imageToRemove);
         Service::find($service->id)->delete();
         return redirect()->route('services');
     }

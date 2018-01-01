@@ -235,7 +235,7 @@ header{
 
   .cards{
     margin-bottom: 1em;
-    height: 60vh;
+    height: 65vh;
 
     img{
       height: 30vh;
@@ -243,7 +243,7 @@ header{
     }
 
     .cards-content {
-      padding: 1.5em;
+      padding: 1em;
 
       p{
         padding: 0.5em 0;
@@ -260,7 +260,7 @@ header{
 /* Section C */
 
 #section-c {
-  padding: 1.5em;
+  padding: 1em;
 
   .card-service{
     display: grid;
@@ -268,6 +268,7 @@ header{
     color: $dark_gray;
     background: #fcfcfc;
     margin-bottom: 1em;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 
     p{
       padding: 0.5em;
@@ -275,6 +276,7 @@ header{
 
     h1{
       padding: 0.5em;
+      text-transform: capitalize;
     }
 
   }
@@ -659,6 +661,8 @@ header{
 
 /* Media Queries */
 @media (min-width: 700px) {
+  /* Index PAGE */
+
   .grid {
     display: grid;
     grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
@@ -685,8 +689,6 @@ header{
   #section-b .cardapio-5 {
     grid-column: 1/5;
   }
-
-
 
   .box, #main-footer div {
     grid-column: span 2;
@@ -731,25 +733,89 @@ header{
     grid-column: 1/5;
   }
 
-  /* Login page */
+  /* Section C = CATEGORIES */
 
-  #login-body{
-    background-image: url('../img/menu.jpeg');
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-     " . . . "
-     " . form . "
-     " . form . "
-     " . . . ";
+  #section-c {
 
-    #card-login{
-      background-color: rgba(0,0,0,0.7);
-      grid-area: form;
-      border-radius: 0.5em;
+    .content-wrap{
+      padding: 1.5em;
+      grid-column: 1/5;
+
+      .card-service{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+                "image description";
+        align-items: center;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+        height: 60vh;
+
+        .description-service{
+          grid-area: description;
+        }
+
+        .image-service{
+          grid-area: image;
+          height: 60vh;
+        }
+
+        img{
+          height: 100%;
+        }
+
+        &:hover{
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        }
+      }
+
+      .card-service:nth-child(odd){
+        grid-template-areas:
+                "description image";
+      }
+
+    }
+
+  }
+
+  /* Section E = CONTACT */
+  #section-e{
+
+      #two-col{
+        columns: 2;
+        padding-bottom: 1em;
+      }
+
+      #center-col{
+        p{
+          text-align: justify;
+        }
+      }
+
+  }
+
+  /* END INDEX */
+
+
+  /*  MODAL */
+
+  .modal-body{
+    .body-content{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 0.5em;
+
+      img{
+        height: 50vh;
+      }
+    }
+
+  }
+
+  /* SERVICES PAGE */
+
+  #services, #detail-service{
+    img{
+      height: 75vh;
     }
   }
 
@@ -775,87 +841,26 @@ header{
 
   }
 
-  /* SERVICES PAGE */
+  /* Login PAGE */
 
-  #services, #detail-service{
-  //  //display: grid;
-  //  //grid-template-columns: 1fr;
-  //  //justify-items: center;
-  //  //
-    img{
-     height: 75vh;
+  #login-body{
+    background-image: url('../img/menu.jpeg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+            " . . . "
+            " . form . "
+            " . form . "
+            " . . . ";
+
+    #card-login{
+      background-color: rgba(0,0,0,0.7);
+      grid-area: form;
+      border-radius: 0.5em;
     }
-  //
-  }
-
-  #section-c {
-
-    .content-wrap{
-      padding: 1.5em;
-      grid-column: 1/5;
-
-      .card-service{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-                "image description";
-        align-items: center;
-
-        .description-service{
-          grid-area: description;
-        }
-
-        .image-service{
-          grid-area: image;
-        }
-
-        &:hover{
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-        }
-      }
-
-      .card-service:nth-child(odd){
-        grid-template-areas:
-                "description image";
-      }
-
-    }
-
-    //img{
-    //  height: 95vh;
-    //}
-  }
-
-  /* Section E */
-  #section-e{
-
-      #two-col{
-        columns: 2;
-        padding-bottom: 1em;
-      }
-
-      #center-col{
-        p{
-          text-align: justify;
-        }
-      }
-
-  }
-
-
-  /*  MODAL */
-
-  .modal-body{
-    .body-content{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 0.5em;
-
-      img{
-        height: 50vh;
-      }
-    }
-
   }
 
 }

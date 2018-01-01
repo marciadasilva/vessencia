@@ -1,22 +1,36 @@
 window.onload = function () {
 
-    const items = Array.from(document.querySelectorAll('.navbar-admin .navbar-nav li a'));
+    const items = Array.from(document.querySelectorAll('.navbar .navbar-nav li a'));
 
     var url_atual = window.location.href;
 
-    if (url_atual.search("category") != -1){
-        items[1].setAttribute('class', 'item-checked')
-    } else if (url_atual.search("menu") != -1){
-        items[2].setAttribute('class', 'item-checked')
-    } else if (url_atual.search("service") != -1){
-        items[3].setAttribute('class', 'item-checked')
-    } else if (url_atual.search("company") != -1){
-        items[4].setAttribute('class', 'item-checked')
-    } else if (url_atual.search("help") != -1){
-        items[5].setAttribute('class', 'item-checked')
-    } else{
-        items[0].setAttribute('class', 'item-checked')
+    // ADMIN NAVBAR
+    if(items.length == 7){
+        if (url_atual.search("category") != -1){
+            items[1].setAttribute('class', 'item-checked')
+        } else if (url_atual.search("menu") != -1){
+            items[2].setAttribute('class', 'item-checked')
+        } else if (url_atual.search("service") != -1){
+            items[3].setAttribute('class', 'item-checked')
+        } else if (url_atual.search("company") != -1){
+            items[4].setAttribute('class', 'item-checked')
+        } else if (url_atual.search("help") != -1){
+            items[5].setAttribute('class', 'item-checked')
+        } else{
+            items[0].setAttribute('class', 'item-checked')
+        }
     }
+    // INDEX NAVBAR
+    else if (items.length == 5){
+        if (url_atual.search("menus") != -1){
+            items[1].setAttribute('class', 'item-checked')
+        } else if(url_atual.search("services") != -1){
+            items[2].setAttribute('class', 'item-checked')
+        } else if (url_atual.search("contact") != -1){
+            items[3].setAttribute('class', 'item-checked')
+        }
+    }
+
 };
 
 //Get modal element

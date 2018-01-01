@@ -49,7 +49,6 @@ Route::post('/admin/category/edit/{category}', 'AdminController@storeUpdateCateg
 Route::get('/admin/category/delete/{category}', 'AdminController@deleteCategory');
 
 Route::get('/admin/menu', 'AdminController@showMenu')->name('menus');
-Route::get('/admin/menuIgor', 'AdminController@showMenuIgor');
 Route::get('/admin/menu/create', 'AdminController@createMenu');
 Route::post('/admin/menu/create', 'AdminController@storeMenu');
 Route::get('/admin/menu/edit/{menu}', 'AdminController@updateMenu');
@@ -57,7 +56,6 @@ Route::post('/admin/menu/edit/{menu}', 'AdminController@storeUpdateMenu');
 Route::get('/admin/menu/delete/{menu}', 'AdminController@deleteMenu');
 
 Route::get('/admin/service', 'AdminController@showServices')->name('services');
-Route::get('/admin/servicesIgor', 'AdminController@showServicesIgor');
 Route::get('/admin/service/create', 'AdminController@createService');
 Route::post('/admin/service/create', 'AdminController@storeService');
 Route::get('/admin/service/edit/{service}', 'AdminController@updateService');

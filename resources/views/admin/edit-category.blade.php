@@ -53,9 +53,6 @@
                     @endif
                 </div>
 
-                <div >
-                  <img id="file-selected" src="{{asset($category->image)}}" alt="Imagem">
-                </div>
                 <div>
                     <label for="image" id="file">
                         <i class="fa fa-upload" aria-hidden="true"></i>
@@ -73,6 +70,10 @@
                             <span>Imagem não selecionada ou muito grande (max 2MB)</span>
                         </div>
                     @endif
+                </div>
+
+                <div >
+                    <img id="file-selected" src="{{asset($category->image)}}" alt="Imagem">
                 </div>
             </div>
 

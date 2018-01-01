@@ -1,4 +1,4 @@
-  <nav class="navbar navbar-admin">
+  <nav class="navbar">
     <span class="open-slide">
       <a href="#" onclick="openSlideMenu()">
         <svg width="30" height="30">

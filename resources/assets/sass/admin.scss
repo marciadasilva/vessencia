@@ -189,8 +189,8 @@ $dark_red: #a72830;
             font-size: 1.5em;
           }
 
-          input:focus ~ label,
-          input:valid ~ label{
+          input:focus ~ label, textarea:focus ~ label,
+          input:valid ~ label, textarea:valid ~ label{
             top: -1em;
             left: 0;
             color: $dark_red;
@@ -243,7 +243,7 @@ $dark_red: #a72830;
           }
         }
 
-        input{
+        input, textarea{
           background-color: transparent;
           color: $dark_gray;
           border: none;
@@ -260,6 +260,10 @@ $dark_red: #a72830;
           &:focus{
             border-bottom: 1px solid $dark_red;
           }
+        }
+
+        textarea{
+          resize: vertical;
         }
 
         input[type='file'] {
@@ -308,6 +312,11 @@ $dark_red: #a72830;
   }// fim caixa
 }
 
+.company-custom{
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
 @media (min-width: 700px) {
   #admin-page{
     .panel{
@@ -316,38 +325,51 @@ $dark_red: #a72830;
     }
   }
 
+  .all-cards{
+    .show-card {
+      //grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      .card-items{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+                        "image description"
+                        "buttons buttons";
 
-    .all-cards{
-      .show-card {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        .card-items{
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          grid-template-areas:
-                          "image description"
-                          "buttons buttons";
-
-          .card_img {
-            grid-area: image;
-            height: 150px;
-            width: 200px;
-          }
+        .card_img {
+          grid-area: image;
+          height: 150px;
+          width: 200px;
         }
       }
     }
+  }
 
-    .create-form{
-      .caixa{
-        form{
-          min-width: 75vh;
-          min-height: 60vh;
+  .create-form{
+    .caixa{
+      form{
+        min-width: 75vh;
+        min-height: 60vh;
 
-          button{
-            margin-top: 2em;
-            width: 75%;
-          }
+        button{
+          margin-top: 2em;
+          width: 75%;
         }
       }
     }
+  }
+
+  .company-custom{
+    .caixa{
+      .form-grupo{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 3em;
+      }
+      form{
+        min-width: 100vh;
+      }
+    }
+  }
 
 }
