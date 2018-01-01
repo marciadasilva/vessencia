@@ -4,41 +4,32 @@
 @section('content')
 @include('layouts.header')
 
-<section id="cardapios">
+<section class="all-cards bread-crumbs">
   <header>
 
     @if(isset($category))
         {{$category->name}}
       @else
-        Todas as Categorias
+        <a href="/">Home</a> / <a class="active" href="/menus">Cardápios</a>
     @endif
 
   </header>
+<div class="show-card">
+  @foreach($menus as $menu)
+    <div class="card-items">
+      <img class="card_img" src="{{asset($menu->image)}}" alt="{{$menu->name}}">
+      <div class="card_description">
+          <h2>{{$menu->name}}</h2>
+          <hr>
+          <p>{{$menu->description}}</p>
+          <p>{{$menu->category->name}}</p>
+      </div>
 
-    @if(sizeof($menus) <= 3)
-      <ul class = "cardapio-3">
-    @elseif(sizeof($menus)== 4 || (sizeof($menus) % 4) == 0)
-      <ul class = "cardapio-4">
-    @elseif(sizeof($menus)== 5 || (sizeof($menus) % 5) == 0)
-      <ul class = "cardapio-5">
-    @elseif((sizeof($menus) % 3) == 0)
-      <ul class = "cardapio-6">
-    @else
-      <ul class = "cardapio-4">
-    @endif
-    @foreach($menus as $menu)
-      <li class="menus-li">
-        <div class="cards">
-          <img src="{{asset($menu->image)}}" alt="card">
-          <div class="cards-content">
-            <h3 class="cards-title">{{$menu->name}}</h3>
-            <hr>
-            <p>{{$menu->description}}</p>
-          </div>
-        </div>
-      </li>
-    @endforeach
-    </ul>
+    </div>
+  @endforeach
+
+</div>
+
 </section>
 
 <section>

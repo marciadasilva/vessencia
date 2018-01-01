@@ -2,7 +2,6 @@ $dark_gray: #383838;
 $dark_red: #a72830;
 
 #admin-page{
-  height: 50%;
   background-image: url("../img/topography.svg"),
   linear-gradient(110deg, $dark_gray, $dark_red);
   min-height: calc(100vh - 100px);
@@ -103,6 +102,10 @@ $dark_red: #a72830;
       &:hover{
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
       }
+    }
+    .card-service:nth-child(odd){
+      grid-template-areas:
+              "description image";
     }
   }
 

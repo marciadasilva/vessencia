@@ -4,17 +4,27 @@
 @section('content')
 @include('layouts.header')
 
-<section id="services">
-    <header> Serviços </header>
+<section class="all-cards bread-crumbs">
+    <header>
+
+      @if(isset($service))
+          {{$service->name}}
+        @else
+          <a href="/">Home</a> / <a class="active" href="/services">Serviços</a>
+      @endif
+
+    </header>
     @foreach($services as $service)
-        <div>
-            <a href="/services/{{$service->id}}">
-                <div>
-                    <img src="{{asset($service->image)}}" alt="{{$service->name}}">
-                    <span>{{$service->name}}</span>
-                </div>
-            </a>
+      <div class="card-service">
+        <div class="description-service">
+          <h1>{{$service->name}}</h1>
+          <P>{{$service->description}}</P>
         </div>
+        <div class="image-service">
+            <a href="/services"><img src="{{asset($service->image)}}" alt=""></a>
+        </div>
+      </div>
+
     @endforeach
 </section>
 @endsection

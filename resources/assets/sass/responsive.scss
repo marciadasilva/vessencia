@@ -1,0 +1,240 @@
+/* Media Queries */
+@media (min-width: 700px) {
+  /* Index PAGE */
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
+  }
+
+  #showcase  .button{
+    margin: 22em 0 0 0;
+  }
+
+  #section-a .content-text {
+    columns: 2;
+    column-gap: 2em;
+
+    p {
+      padding-top: 0;
+    }
+  }
+
+  .content-wrap, #section-b ul {
+    grid-column: 2/4;
+    padding: 0 5em;
+  }
+
+  #section-b .cardapio-5 {
+    grid-column: 1/5;
+  }
+
+  .box, #main-footer div {
+    grid-column: span 2;
+  }
+
+  .cardapio-3{
+    display: flex;
+    justify-content: space-around;
+
+    a {
+      width: 23%;
+    }
+
+    .menus-li {
+        width: 23%;
+    }
+  }
+
+  .cardapio-4{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 1.5em;
+    grid-row-gap: 0.75em;
+
+  }
+
+  .cardapio-5{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 1em;
+    grid-row-gap: 0.75em;
+  }
+
+  .cardapio-6{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1.5em;
+    grid-row-gap: 0.75em;
+  }
+
+  #section-d div, #section-d img {
+    grid-column: 1/5;
+  }
+
+  /* Section C = CATEGORIES */
+
+  #section-c {
+
+    .content-wrap{
+      padding: 1.5em;
+      grid-column: 1/5;
+
+      .card-service{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+                "image description";
+        align-items: center;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+        height: 60vh;
+
+        .description-service{
+          grid-area: description;
+        }
+
+        .image-service{
+          grid-area: image;
+          height: 60vh;
+        }
+
+        img{
+          height: 100%;
+        }
+
+        &:hover{
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        }
+      }
+
+      .card-service:nth-child(odd){
+        grid-template-areas:
+                "description image";
+      }
+
+    }
+
+  }
+
+  /* Section E = CONTACT */
+  #section-e{
+
+      #two-col{
+        columns: 2;
+        padding-bottom: 1em;
+      }
+
+      #center-col{
+        p{
+          text-align: justify;
+        }
+      }
+
+  }
+
+  /* END INDEX */
+
+
+  /*  MODAL */
+
+  .modal-body{
+    .body-content{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 0.5em;
+
+      img{
+        height: 50vh;
+      }
+    }
+
+  }
+
+  /* SERVICES PAGE */
+
+  #services, #detail-service{
+    img{
+      height: 75vh;
+    }
+  }
+
+  /* CONTACT PAGE */
+  #contact {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr 5fr 1fr;
+    grid-template-areas:
+            " . . . . ."
+            " . form . text . "
+            " . form . text . "
+            " . . . . .";
+
+    padding: 0.5em;
+
+    #contact-form {
+      grid-area: form;
+    }
+
+    #contact-text {
+      grid-area: text;
+    }
+
+  }
+
+  /* Login PAGE */
+
+  #login-body{
+    background-image: url('../img/menu.jpeg');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+            " . . . "
+            " . form . "
+            " . form . "
+            " . . . ";
+
+    #card-login{
+      background-color: rgba(0,0,0,0.7);
+      grid-area: form;
+      border-radius: 0.5em;
+    }
+  }
+
+  /* BREAD CRUMBS*/
+  .bread-crumbs{
+    .card-service{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+              "image description";
+      align-items: center;
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+      height: 60vh;
+
+      .description-service{
+        grid-area: description;
+      }
+
+      .image-service{
+        grid-area: image;
+        height: 60vh;
+      }
+
+      img{
+        height: 100%;
+      }
+
+      &:hover{
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+      }
+    }
+
+    .card-service:nth-child(odd){
+      grid-template-areas:
+              "description image";
+    }
+  }
+
+}

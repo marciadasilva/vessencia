@@ -61,6 +61,7 @@
     <!-- Section C -->
     <section id="section-c" class="grid">
       <div class="content-wrap">
+        <h1>Contrate um dos serviços da 5ª Essência</h1>
         @foreach($services as $service)
           <div class="card-service">
             <div class="description-service">

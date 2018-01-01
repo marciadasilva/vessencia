@@ -96,49 +96,34 @@ header{
 }
 
 /*pagina de menus*/
-#cardapios{
-  background-color: $dark_gray;
-  color: $dark_gray;
-  padding-bottom: 0.5em;
-  //padding: 2em 1em 1em;
-
+.bread-crumbs{
+  padding: 0;
+  margin: 0;
   header{
     color: #fff;
-    background: $dark_red;
-    background-image: url("https://www.transparenttextures.com/patterns/wavecut.png");
-    padding: 1em;
+    letter-spacing: 1px;
+    padding: 1em 2em;
     font-size: 1.5em;
     text-transform: uppercase;
-  }
+    text-align: left;
+    word-spacing: 10px;
 
-  ul {
-    list-style: none;
-    margin: 0.5em;
-    padding: 0;
-  }
-
-  li {
-    background: #fff;
-    color: $dark_gray;
-    margin-bottom: 0.5em;
-  }
-
-  .cards{
-    margin-bottom: 1em;
-    height: 75vh;
-
-    img{
-      height: 45vh;
-      background-size: cover;
+    .active{
+      border-bottom: 1px solid #fff;
     }
 
-    .cards-content {
-      padding: 1.5em;
-
-      p{
-        padding: 0.5em 0;
-      }
+    a{
+      color: #fff;
+      text-decoration: none;
     }
+
+  }
+
+  .card-service{
+    color: #fff;
+    font-size: 2em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
   }
 }
 
@@ -261,6 +246,7 @@ header{
 
 #section-c {
   padding: 1em;
+  color: $dark_gray;
 
   .card-service{
     display: grid;
@@ -285,7 +271,6 @@ header{
   .card-service:last-child{
     margin-bottom: 0;
   }
-
 
 
 }
@@ -579,39 +564,6 @@ header{
 
 /* FIM MODAL*/
 
-/* SERVICES PAGE */
-
-#services, #detail-service{
-
-  header{
-    color: #fff;
-    background: $dark_red;
-    background-image: url("https://www.transparenttextures.com/patterns/wavecut.png");
-    padding: 1em;
-    font-size: 1.5em;
-    text-transform: uppercase;
-  }
-
-  a > div{
-    color: white;
-    padding: 1em;
-    position: relative;
-
-    span{
-      font-size: 2em;
-      position: absolute;
-      top: 45%;
-      left: 0;
-      width: 100%;
-    }
-
-    &:hover{
-      filter: grayscale(70%);
-      transition: 1s;
-    }
-  }
-}
-
 #detail-service{
   label{
     color: $dark_gray;
@@ -657,210 +609,4 @@ header{
     color: #fff;
     text-decoration: none;
   }
-}
-
-/* Media Queries */
-@media (min-width: 700px) {
-  /* Index PAGE */
-
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
-  }
-
-  #showcase  .button{
-    margin: 22em 0 0 0;
-  }
-
-  #section-a .content-text {
-    columns: 2;
-    column-gap: 2em;
-
-    p {
-      padding-top: 0;
-    }
-  }
-
-  .content-wrap, #section-b ul {
-    grid-column: 2/4;
-    padding: 0 5em;
-  }
-
-  #section-b .cardapio-5 {
-    grid-column: 1/5;
-  }
-
-  .box, #main-footer div {
-    grid-column: span 2;
-  }
-
-  .cardapio-3{
-    display: flex;
-    justify-content: space-around;
-
-    a {
-      width: 23%;
-    }
-
-    .menus-li {
-        width: 23%;
-    }
-  }
-
-  .cardapio-4{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column-gap: 1.5em;
-    grid-row-gap: 0.75em;
-
-  }
-
-  .cardapio-5{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-column-gap: 1em;
-    grid-row-gap: 0.75em;
-  }
-
-  .cardapio-6{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 1.5em;
-    grid-row-gap: 0.75em;
-  }
-
-  #section-d div, #section-d img {
-    grid-column: 1/5;
-  }
-
-  /* Section C = CATEGORIES */
-
-  #section-c {
-
-    .content-wrap{
-      padding: 1.5em;
-      grid-column: 1/5;
-
-      .card-service{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-                "image description";
-        align-items: center;
-        box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
-        height: 60vh;
-
-        .description-service{
-          grid-area: description;
-        }
-
-        .image-service{
-          grid-area: image;
-          height: 60vh;
-        }
-
-        img{
-          height: 100%;
-        }
-
-        &:hover{
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-        }
-      }
-
-      .card-service:nth-child(odd){
-        grid-template-areas:
-                "description image";
-      }
-
-    }
-
-  }
-
-  /* Section E = CONTACT */
-  #section-e{
-
-      #two-col{
-        columns: 2;
-        padding-bottom: 1em;
-      }
-
-      #center-col{
-        p{
-          text-align: justify;
-        }
-      }
-
-  }
-
-  /* END INDEX */
-
-
-  /*  MODAL */
-
-  .modal-body{
-    .body-content{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 0.5em;
-
-      img{
-        height: 50vh;
-      }
-    }
-
-  }
-
-  /* SERVICES PAGE */
-
-  #services, #detail-service{
-    img{
-      height: 75vh;
-    }
-  }
-
-  /* CONTACT PAGE */
-  #contact {
-    display: grid;
-    grid-template-columns: 1fr 5fr 1fr 5fr 1fr;
-    grid-template-areas:
-            " . . . . ."
-            " . form . text . "
-            " . form . text . "
-            " . . . . .";
-
-    padding: 0.5em;
-
-    #contact-form {
-      grid-area: form;
-    }
-
-    #contact-text {
-      grid-area: text;
-    }
-
-  }
-
-  /* Login PAGE */
-
-  #login-body{
-    background-image: url('../img/menu.jpeg');
-    background-position: center;
-    background-size: cover;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-            " . . . "
-            " . form . "
-            " . form . "
-            " . . . ";
-
-    #card-login{
-      background-color: rgba(0,0,0,0.7);
-      grid-area: form;
-      border-radius: 0.5em;
-    }
-  }
-
 }
