@@ -16,7 +16,7 @@
 
     <ul class="navbar-nav">
       <li><a href="/">Home</a></li>
-      <li><a href="/menus">Cardápios</a>
+      <li><a href="/menus">Cardápios</a></li>
       <li><a href="/services">Serviços</a></li>
       <li><a href="/contact">Contato</a></li>
       <li><a id="modalBtn">Sobre</a></li>
