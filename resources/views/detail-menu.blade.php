@@ -19,9 +19,7 @@
                 <P>{{$menu->description}}</P>
             </div>
             <div class="image-service">
-                <a href="/menus/{{$menu->id}}">
-                    <img src="{{asset($menu->image)}}" alt="{{$menu->name}}" class="img-responsive">
-                </a>
+                <img src="{{asset($menu->image)}}" alt="{{$menu->name}}" class="img-responsive">
             </div>
         </div>
     </section>
