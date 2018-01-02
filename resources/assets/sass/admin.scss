@@ -139,12 +139,10 @@ $dark_red: #a72830;
 
 // navbar-admin
 .item-checked{
-  //background: $dark_red;
   padding-bottom: 0.5em !important;
   border-bottom: 5px solid $dark_red;
-  //color: white !important;
-  transition: 0.2s;
-  //border-radius: 5px;
+  transition:
+          all 500ms cubic-bezier(0.340, -0.600, 0.485, 1.650);
 }
 
 // Create
