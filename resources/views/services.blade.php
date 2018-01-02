@@ -6,14 +6,9 @@
 
 <section class="all-cards bread-crumbs">
     <header>
-
-      @if(isset($service))
-          {{$service->name}}
-        @else
-          <a href="/">Home</a> / <a class="active" href="/services">Serviços</a>
-      @endif
-
+      <a href="/">Home</a> / <a class="active" href="/services">Serviços</a>
     </header>
+
     @foreach($services as $service)
       <div class="card-service">
         <div class="description-service">
@@ -21,7 +16,9 @@
           <P>{{$service->description}}</P>
         </div>
         <div class="image-service">
-            <a href="/services"><img src="{{asset($service->image)}}" alt=""></a>
+            <a href="/services/{{$service->id}}">
+                <img src="{{asset($service->image)}}" alt="{{$service->name}}" class="img-responsive">
+            </a>
         </div>
       </div>
 

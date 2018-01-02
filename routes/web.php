@@ -17,6 +17,8 @@ Route::get('/menus', 'SiteController@menus');
 
 Route::get('/menus/{category}', 'SiteController@menu');
 
+Route::get('/menus/{category}/{menu}', 'SiteController@detailMenu');
+
 Route::get('/contact','SiteController@contact')->name('contact');
 
 Route::post('/contact', 'SiteController@store');

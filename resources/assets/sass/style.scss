@@ -99,6 +99,7 @@ header{
 .bread-crumbs{
   padding: 0;
   margin: 0;
+
   header{
     color: #fff;
     letter-spacing: 1px;
@@ -120,6 +121,13 @@ header{
   }
 
   .card-service{
+    color: #fff;
+    font-size: 2em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .detail-service{
     color: #fff;
     font-size: 2em;
     letter-spacing: 1px;
@@ -387,107 +395,107 @@ header{
   }
 }
 
-/* CONTACT PAGE */
-#contact{
-
-  #contact-form{
-  background: #fff;
-
-    form{
-      padding: 0.5em;
-      color: $dark_gray;
-
-      h1{
-        padding: 0;
-        font-size: 2.4em;
-        margin-bottom: 1em;
-      }
-
-      .group-custom{
-        display: block;
-        border: none;
-
-        input{
-          background-color: transparent;
-          color: $dark_red;
-          border: none;
-          width: 91%;
-          border-bottom: 1px solid $dark_gray;
-          margin-bottom: 1em;
-          padding: 0.5em;
-          font-size: 1em;
-          outline: 0 none;
-
-          &:focus{
-            transition: 0.5s;
-            border-bottom: 1px solid $dark_red;
-          }
-        }
-
-        textarea{
-          background-color: transparent;
-          color: $dark_red;
-          width: 91%;
-          border: 1px solid $dark_gray;
-          margin-bottom: 1em;
-          padding: 0.5em;
-          font-size: 1.5em;
-          outline: 0 none;
-          resize: none;
-
-          &:focus{
-            transition: 0.5s;
-            border: 1px solid $dark_red;
-          }
-        }
-
-        .btn-form{
-          background-color: $dark_red;
-          border-radius: 0.5em;
-
-          button{
-            color: #fff;
-            padding: 0.5em;
-            width: 100%;
-          }
-
-        }
-      }
-    }
-  }
-
-  #contact-text{
-    color: $dark_gray;
-    text-align: center;
-    padding: 0.5em;
-
-    hr {
-      border: 0.5px solid $dark_red;
-    }
-
-    p{
-      text-align: justify;
-    }
-
-    h1{
-      padding: 0;
-      font-size: 2.4em;
-      margin-bottom: 1em;
-    }
-
-    span{
-      color: $dark_red;
-    }
-
-    i{
-      padding: 0;
-      font-size: 4em;
-    }
-
-  }
-}
-
-/* end of contact page */
+///* CONTACT PAGE */
+//#contact{
+//
+//  #contact-form{
+//  background: #fff;
+//
+//    form{
+//      padding: 0.5em;
+//      color: $dark_gray;
+//
+//      h1{
+//        padding: 0;
+//        font-size: 2.4em;
+//        margin-bottom: 1em;
+//      }
+//
+//      .group-custom{
+//        display: block;
+//        border: none;
+//
+//        input{
+//          background-color: transparent;
+//          color: $dark_red;
+//          border: none;
+//          width: 91%;
+//          border-bottom: 1px solid $dark_gray;
+//          margin-bottom: 1em;
+//          padding: 0.5em;
+//          font-size: 1em;
+//          outline: 0 none;
+//
+//          &:focus{
+//            transition: 0.5s;
+//            border-bottom: 1px solid $dark_red;
+//          }
+//        }
+//
+//        textarea{
+//          background-color: transparent;
+//          color: $dark_red;
+//          width: 91%;
+//          border: 1px solid $dark_gray;
+//          margin-bottom: 1em;
+//          padding: 0.5em;
+//          font-size: 1.5em;
+//          outline: 0 none;
+//          resize: none;
+//
+//          &:focus{
+//            transition: 0.5s;
+//            border: 1px solid $dark_red;
+//          }
+//        }
+//
+//        .btn-form{
+//          background-color: $dark_red;
+//          border-radius: 0.5em;
+//
+//          button{
+//            color: #fff;
+//            padding: 0.5em;
+//            width: 100%;
+//          }
+//
+//        }
+//      }
+//    }
+//  }
+//
+//  #contact-text{
+//    color: $dark_gray;
+//    text-align: center;
+//    padding: 0.5em;
+//
+//    hr {
+//      border: 0.5px solid $dark_red;
+//    }
+//
+//    p{
+//      text-align: justify;
+//    }
+//
+//    h1{
+//      padding: 0;
+//      font-size: 2.4em;
+//      margin-bottom: 1em;
+//    }
+//
+//    span{
+//      color: $dark_red;
+//    }
+//
+//    i{
+//      padding: 0;
+//      font-size: 4em;
+//    }
+//
+//  }
+//}
+//
+///* end of contact page */
 
 /*  MODAL */
 .modal {
@@ -608,5 +616,48 @@ header{
   a{
     color: #fff;
     text-decoration: none;
+  }
+}
+
+/* CONTACT PAGE */
+
+.contact-custom{
+  .caixa{
+      hr {
+        margin: 2em;
+        border: 0.5px solid $dark_red;
+      }
+
+      p{
+        text-align: justify;
+        padding: 0 2em;
+        font-size: 2em;
+        margin: 1em 0;
+      }
+
+      h1{
+        padding: 0;
+        font-size: 2.4em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
+
+      span{
+        color: $dark_red;
+      }
+
+      i{
+        padding: 0;
+        font-size: 4em;
+      }
+
+      // Sobrescrever por que ta ficando sempre vermelho no textarea
+      form{
+        .form-grupo{
+          textarea:focus ~ label, textarea:valid ~ label{
+            color: $dark_gray !important;
+          }
+        }
+      }
   }
 }

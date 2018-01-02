@@ -71,7 +71,15 @@ $dark_red: #a72830;
       .card_description{
         grid-area: description;
         p{
-          padding: 0;
+          padding: 0.5em 0;
+
+          a{
+            text-decoration: none;
+            color: #fff;
+            background: $dark_gray;
+            padding: 0 1em;
+            border-radius: 25%;
+          }
         }
 
         h2 {

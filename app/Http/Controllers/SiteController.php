@@ -27,6 +27,10 @@ class SiteController extends Controller
     return view('menus', compact(['menus', 'category']));
   }
 
+  public function detailMenu(Category $category, Menu $menu){
+    return view('detail-menu', compact('menu'));
+  }
+
   public function contact(){
     return view('contact');
   }

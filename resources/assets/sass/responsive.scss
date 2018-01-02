@@ -158,27 +158,27 @@
     }
   }
 
-  /* CONTACT PAGE */
-  #contact {
-    display: grid;
-    grid-template-columns: 1fr 5fr 1fr 5fr 1fr;
-    grid-template-areas:
-            " . . . . ."
-            " . form . text . "
-            " . form . text . "
-            " . . . . .";
-
-    padding: 0.5em;
-
-    #contact-form {
-      grid-area: form;
-    }
-
-    #contact-text {
-      grid-area: text;
-    }
-
-  }
+  ///* CONTACT PAGE */
+  //#contact {
+  //  display: grid;
+  //  grid-template-columns: 1fr 5fr 1fr 5fr 1fr;
+  //  grid-template-areas:
+  //          " . . . . ."
+  //          " . form . text . "
+  //          " . form . text . "
+  //          " . . . . .";
+  //
+  //  padding: 0.5em;
+  //
+  //  #contact-form {
+  //    grid-area: form;
+  //  }
+  //
+  //  #contact-text {
+  //    grid-area: text;
+  //  }
+  //
+  //}
 
   /* Login PAGE */
 
@@ -186,9 +186,8 @@
     background-image: url('../img/menu.jpeg');
     background-position: center;
     background-size: cover;
-    height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr !important;
     grid-template-areas:
             " . . . "
             " . form . "
@@ -235,6 +234,43 @@
       grid-template-areas:
               "description image";
     }
+
+    .detail-service{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+              "description"
+              "image";
+      align-items: center;
+      justify-items: center;
+      padding-bottom: 1em;
+
+      .description-service{
+        grid-area: description;
+      }
+
+      .image-service{
+        grid-area: image;
+
+        img{
+          max-height: 75vh;
+          max-width: 75vh;
+        }
+        &:hover{
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        }
+      }
+    }
   }
 
+  /* CONTACT PAGE*/
+  .contact-custom{
+    .caixa{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1em;
+      margin: 4em;
+      padding: 1em;
+    }
+  }
 }
