@@ -60,6 +60,8 @@ $dark_red: #a72830;
       grid-gap: 1em;
       align-items: center;
 
+      transition: all .35s ease-in-out;
+
       .card_img {
         grid-area: image;
         width: 100%;
@@ -95,12 +97,15 @@ $dark_red: #a72830;
         display: grid;
         grid-template-columns: 1fr 1fr;
 
+        transition: all .35s ease-in-out;
+
         > a{
           padding: 1em;
 
           &:hover{
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
           }
+
           i{
             color: $dark_gray;
           }
@@ -111,6 +116,7 @@ $dark_red: #a72830;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
       }
     }
+
     .card-service:nth-child(odd){
       grid-template-areas:
               "description image";
@@ -122,6 +128,7 @@ $dark_red: #a72830;
     margin-top: 1em;
     background-color: $dark_gray;
     font-size: 1.5em;
+    transition: all .35s ease-in-out;
 
     a{
       text-decoration: none;
@@ -166,6 +173,7 @@ $dark_red: #a72830;
 
   .caixa {
     background: rgba(255, 255, 255, 0.7);
+    transition: all .35s ease-in-out;
 
     form{
       color: $dark_gray;
@@ -245,6 +253,7 @@ $dark_red: #a72830;
           padding: 0.5em 4em;
           font-size: 1.5em;
           letter-spacing: 1px;
+          transition: all .35s ease-in-out;
 
           &:hover{
             background-color: $dark_gray;
@@ -308,6 +317,7 @@ $dark_red: #a72830;
         margin: 0.5em;
         font-size: 1.5em;
         width: 92%;
+        transition: all .35s ease-in-out;
 
         &:hover{
           background: $dark_red;

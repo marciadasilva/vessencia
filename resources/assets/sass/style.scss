@@ -2,6 +2,13 @@ $dark_gray: #383838;
 $dark_red: #a72830;
 
 /*Core Styles*/
+// Habilitar (em alguns navegadores é preciso zerar)
+// * {
+// 	margin: 0;
+// 	padding: 0;
+// 	box-sizing: border-box;
+// }
+
 body {
   margin: 0;
   font-family: 'Titillium Web', sans-serif;
@@ -26,6 +33,7 @@ p{
   margin: 0;
   padding: 1em 0;
 }
+
 hr{
   border: 1px solid $dark_red;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
@@ -159,7 +167,7 @@ header{
   }
 
   .button{
-     outline: none;
+    outline: none;
     border: none;
     cursor: pointer;
     display: inline-block;
@@ -175,6 +183,10 @@ header{
     margin: 20em 0 0 0;
     box-shadow: 0 6px #812226;
     border-radius: 20px;
+    opacity: 0;
+    transform: translateY(-1000%);
+    // transform: translateX(-1000%);
+    animation: 2.5s showButton 0.5s forwards;
 
     &:hover {
       box-shadow: 0 4px #812226;
@@ -186,6 +198,13 @@ header{
       top: 6px;
     }
   }
+}
+
+@keyframes showButton {
+	100% {
+		opacity: 1;
+    transform: translateY(0);
+	}
 }
 
 #showcase .content-wrap,
@@ -229,6 +248,7 @@ header{
   .cards{
     margin-bottom: 1em;
     height: 65vh;
+    transition: all .35s ease-in-out;
 
     img{
       height: 30vh;
@@ -299,6 +319,7 @@ header{
   padding: 2em;
   background: $dark_gray;
   color: #fff;
+  transition: all .35s ease-in-out;
 
   a {
     color: #fff;
