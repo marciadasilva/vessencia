@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Menu;
 use App\Service;
+use App\Company;
 use Mail;
 use Session;
 
@@ -14,7 +15,8 @@ class SiteController extends Controller
   public function index(){
     $categories = Category::latest()->get();
     $services = Service::latest()->get();
-    return view('index', compact(['categories', 'services']));
+    $companies = Company::take(1)->latest()->get();
+    return view('index', compact(['categories', 'services', 'companies']));
   }
 
   public function menus(){
@@ -36,17 +38,16 @@ class SiteController extends Controller
   }
 
   public function store(){
-
-      Session::put('name-contact', request('name'));
-      Session::put('email-contact', request('email'));
-      Session::put('subject-contact', request('subject'));
-      Session::put('message-contact', request('message'));
+    Session::put('name-contact', request('name'));
+    Session::put('email-contact', request('email'));
+    Session::put('subject-contact', request('subject'));
+    Session::put('message-contact', request('message'));
 
     $this->validate(request(), [
-        'name' => 'required',
-        'email' => 'required|email',
-        'subject' => 'min:3',
-        'message' => 'min:5'
+      'name' => 'required',
+      'email' => 'required|email',
+      'subject' => 'min:3',
+      'message' => 'min:5'
     ]);
 
     $data = array(
@@ -63,16 +64,15 @@ class SiteController extends Controller
     });
 
     Session::flash('success', 'Sua mensagem foi enviada com sucesso! Em breve estaremos lendo seu comentário.');
-
     return redirect()->route('contact');
   }
 
   public function services(){
-      $services = Service::latest()->get();
-      return view('services', compact('services'));
+    $services = Service::latest()->get();
+    return view('services', compact('services'));
   }
 
-    public function service(Service $service){
-        return view('detail-service', compact('service'));
-    }
+  public function service(Service $service){
+    return view('detail-service', compact('service'));
+  }
 }
