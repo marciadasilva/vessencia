@@ -6,7 +6,7 @@
 
 <section class="all-cards bread-crumbs">
   <header>
-
+    <div>
     @if(isset($category))
       <a href="/">Home</a> /
       <a href="/menus">Cardápios</a> /
@@ -14,33 +14,31 @@
       @else
         <a href="/">Home</a> / <a class="active" href="/menus">Cardápios</a>
     @endif
-
+    </div>
     <!-- search -->
-    <div id="wrap">
-      <form action="" autocomplete="on">
-        <input id="search" name="search" type="text" placeholder="What're we looking for ?">
-        <input id="search_submit" value="Rechercher" type="submit">
-      </form>
+    <div class="search-icon">
+      <input class="remove-input" id="search" name="search" type="text" placeholder="Digite o nome do cardápio.">
+      <a id="search_submit" onclick="showInputSearch()"> <i class="fa fa-search fa-lg" aria-hidden="true"></i> </a>
     </div>
 
   </header>
-<div class="show-card">
-  @foreach($menus as $menu)
-    <div class="card-items">
-        <a href="/menus/{{$menu->category->id}}/{{$menu->id}}">
-            <img class="card_img" src="{{asset($menu->image)}}" alt="{{$menu->name}}">
-        </a>
-      <div class="card_description">
-          <h2>{{$menu->name}}</h2>
-          <hr>
-          <p>{{$menu->description}}</p>
-          <p><a href="/menus/{{$menu->category->id}}">{{$menu->category->name}}</a></p>
+  <div class="show-card">
+    @foreach($menus as $menu)
+      <div class="card-items">
+          <a href="/menus/{{$menu->category->id}}/{{$menu->id}}">
+              <img class="card_img" src="{{asset($menu->image)}}" alt="{{$menu->name}}">
+          </a>
+        <div class="card_description">
+            <h2>{{$menu->name}}</h2>
+            <hr>
+            <p>{{$menu->description}}</p>
+            <p><a href="/menus/{{$menu->category->id}}">{{$menu->category->name}}</a></p>
+        </div>
+
       </div>
+    @endforeach
 
-    </div>
-  @endforeach
-
-</div>
+  </div>
 
 </section>
 

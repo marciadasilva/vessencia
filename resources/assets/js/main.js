@@ -134,3 +134,7 @@ function readURL(input) {
         reader.readAsDataURL(input.files[0]);
     }
 }
+
+function showInputSearch(){
+  document.getElementById("search").classList.remove('remove-input');
+}
