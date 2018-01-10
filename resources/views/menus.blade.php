@@ -15,6 +15,14 @@
         <a href="/">Home</a> / <a class="active" href="/menus">Cardápios</a>
     @endif
 
+    <!-- search -->
+    <div id="wrap">
+      <form action="" autocomplete="on">
+        <input id="search" name="search" type="text" placeholder="What're we looking for ?">
+        <input id="search_submit" value="Rechercher" type="submit">
+      </form>
+    </div>
+
   </header>
 <div class="show-card">
   @foreach($menus as $menu)
