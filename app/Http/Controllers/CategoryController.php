@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Category;
+use App\Menu;
 use Session;
 use Alert;
 
@@ -100,9 +101,14 @@ class CategoryController extends Controller
   }
 
   public function deleteCategory(Category $category){
-    $imageToRemove = Category::where('id', $category->id)->first()->image;
-    unlink($imageToRemove);
-    Category::find($category->id)->delete();
-    return redirect()->route('categories');
+    if(Menu::where('category_id', $category->id)->first()){
+      return redirect()->back()->withErrors(['Não é possível deletar
+      uma categoria que possui cardápios cadastrados.', '']);
+    }else{
+      $imageToRemove = Category::where('id', $category->id)->first()->image;
+      unlink($imageToRemove);
+      Category::find($category->id)->delete();
+      return redirect()->route('categories');
+    }
   }
 }
