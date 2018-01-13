@@ -74,7 +74,7 @@
             <P>{{$service->description}}</P>
           </div>
           <div class="image-service">
-            <a href="/services"><img src="{{asset($service->image)}}" alt=""></a>
+            <a href="/services/{{$service->id}}"><img src="{{asset($service->image)}}" alt=""></a>
           </div>
         </div>
       @endforeach
@@ -167,4 +167,22 @@
     </div>
   </section>
 </main>
+
+<script>
+
+ window.onscroll = function() {myFunction()};
+
+ var sectionB = document.getElementById("section-b");
+ var element = document.querySelector("#section-b ul");
+ var sticky = sectionB.offsetTop - 800;
+
+ function myFunction() {
+   if (window.pageYOffset >= sticky) {
+     element.classList.add("show-item")
+   } else {
+     element.classList.remove("show-item");
+   }
+ }
+
+</script>
 @endsection

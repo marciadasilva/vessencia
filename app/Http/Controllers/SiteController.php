@@ -9,6 +9,7 @@ use App\Service;
 use App\Company;
 use Mail;
 use Session;
+use Alert;
 
 class SiteController extends Controller
 {
@@ -20,12 +21,12 @@ class SiteController extends Controller
   }
 
   public function menus(){
-    $menus = Menu::latest()->paginate(6);
+    $menus = Menu::latest()->paginate(8);
     return view('menus', compact('menus'));
   }
 
   public function menu(Category $category){
-    $menus = Menu::where('category_id', '=', $category->id)->latest()->paginate(6);
+    $menus = Menu::where('category_id', '=', $category->id)->latest()->paginate(8);
     return view('menus', compact(['menus', 'category']));
   }
 
@@ -63,7 +64,7 @@ class SiteController extends Controller
       $message->subject($data['subject']);
     });
 
-    Session::flash('success', 'Sua mensagem foi enviada com sucesso! Em breve estaremos lendo seu comentário.');
+    Alert::success('Sucesso! Logo estaremos lendo sua mensagem.', 'Sucesso')->persistent('Close');
     return redirect()->route('contact');
   }
 

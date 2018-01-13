@@ -6,8 +6,9 @@
 
 <main class="all-cards">
 
-  <button type="button" name="button">
-    <a href="/admin/service/create">Novo Serviço</a>
+  <button type="button" name="button"
+          onclick="window.location.href='/admin/service/create'">
+              Novo Serviço
   </button>
 
   <div class="show-card">

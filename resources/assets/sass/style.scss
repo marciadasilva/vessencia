@@ -61,6 +61,22 @@ button{
   }
 }*/
 
+.show-item{
+ animation: 2.5s showElement 0.1s forwards;
+}
+
+#section-b ul{
+ opacity: 0;
+ transform: translateY(+10%);
+}
+
+@keyframes showElement {
+  100% {
+     opacity: 1;
+     transform: translateY(0);
+  }
+}
+
 
 .button-position {
   position:relative;

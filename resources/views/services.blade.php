@@ -5,9 +5,16 @@
 @include('layouts.header')
 
 <section class="all-cards bread-crumbs">
-    <header>
-      <a href="/">Home</a> / <a class="active" href="/services">Serviços</a>
-    </header>
+  <header>
+     <div>
+       <a href="/">Home</a> / <a class="active" href="/services">Serviços</a>
+     </div>
+     <!-- search -->
+     <div class="search-icon">
+       <input class="remove-input" id="search" name="search" type="text" placeholder="Digite o nome do serviço.">
+       <a id="search_submit" onclick="showInputSearch()"> <i class="fa fa-search fa-lg" aria-hidden="true"></i> </a>
+     </div>
+  </header>
 
     @foreach($services as $service)
       <div class="card-service">

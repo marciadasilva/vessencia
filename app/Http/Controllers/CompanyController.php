@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Company;
+use Alert;
 
 class CompanyController extends Controller
 {
@@ -30,6 +31,7 @@ class CompanyController extends Controller
     $dados = request()->all();
 
     Company::create($dados);
+    Alert::success('Dados da empresa salvos com sucesso!', 'Sucesso')->persistent('Close');
     return redirect()->route('company');
   }
 }

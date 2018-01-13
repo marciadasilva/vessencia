@@ -27,7 +27,7 @@ CREATE TABLE `categories` (
   `user_id` int(11) NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -40,7 +40,7 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (1,1,'Comidas','img/categories//image_4677.jpeg','Teste','2017-12-31 23:01:10','2017-12-31 23:01:10'),(2,1,'tortas','img/categories//image_8851.jpeg','Tortas diversas','2018-01-01 00:40:42','2018-01-01 00:40:42'),(3,1,'Sobremesas','img/categories//image_6180.jpeg','Doces e salgados','2018-01-01 00:41:09','2018-01-01 00:41:09'),(4,1,'Pós-treino','img/categories//image_5693.jpeg','Pra recurar a energia','2018-01-01 00:41:53','2018-01-01 00:41:53'),(5,1,'Comida Japonesa','img/categories//image_9430.jpeg','Sushis e pratos japoneses','2018-01-01 00:42:30','2018-01-01 13:17:29');
+INSERT INTO `categories` VALUES (1,1,'Categoria 1','img/categories//image_6326.jpeg','Est tollit disputando eu. No delicata efficiantur mel, eleifend mandamus concludaturque ei vix.','2018-01-13 13:49:30','2018-01-13 14:03:37'),(2,1,'Categoria 2','img/categories//image_5116.jpeg','Audiam atomorum sea an, quodsi appareat efficiendi sit ex.','2018-01-13 13:52:47','2018-01-13 14:03:25'),(3,1,'Categoria 3','img/categories//image_3936.jpeg','Per quidam vituperatoribus ad, at sit nulla consetetur, ex nec autem dolores.','2018-01-13 13:53:30','2018-01-13 14:03:15'),(4,1,'Categoria 4','img/categories//image_7769.jpeg','Lorem ipsum dolor sit amet, sea melius epicurei consetetur ei.','2018-01-13 13:56:04','2018-01-13 13:56:04'),(5,1,'Categoria 5','img/categories//image_3987.jpeg','Ei vel sint perpetua voluptaria.','2018-01-13 13:58:42','2018-01-13 13:58:42');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-01-01 16:41:51
+-- Dump completed on 2018-01-13 10:57:32

@@ -27,7 +27,7 @@ CREATE TABLE `services` (
   `user_id` int(11) NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -40,7 +40,7 @@ CREATE TABLE `services` (
 
 LOCK TABLES `services` WRITE;
 /*!40000 ALTER TABLE `services` DISABLE KEYS */;
-INSERT INTO `services` VALUES (1,1,'serviço','img/services//image_4063.jpeg','serviço','2018-01-01 01:01:07','2018-01-01 01:01:07'),(2,1,'bebidas','img/services//image_1187.jpeg','bebidas','2018-01-01 01:01:21','2018-01-01 01:01:21'),(3,1,'Buffet','img/services//image_9441.jpeg','variados','2018-01-01 01:41:42','2018-01-01 15:01:55');
+INSERT INTO `services` VALUES (1,1,'Workshop em carne e molhos','img/services//image_4759.jpeg','Lorem ipsum dolor sit amet, sea melius epicurei consetetur ei. Ei intellegat dissentiunt duo, ad recusabo efficiendi vis, pri cu tale eros expetendis. Cu sed clita dolore consul, vis ne sint adhuc explicari. Vim no alienum molestie voluptatum, sumo accumsan sensibus sed in. Ei vel sint perpetua voluptaria.','2018-01-13 13:43:26','2018-01-13 13:43:26'),(2,1,'Buffet','img/services//image_3195.jpeg','Ipsum legendos nec ea, errem perpetua adversarium at vim. Nec suscipit rationibus an, vis viris ponderum ea. Est iudico persius ei, eum id mundi discere, adhuc vocent disputando in duo. Audiam atomorum sea an, quodsi appareat efficiendi sit ex.','2018-01-13 13:44:41','2018-01-13 13:44:41'),(3,1,'Confeitaria','img/services//image_9495.jpeg','Padeiros fazendo os melhores paezinhos.','2018-01-13 13:46:49','2018-01-13 13:46:49');
 /*!40000 ALTER TABLE `services` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-01-01 16:41:51
+-- Dump completed on 2018-01-13 10:57:31

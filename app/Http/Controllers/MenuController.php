@@ -15,7 +15,7 @@ class MenuController extends Controller
   }
 
   public function showMenu(){
-    $menus = Menu::latest()->paginate(3);
+    $menus = Menu::latest()->paginate(8);
     $admin = true;
     return view('admin.menu', compact(['admin', 'menus']));
   }

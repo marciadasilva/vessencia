@@ -40,9 +40,11 @@
 
   </div>
 
+
+  <section>
+    {{ $menus->links() }}
+  </section>
+
 </section>
 
-<section>
-  {{ $menus->links() }}
-</section>
 @endsection

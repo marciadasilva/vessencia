@@ -7,10 +7,12 @@
     <section class="all-cards bread-crumbs">
 
         <header>
+          <div>
             <a href="/">Home</a> /
             <a href="/menus">Cardápios</a> /
             <a href="/menus/{{$menu->category->id}}">{{$menu->category->name}}</a> /
             <a class="active">{{$menu->name}}</a>
+          </div>
         </header>
 
         <div class="detail-service">

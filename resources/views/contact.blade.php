@@ -6,7 +6,7 @@
 
 <main class="create-form contact-custom">
     <div class="caixa">
-        <form action="/admin/company/create" method="post" enctype="multipart/form-data">
+        <form action="/contact" method="post" enctype="multipart/form-data">
             {{ csrf_field() }}
             <h1>Entre em contato conosco</h1>
             <div class="form-grupo">

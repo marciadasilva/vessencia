@@ -19,7 +19,7 @@ class CreateMenusTable extends Migration
             $table->integer('category_id');
             $table->string('name');
             $table->string('image');
-            $table->string('description');
+            $table->longText('description');
 
             $table->timestamps();
         });

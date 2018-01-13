@@ -15,7 +15,7 @@ class CategoryController extends Controller
   }
 
   public function showCategories(){
-    $categories = Category::latest()->paginate(3);
+    $categories = Category::latest()->paginate(8);
     $admin = true;
     return view('admin.category', compact(['admin', 'categories']));
   }

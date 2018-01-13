@@ -28,11 +28,11 @@ CREATE TABLE `menus` (
   `category_id` int(11) NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,7 +41,7 @@ CREATE TABLE `menus` (
 
 LOCK TABLES `menus` WRITE;
 /*!40000 ALTER TABLE `menus` DISABLE KEYS */;
-INSERT INTO `menus` VALUES (1,1,1,'Prato de camarão com grama','img/menus//image_7620.jpeg','camarão','2017-12-31 23:01:37','2018-01-01 14:44:49'),(2,1,2,'torta de framboesa','img/menus//image_3181.jpeg','raspberry pi 2','2018-01-01 00:55:11','2018-01-01 00:55:11'),(3,1,2,'torta de nozes','img/menus//image_8142.jpeg','pecan pie','2018-01-01 00:55:52','2018-01-01 00:55:52'),(4,1,2,'torta de mirtilo','img/menus//image_7579.jpeg','blueberry pie','2018-01-01 00:56:24','2018-01-01 14:52:28'),(5,1,1,'Risoto','img/menus//image_6648.jpeg','Em colher','2018-01-01 14:11:30','2018-01-01 14:56:10');
+INSERT INTO `menus` VALUES (1,1,3,'Prato 1','img/menus//image_5233.jpeg','No cum sumo enim impetus.','2018-01-13 14:09:32','2018-01-13 14:41:42'),(2,1,3,'Prato 2','img/menus//image_3786.jpeg','Ne lorem omnium laboramus nam, pro ea illum officiis.','2018-01-13 14:10:16','2018-01-13 14:41:31'),(3,1,4,'Prato 1','img/menus//image_9051.jpeg','Ne lorem omnium laboramus nam, pro ea illum officiis.','2018-01-13 14:10:54','2018-01-13 14:40:58'),(4,1,5,'Prato 1','img/menus//image_8711.jpeg','Lorem ipsum dolor sit amet, sea melius epicurei consetetur ei.','2018-01-13 14:30:57','2018-01-13 14:40:48'),(5,1,5,'Prato 2','img/menus//image_4731.jpeg','Lorem ipsum dolor sit amet, sea melius epicurei consetetur ei.','2018-01-13 14:31:23','2018-01-13 14:40:40'),(6,1,5,'Prato 3','img/menus//image_1210.jpeg','Lorem ipsum dolor sit amet, sea melius epicurei consetetur ei.','2018-01-13 14:31:45','2018-01-13 14:40:33'),(7,1,3,'Prato 3','img/menus//image_6427.jpeg','Lorem ipsum dolor sit amet, sea melius epicurei consetetur ei.','2018-01-13 14:32:08','2018-01-13 14:40:24'),(8,1,2,'Prato 1','img/menus//image_3876.jpeg','Lorem ipsum dolor sit amet, sea melius epicurei consetetur ei.','2018-01-13 14:33:02','2018-01-13 14:40:15'),(9,1,1,'Prato 1','img/menus//image_8643.jpeg','Lorem ipsum dolor sit amet, sea melius epicurei consetetur ei.','2018-01-13 14:33:30','2018-01-13 14:40:07'),(10,1,1,'Prato 2','img/menus//image_3934.jpeg','Lorem ipsum dolor sit amet, sea melius epicurei consetetur ei.','2018-01-13 14:33:45','2018-01-13 14:40:00'),(11,1,2,'Prato 2','img/menus//image_7488.jpeg','Lorem ipsum dolor sit amet, sea melius epicurei consetetur ei.','2018-01-13 14:34:07','2018-01-13 14:39:53');
 /*!40000 ALTER TABLE `menus` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -54,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-01-01 16:41:50
+-- Dump completed on 2018-01-13 10:57:31

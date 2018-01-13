@@ -14,7 +14,7 @@ class ServiceController extends Controller
   }
 
   public function showServices(){
-    $services = Service::latest()->paginate(3);
+    $services = Service::latest()->paginate(4);
     $admin = true;
     return view('admin.service', compact(['admin', 'services']));
   }
