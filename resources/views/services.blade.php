@@ -1,34 +1,40 @@
 @extends('layouts.master')
-@section('title', 'Serviços - 5ª Essência')
+
+@section('title', 'Categorias - 5ª Essência')
 
 @section('content')
+
 @include('layouts.header')
 
-<section class="all-cards bread-crumbs">
-  <header>
-     <div>
-       <a href="/">Home</a> / <a class="active" href="/services">Serviços</a>
-     </div>
-     <!-- search -->
-     <div class="search-icon">
-       <input class="remove-input" id="search" name="search" type="text" placeholder="Digite o nome do serviço.">
-       <a id="search_submit" onclick="showInputSearch()"> <i class="fa fa-search fa-lg" aria-hidden="true"></i> </a>
-     </div>
-  </header>
+<section class="bread-crumbs">
+  <div class="bread-crumbs-links">
+    <a href="/">Home /</a>
+    <a href="/services" class="active">Serviços /</a>
+  </div>
+  <div class="search">
+    <span><i class="fa fa-search fa-2x"></i></span>
+  </div>
+</section>
 
+<section>
+  <div class="categories-service">
+    <h3 class="title">Nossos Serviços</h3>
+    <hr>
     @foreach($services as $service)
-      <div class="card-service">
-        <div class="description-service">
-          <h1>{{$service->name}}</h1>
-          <P>{{$service->description}}</P>
+      <div class="card-title">
+        <div class="description-text">
+          <a href="/services/{{$service->id}}">
+            <h3 class="title">{{$service->name}}</h3>
+            <p>{{$service->description}}</p>
+          </a>
         </div>
-        <div class="image-service">
-            <a href="/services/{{$service->id}}">
-                <img src="{{asset($service->image)}}" alt="{{$service->name}}" class="img-responsive">
-            </a>
+        <div class="image-text">
+          <a href="/services/{{$service->id}}">
+            <img src="{{asset($service->image)}}" alt="{{$service->name}}">
+          </a>
         </div>
       </div>
-
     @endforeach
+  </div>
 </section>
 @endsection

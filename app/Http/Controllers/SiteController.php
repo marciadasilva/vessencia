@@ -14,15 +14,26 @@ use Alert;
 class SiteController extends Controller
 {
   public function index(){
-    $categories = Category::latest()->get();
-    $services = Service::latest()->get();
+    $menus = Menu::take(4)->get();
+    $services = Service::take(4)->get();
     $companies = Company::take(1)->latest()->get();
-    return view('index', compact(['categories', 'services', 'companies']));
+    $index = true;
+    return view('index', compact(['menus', 'services', 'companies', 'index']));
+  }
+
+  public function chef(){
+    return view('chef');
+  }
+
+  public function categories(){
+    $categories = Category::latest()->get();
+    return view('categories', compact('categories'));
   }
 
   public function menus(){
-    $menus = Menu::latest()->paginate(8);
-    return view('menus', compact('menus'));
+    $categories = Category::latest()->get();
+    $menus = Menu::latest()->get();
+    return view('menus', compact('categories', 'menus'));
   }
 
   public function menu(Category $category){
@@ -74,6 +85,6 @@ class SiteController extends Controller
   }
 
   public function service(Service $service){
-    return view('detail-service', compact('service'));
+    return view('service-detail', compact('service'));
   }
 }

@@ -1,17 +1,10 @@
 <!-- Footer -->
-<footer id="main-footer" class="grid">
-  <div>5ª Essência Gastronomia e Eventos</div>
-  <div>
-    Project By Marcia da Silva
-    <a href="https://twitter.com/_marcia_dasilva" target="_blank">
-      <i class="fa fa-twitter" aria-hidden="true"> </i>
-    </a>
-    <a href="https://www.linkedin.com/in/marcia-silva-068b4666/" target="_blank">
-      <i class="fa fa-linkedin" aria-hidden="true"> </i>
-    </a>
-    <a href="https://github.com/marciadasilva" target="_blank">
-      <i class="fa fa-github" aria-hidden="true"> </i>
-    </a>
-  </div>
-
+<footer>
+  <p>5ª Essência Gastronomia e Eventos. </p>
+  <p>&copy Copyright: <a href="#"><strong> Márcia da Silva</strong></a></p>
+  <ul>
+    <li><a href="https://twitter.com/mds_marcia" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+    <li><a href="https://www.facebook.com/marciah.silvah" target="_blank"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+    <li><a href="#" target="_blank"><i class="fa fa-star fa-2x"></i></a></li>
+  </ul>
 </footer>

@@ -12,23 +12,16 @@
   <section id="card-login">
     <form action="/login" method="post">
       {{ csrf_field() }}
-      <div class="group-custom">
-        <div class="">
-          <h1>Login</h1>
-        </div>
-        <div class="">
-          <label for="email">E-mail</label>
-          <input type="email" name="email" id="email" value="">
-        </div>
-        <div class="">
-          <label for="password">Senha</label>
-          <input type="password" name="password" id="password" value="">
-        </div>
-        <div class="btn-form">
-          <button type="submit">Entrar</button>
-        </div>
-
+      <h1>Login</h1>
+      <div>
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email" value="">
       </div>
+      <div>
+        <label for="password">Senha</label>
+        <input type="password" name="password" id="password" value="">
+      </div>
+      <button class="btn-custom" type="submit">Entrar</button>
     </form>
   </section>
 </body>

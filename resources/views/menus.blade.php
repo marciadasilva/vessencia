@@ -1,50 +1,64 @@
 @extends('layouts.master')
+
 @section('title', 'Cardápios - 5ª Essência')
 
 @section('content')
+
 @include('layouts.header')
 
-<section class="all-cards bread-crumbs">
-  <header>
-    <div>
+<section class="bread-crumbs">
+  <div class="bread-crumbs-links">
+    <a href="/">Home /</a>
+    <a href="/menus">Cardápios /</a>
     @if(isset($category))
-      <a href="/">Home</a> /
-      <a href="/menus">Cardápios</a> /
-      <a class="active" href="/menus">{{$category->name}}</a>
-      @else
-        <a href="/">Home</a> / <a class="active" href="/menus">Cardápios</a>
+    <a href="#" class="active">{{$category->name}} /</a>
+    @else
+
     @endif
-    </div>
-    <!-- search -->
-    <div class="search-icon">
-      <input class="remove-input" id="search" name="search" type="text" placeholder="Digite o nome do cardápio.">
-      <a id="search_submit" onclick="showInputSearch()"> <i class="fa fa-search fa-lg" aria-hidden="true"></i> </a>
-    </div>
+  </div>
+  <div class="search">
+    <span><i class="fa fa-search fa-2x"></i></span>
+  </div>
+</section>
 
-  </header>
-  <div class="show-card">
-    @foreach($menus as $menu)
-      <div class="card-items">
-          <a href="/menus/{{$menu->category->id}}/{{$menu->id}}">
-              <img class="card_img" src="{{asset($menu->image)}}" alt="{{$menu->name}}">
-          </a>
-        <div class="card_description">
-            <h2>{{$menu->name}}</h2>
-            <hr>
+<section>
+  <!--  Caso onde é pra mostrar pratos de uma categoria só -->
+  @if(isset($category))
+    <h3 class="title"> {{$category->name}}</h3>
+    <hr>
+    <div class="menu-cards">
+      @foreach($menus as $menu)
+        <div class="card">
+          <img src="{{asset($menu->image)}}" alt="">
+          <div class="card-content">
+            <h4>{{$menu->name}}</h4>
             <p>{{$menu->description}}</p>
-            <p><a href="/menus/{{$menu->category->id}}">{{$menu->category->name}}</a></p>
+          </div>
+      </div>
+      @endforeach
+    </div>
+    <!--  pagination só mostra quando é para uma única categoria -->
+    {{ $menus->links() }}
+  @else
+  <!--  Caso onde é pra mostrar pratos de todas as categorias -->
+    @foreach($categories as $category)
+      <h3 class="title"> {{$category->name}}</h3>
+      <hr>
+      <div class="menu-cards">
+        @foreach($menus as $menu)
+          <div class="card">
+            <img src="{{asset($menu->image)}}" alt="">
+            <div class="card-content">
+              <h4>{{$menu->name}}</h4>
+              <p>{{$menu->description}}</p>
+            </div>
         </div>
-
+        @endforeach
       </div>
     @endforeach
-
-  </div>
-
-
-  <section>
-    {{ $menus->links() }}
-  </section>
-
+  @endif
 </section>
+
+
 
 @endsection

@@ -13,6 +13,9 @@
 
 Route::get('/', 'SiteController@index')->name('home');
 
+Route::get('/chef', 'SiteController@chef');
+Route::get('/categories', 'SiteController@categories');
+
 Route::get('/menus', 'SiteController@menus');
 Route::get('/menus/{category}', 'SiteController@menu');
 Route::get('/menus/{category}/{menu}', 'SiteController@detailMenu');

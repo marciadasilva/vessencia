@@ -1,0 +1,164 @@
+/*General Styles*/
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+:root {
+  --main-color: #d1ba45;
+	--main-color-dark: #b71c1c;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Montserrat', sans-serif;
+	color: #555;
+  line-height: 1.5em;
+  overflow-x: hidden;
+}
+
+ul,
+nav {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #f5f5f5;
+  font-weight: 300;
+	cursor: pointer;
+}
+
+a:hover {
+	color: var(--main-color);
+}
+
+a.btn {
+	border-radius: 4px;
+	text-align: center;
+	opacity: 1;
+}
+
+button{
+  border: none;
+  outline:none;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 100px 80px;
+}
+
+ /* Exceto capa cada section alterna entre
+ fundo branco e cinza*/
+section:not(.hero):nth-child(odd) {
+	background-color: #f5f5f5;
+}
+
+.grid {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+hr {
+	width: 250px;
+	height: 3px;
+	background-color: var(--main-color);
+	border: 0;
+  margin-bottom: 50px;
+}
+
+section h3.title {
+	text-transform: capitalize;
+	font: bold 32px "Open Sans", sans-serif;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+section p {
+	max-width: 775px;
+	line-height: 2;
+	padding: 0 20px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.pagination{
+  list-style: none;
+  padding: 0.5em 0;
+  margin: 0;
+  border-radius: 0.75%;
+}
+
+.pagination li {
+  display:inline-block;
+  font-size: 1.5em;
+  padding: 1em 0.5em;
+  margin-left: -4px;
+  color: #555;
+}
+
+.pagination li:first-child{
+  padding-left: 2em;
+}
+
+.pagination li:last-child{
+  padding-right: 2em;
+}
+
+.pagination .active, .pagination .disabled{
+  color: #555;
+  font-weight: 700;
+}
+
+.pagination li a{
+  color: #555;
+  text-decoration: none;
+}
+
+.bread-crumbs{
+  color: #383838;
+  letter-spacing: 1px;
+  padding-top: 5em;
+  padding-bottom: 1em;
+  font-size: 1em;
+  text-transform: uppercase;
+  text-align: left;
+  word-spacing: 2px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.bread-crumbs *{
+  display: flex;
+  flex-direction: row;
+}
+
+.bread-crumbs .bread-crumbs-links a{
+  color: #383838;
+  text-decoration: none;
+  padding: 1em;
+}
+
+.bread-crumbs .bread-crumbs-links a:hover{
+  color: var(--main-color);
+}
+
+.bread-crumbs .active{
+  border-bottom: 1px solid var(--main-color);
+}
+
+@media (max-width: 800px) {
+	section {
+		padding: 50px 20px;
+	}
+}

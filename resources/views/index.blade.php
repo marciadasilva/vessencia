@@ -1,188 +1,214 @@
 @extends('layouts.master')
+
 @section('title', '5ª Essência')
 
 @section('content')
 
-@include('layouts.modal')
+@include('layouts.header')
 
-<!-- Header Showcase -->
-<header id="showcase" class="grid">
-  <div class="bg-image"></div>
-  <div class="content-wrap">
-    <a href="/menus" class="button">Conheça nosso cardápio</a>
+<section class="hero" id="hero">
+  <div class="hero-content-area">
+    <a href="menus.html" class="btn">Cardápios</a>
+    <a href="#" class="btn">Serviços</a>
   </div>
-</header>
+  <div id="slider">
+    <figure>
+      <img src="{{ asset('img/vcover1.jpg')}}">
+      <img src="{{ asset('img/vcover2.jpg')}}">
+      <img src="{{ asset('img/dinner-table.jpg')}}">
+      <img src="{{ asset('img/vcover4.jpg')}}">
+      <img src="{{ asset('img/vcover1.jpg')}}">
+    </figure>
+  </div>
+</section>
 
-<!-- Main Area -->
-<main id="main">
-  <!-- Section A -->
-  <section id="section-a" class="grid">
-    <div class="content-wrap">
-      <h2 class="content-title">5ª Essência Gastronomia e Eventos</h2>
-      <div class="content-text">
-        <p>
-          @foreach($companies as $company)
-            @if(isset($company->description))
-              {{$company->description}}
-            @else
-              Descrição da empresa.
-            @endif
-          @endforeach
-        </p>
-      </div>
-  </section>
-
-  <section id="section-b" class="">
-    <h1>Especialidades do Chef</h1>
-
-    @if(sizeof($categories) <= 3)
-    <ul class = "cardapio-3">
-    @elseif(sizeof($categories)== 4 || (sizeof($categories) % 4) == 0)
-    <ul class = "cardapio-4">
-    @elseif(sizeof($categories)== 5 || (sizeof($categories) % 5) == 0)
-    <ul class = "cardapio-5">
-    @elseif((sizeof($categories) % 3) == 0)
-    <ul class = "cardapio-6">
-    @else
-    <ul class = "cardapio-4">
-    @endif
-    @foreach($categories as $category)
-      <a href="/menus/{{$category->id}}">
-        <li>
-          <div class="cards">
-            <img src="{{$category->image}}" alt="card">
-            <div class="cards-content">
-              <h3 class="cards-title">{{$category->name}}</h3>
-              <hr>
-              <p>{{$category->description}}</p>
-            </div>
-          </div>
-        </li>
-      </a>
-    @endforeach
-    </ul>
-  </section>
-
-  <!-- Section C -->
-  <section id="section-c" class="grid">
-    <div class="content-wrap">
-      <h1>Contrate um dos serviços da 5ª Essência</h1>
-      @foreach($services as $service)
-        <div class="card-service">
-          <div class="description-service">
-            <h1>{{$service->name}}</h1>
-            <P>{{$service->description}}</P>
-          </div>
-          <div class="image-service">
-            <a href="/services/{{$service->id}}"><img src="{{asset($service->image)}}" alt=""></a>
-          </div>
-        </div>
+<section class="greeting" id="greeting">
+  <div class="grid">
+    <div class="greeting-text">
+      <h3 class="title">Bem vindos a 5ª Essência</h3>
+      <hr>
+      <p>
+      @foreach($companies as $company)
+        @if(isset($company->description))
+          {{$company->description}}
+        @else
+          Descrição da empresa.
+        @endif
       @endforeach
+    </p>
     </div>
-  </section>
-
-  <!-- Section D -->
-  <section id="section-d" class="grid">
-    <div class="content-wrap">
-      <h4>Ristretto Grãos e Gastronomia</h4>
-      <a href="https://www.facebook.com/ristrettograosegastronomia/" target="_blank">
-        <img src="img/ristretto.jpg" alt="ristretto">
-      </a>
+    <div class="greeting-img">
+      <img src="{{ asset('img/logo.png')}}">
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Section E -->
-  <section id="section-e" class="grid">
-    <div class="box">
-      <div> <h2 class="content-title">Contate-nos</h2> </div>
-      <div id="two-col">
-        <p>
-          <i class="fa fa-whatsapp" aria-hidden="true"></i> (55) 9 9955-9990
-        </p>
+<section class="image-fixed first-image"></section>
 
-        <p>
-          <a
-            @foreach($companies as $company)
-              @if(isset($company->facebook))
-                href="{{$company->facebook}}"
-              @else
-                href="https://www.facebook.com/vessencia/"
-              @endif
-            @endforeach
-            target="_blank"
-          >  <!-- fecha <a> -->
-            <i class="fa fa-facebook-official" aria-hidden="true"></i>
-            @foreach($companies as $company)
-              @if(isset($company->facebook))
-                {{str_replace("https://www.", "",$company->facebook)}}
-              @else
-                facebook.com/vessencia/
-              @endif
-            @endforeach
-          </a>
-        </p>
+<section class="best-sellers" id="best-sellers">
+  <h3 class="title">Alguns dos nossos best-sellers</h3>
+  <hr>
+  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id ipsum animi aut repellendus, deserunt quo libero praesentium tenetur soluta maiores!</p>
 
-        <p>
-          <a href="/contact">
-            <i class="fa fa-envelope-o" aria-hidden="true"></i>
-            @foreach($companies as $company)
-              @if(isset($company->email))
-                {{$company->email}}
-              @else
-                vessencia@outlook.com
-              @endif
-            @endforeach
-          </a>
-        </p>
+  <ul class="grid">
+    <li class="small" style="background-image: url({{ asset('img/shrimp.jpg')}});"></li>
+    <li class="large" style="background-image: url({{ asset('img/red-rice.jpg')}});"></li>
+    <li class="large" style="background-image: url({{ asset('img/rice.jpg')}});"></li>
+    <li class="small" style="background-image: url({{ asset('img/food.jpg')}});"></li>
+  </ul>
+</section>
 
-        <p>Aberto de segunda à sabado</p>
+<section class="image-fixed second-image"></section>
 
-        <p>Horário de Atendimento:
-          @foreach($companies as $company)
-            @if(isset($company->address))
-              {{$company->address}}
-            @else
-              08:00 às 18:00
-            @endif
-          @endforeach
-        </p>
-      </div>
+<section class="menus" id="menus">
+  <div class="menus-img">
+    @foreach($menus as $menu)
+    <img src="{{asset($menu->image)}}" alt="{{$menu->name}}">
+    @endforeach
+  </div>
+  <div class="menus-text">
+    <div>
+      <h3 class="title">Cardápios</h3>
+      <hr>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis consectetur sint enim libero, labore qui, nesciunt, itaque animi tenetur ipsa ea odio recusandae corrupti ipsam quasi fugiat, totam modi. Officia nostrum, illo aspernatur voluptates accusamus, id provident, sequi voluptatem molestiae sapiente autem, expedita debitis ducimus sit quibusdam fugit harum corporis?</p>
     </div>
-
-    <div class="box">
-      <div id="center-col">
-        <button id="modalBtn"><h2 class="content-title">Sobre a nossa Empresa</h2>
-        <p>
-          @foreach($companies as $company)
-            @if(isset($company->about))
-              {{$company->about}}
-            @else
-              Empresa especializada na realização de eventos, festas, produção de alimentos,
-              treinamentos, oficinas e consultoria em gastronomia.
-            @endif
-          @endforeach
-        </p>
-        </button>
-      </div>
+    <div>
+      <a href="/categories" class="anim">Mais</a>
     </div>
-  </section>
-</main>
+  </div>
+</section>
+
+<section class="image-fixed third-image"></section>
+
+<section class="services" id="services">
+  <div class="services-text">
+    <div>
+      <h3 class="title">Serviço Customizado</h3>
+      <hr>
+      <p>The private dining facilities are ideal for small, intimate lunch and dinner parties, private celebrations and corporate dining for up to 16 guests.</p>
+    </div>
+    <div>
+      <a href="services.html" class="anim">Mais</a>
+    </div>
+  </div>
+  <div class="services-img">
+    @foreach($services as $service)
+    <img src="{{asset($service->image)}}" alt="{{$service->name}}">
+    @endforeach
+  </div>
+</section>
+
+<section class="image-fixed forth-image"></section>
+
+<section class="gallery" id="gallery">>
+  <h3 class="title">Galerias</h3>
+  <hr>
+  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem neque adipisci molestiae, quam repellendus eos molestias amet ducimus, cumque tempore. </p>
+
+  <ul class="grid">
+  <a href="">
+    <li>
+      <i class=" fa fa-cutlery fa-4x"></i>
+      <h4>Receitas</h4>
+      <p>Looking for the complete experience? Take a tour with one of our experts. They'll show you secrets that you're likely to miss otherwise.</p>
+    </li>
+  </a>
+  <a href="gallery-photo.html">
+    <li>
+      <i class="fa fa-camera-retro fa-4x"></i>
+      <h4>Eventos</h4>
+      <p>Want to experience nature's beauty without all of that annoying exercise? Take a photo tour on one of our mountain buses.</p>
+    </li>
+  </a>
+  </ul>
+</section>
+
+<section class="image-fixed fifth-image"></section>
+
+<section class="news">
+  <h3 class="title">Notícias Recentes</h3>
+  <hr>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque aspernatur nostrum distinctio ipsam obcaecati amet. </p>
+  <div class="thumbnail">
+    <div class="card">
+      <a href=""><img src="{{ asset('img/guardanapo.jpg')}}" alt=""></a>
+      <p>Title</p>
+    </div>
+    <div class="card">
+      <a href=""><img src="{{ asset('img/guardanapo.jpg')}}" alt=""></a>
+      <p>Title</p>
+    </div>
+    <div class="card">
+      <a href=""><img src="{{ asset('img/guardanapo.jpg')}}" alt=""></a>
+      <p>Title</p>
+    </div>
+  </div>
+  <a href="" class="more anim">Mais</a>
+</section>
+
+<section class="image-fixed sixth-image"></section>
+
+<section class="contact" id="contact">
+	<h3 class="title">Formas de Contato</h3>
+  <hr>
+  <div class="social">
+    <a href="https://www.facebook.com/vessencia/">
+      <i class="fa fa-facebook-square fa-4x"></i>facebook.com/vessencia</a>
+    <a href="#"><i class="fa fa-whatsapp fa-4x"></i> (55) 9955-9990</a>
+    <a href="#"><i class="fa fa-envelope-o fa-4x"></i> vessencia@outlook.com</a>
+    <!-- <a href="#"><i class="fa fa-commenting-o fa-4x"></i>Nos diga um Oi</a> -->
+  </div>
+</section>
 
 <script>
+  if (document.documentElement.style.scrollBehavior === undefined) { smoothScroll.init(); }
 
- window.onscroll = function() {myFunction()};
+  window.onscroll = function() {
+    var greeting = document.getElementById("greeting");
+    var greetingImg = document.querySelector(".greeting .greeting-img");
+    var greetingPosition = greeting.offsetTop - 500;
+    var greetingEnd = greeting.scrollHeight + greetingPosition + 300;
 
- var sectionB = document.getElementById("section-b");
- var element = document.querySelector("#section-b ul");
- var sticky = sectionB.offsetTop - 800;
+    slide(greetingImg, greetingPosition, greetingEnd);
 
- function myFunction() {
-   if (window.pageYOffset >= sticky) {
-     element.classList.add("show-item")
-   } else {
-     element.classList.remove("show-item");
-   }
- }
+    var services = document.getElementById("services");
+    var servicesImg = document.querySelector(".services .services-img");
+    var servicesPosition = services.offsetTop - 500;
+    var servicesEnd = services.scrollHeight + servicesPosition + 300;
 
+    slide(servicesImg, servicesPosition, servicesEnd);
+
+    var menus = document.getElementById("menus");
+    var menusImg = document.querySelector(".menus .menus-img");
+    var menusPosition = menus.offsetTop - 500;
+    var menusEnd = menus.scrollHeight + menusPosition + 300;
+
+    slide(menusImg, menusPosition, menusEnd);
+
+    navScroll();
+  };
+
+  function slide(element, elementPosition, elementEnd) {
+    if (window.pageYOffset >= elementPosition) {
+      element.classList.add("move")
+    } else {
+      element.classList.remove("move");
+    }
+
+    if (window.pageYOffset > elementEnd){
+      element.classList.remove("move");
+    }
+  }
+
+  function navScroll(){
+    const menu = document.querySelector('#navbar');
+
+    if (window.pageYOffset >= (window.innerHeight/2)){
+      menu.classList.add("navbar-background");
+    } else {
+      menu.classList.remove("navbar-background");
+    }
+  }
 </script>
+
 @endsection
