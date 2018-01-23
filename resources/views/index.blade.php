@@ -153,9 +153,10 @@
   <hr>
   <div class="social">
     <a href="https://www.facebook.com/vessencia/">
-      <i class="fa fa-facebook-square fa-4x"></i>facebook.com/vessencia</a>
-    <a href="#"><i class="fa fa-whatsapp fa-4x"></i> (55) 9955-9990</a>
-    <a href="#"><i class="fa fa-envelope-o fa-4x"></i> vessencia@outlook.com</a>
+      <i class="fa fa-facebook-square fa-4x"></i>{{$company->facebook}}</a>
+    <a href="#"><i class="fa fa-whatsapp fa-4x"></i> {{$company->phone}}</a>
+    <a href="#"><i class="fa fa-envelope-o fa-4x"></i> {{$company->email}}</a>
+    <a href="#"><i class="fa fa-instagram  fa-4x" ></i></i> {{$company->instagram}}</a>
     <!-- <a href="#"><i class="fa fa-commenting-o fa-4x"></i>Nos diga um Oi</a> -->
   </div>
 </section>
