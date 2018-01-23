@@ -1,5 +1,4 @@
 window.onload = function() {
-
   const items = document.querySelectorAll('.item');
 
   items.forEach(item => (changeBackgroundColor(item)));
