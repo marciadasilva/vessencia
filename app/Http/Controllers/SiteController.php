@@ -89,6 +89,10 @@ class SiteController extends Controller
   }
 
   public function galleryPhotos(){
-    return view('gallery-photo');
+    $photosm = Menu::latest()->get(['image','description']);
+    $photost = Category::latest()->get(['image','description']);
+    $photoss = Service::latest()->get(['image', 'description']);
+    $photos = $photosm->toBase()->merge($photost)->merge($photoss);
+    return view('gallery-photo', compact('photos'));
   }
 }
