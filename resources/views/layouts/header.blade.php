@@ -13,9 +13,9 @@
 </header>
 @elseif(isset($admin))
 <header id="navbar" style="background: rgba(56, 56, 56, 0.7);">
-  <h2><a href="">5ª Essência</a></h2>
+  <h2><a href="/">5ª Essência</a></h2>
   <nav>
-    <li><a class="expand_middle" href="/">Home</a></li>
+    <li><a class="expand_middle" href="/admin">Home</a></li>
     <li><a class="expand_middle" href="/admin/category">Categorias</a></li>
     <li><a class="expand_middle" href="/admin/menu">Cardápios</a></li>
     <li><a class="expand_middle" href="/admin/service">Serviços</a></li>

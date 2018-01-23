@@ -1,5 +1,5 @@
 $dark_gray: #383838;
-$dark_red: #a72830;
+$dark_red: var(--main-color);
 
 #admin-page{
   background-image: url("../img/topography.svg"),
@@ -43,11 +43,10 @@ $dark_red: #a72830;
   font-weight: 900;
   font-size: 10px;
   color: $dark_gray;
-  padding-left: 3em;
-  padding-right: 3em;
+  padding: 8em 3em 0 3em;
 }
 
-.all-cards   button{
+.all-cards button{
   padding: 1em;
   margin-top: 1em;
   background-color: $dark_gray;
@@ -129,7 +128,7 @@ $dark_red: #a72830;
   }
 }
 
-.all-cards .show-card .card-items   .card_buttons{
+.all-cards .show-card .card-items .card_buttons{
   grid-area: buttons;
   border-top: 1px solid $dark_gray;
   padding-top: 1em;
@@ -169,16 +168,17 @@ $dark_red: #a72830;
   background-size: 340px, auto;
   min-height: calc(100vh - 100px);
   letter-spacing: -1px;
-  box-sizing: border-box;
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
   font-weight: 900;
   font-size: 10px;
   color: $dark_gray;
+  padding-top: 10em!important;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
+  padding: 0 10em;
 }
 
 .create-form .caixa {
@@ -206,7 +206,7 @@ $dark_red: #a72830;
     padding: 0.5em;
     margin: 0.5em;
     font-size: 1.5em;
-    width: 92%;
+    width: 50%;
     transition: all .35s ease-in-out;
 
     &:hover{
@@ -218,7 +218,7 @@ $dark_red: #a72830;
 .create-form .caixa form .form-grupo{
   padding: 2em;
   margin: 1em;
-  width: 80%;
+  width: 100%;
   color: $dark_gray;
 
   a{
@@ -344,58 +344,49 @@ $dark_red: #a72830;
   padding-bottom: 1em;
 }
 
-@media (min-width: 700px) {
-  #admin-page{
-    .panel{
-      width: 50%;
-      height: 50%;
-    }
+@media (min-width: 900px) {
+  #admin-page .panel{
+    width: 50%;
+    height: 50%;
   }
 
-  .all-cards{
-    .show-card {
-      //grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      .card-items{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas:
-                        "image description"
-                        "buttons buttons";
+  .all-cards .show-card {
+    //grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    .card-items{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+                      "image description"
+                      "buttons buttons";
 
-        .card_img {
-          grid-area: image;
-          height: 150px;
-          width: 200px;
-        }
+      .card_img {
+        grid-area: image;
+        height: 150px;
+        width: 200px;
       }
     }
   }
 
-  .create-form{
-    .caixa{
-      form{
-        min-width: 75vh;
-        min-height: 60vh;
+  .create-form .caixa form{
+    min-width: 75vh;
+    min-height: 60vh;
 
-        button{
-          margin-top: 2em;
-          width: 75%;
-        }
-      }
+    button{
+      margin-top: 2em;
+      width: 25%;
     }
   }
 
-  .company-custom{
-    .caixa{
-      .form-grupo{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 3em;
-      }
-      form{
-        min-width: 100vh;
-      }
+  .company-custom .caixa{
+    .form-grupo{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 3em;
+    }
+
+    form{
+      min-width: 100vh;
     }
   }
 

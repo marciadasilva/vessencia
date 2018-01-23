@@ -116,17 +116,17 @@
 }
 
 .anim {
- animation-name: jiggle;
- animation-duration: 2s;
- animation-timing-function: ease-in;
- animation-iteration-count: infinite;
+	animation-name: jiggle;
+	animation-duration: 2s;
+	animation-timing-function: ease-in;
+	animation-iteration-count: infinite;
 }
 
 @keyframes jiggle {
- 48%, 62% { transform: scale(1.0, 1.0)}
- 50% { transform: scale(1.1, 0.9)}
- 56% { transform: scale(0.9, 1.1) translate(0, -5px)}
- 59% {   transform: scale(1.0, 1.0) translate(0, -3px)}
+	48%, 62% { transform: scale(1.0, 1.0)}
+	50% { transform: scale(1.1, 0.9)}
+	56% { transform: scale(0.9, 1.1) translate(0, -5px)}
+	59% { transform: scale(1.0, 1.0) translate(0, -3px)}
 }
 
 /* Greeting section*/

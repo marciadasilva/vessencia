@@ -100,7 +100,7 @@
 
 <section class="image-fixed forth-image"></section>
 
-<section class="gallery" id="gallery">>
+<section class="gallery" id="gallery">
   <h3 class="title">Galerias</h3>
   <hr>
   <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem neque adipisci molestiae, quam repellendus eos molestias amet ducimus, cumque tempore. </p>
