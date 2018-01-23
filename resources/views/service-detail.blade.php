@@ -25,39 +25,42 @@
     <h3 class="title">Buffet</h3>
     <hr>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus nihil ut totam corporis rem pariatur fuga veritatis officiis beatae sed laboriosam iste error voluptatum numquam, harum molestias dolore debitis aspernatur repudiandae quam rerum eligendi itaque animi. Veniam similique quae magnam!</p>
+    <p class="click-here">Para contratar este serviço &nbsp<a href="#">Entre em Contato.</a></p >
   </div>
   <div>
-    <form action="/" method="post">
-      <div class="group-custom">
-        <div>
-          <h1>Entre em contato conosco</h1>
+    <div class="related-news">
+      <h3 class="title"> Noticias relacionadas</h3>
+      <hr>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, a!</p>
+
+      <div class="related-news-items">
+        <div class="related-news-item">
+          <a href="news.html">
+            <img src="{{asset($service->image)}}" alt="{{$service->name}}">
+            <h4>Lorem ipsum dolor sit amet!</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </a>
         </div>
-        <div class="field">
-          <label for="nome">Nome</label>
-          <input type="nome" name="nome" id="nome" value="">
+
+        <div class="related-news-item">
+          <a href="news.html">
+            <img src="{{asset($service->image)}}" alt="{{$service->name}}">
+            <h4>Lorem ipsum dolor sit amet!</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </a>
         </div>
-        <div class="field">
-          <label for="email">E-mail</label>
-          <input type="email" name="email" id="email" value="">
-        </div>
-        <div class="field">
-          <label for="subject">Assunto</label>
-          <input type="text" name="subject" id="subject" value="">
-        </div>
-        <div class="field">
-          <label for="message">Mensagem</label>
-          <input type="message" name="message" id="message" value="">
-        </div>
-        <div class="btn-form">
-          <button type="submit">Entrar</button>
+
+        <div class="related-news-item">
+          <a href="news.html">
+            <img src="{{asset($service->image)}}" alt="{{$service->name}}">
+            <h4>Lorem ipsum dolor sit amet!</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </a>
         </div>
       </div>
-    </form>
-  </div>
-  <div class="related-news">
-    <h3 class="title"> Noticias relacionadas</h3>
-    <hr>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, a!</p>
-  </div>
-</section>
+      <div>
+        <a href="#" class="anim">Mais</a>
+      </div>
+    </div>
+  </section>
 @endsection

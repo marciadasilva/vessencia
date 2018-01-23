@@ -88,7 +88,7 @@
       <p>The private dining facilities are ideal for small, intimate lunch and dinner parties, private celebrations and corporate dining for up to 16 guests.</p>
     </div>
     <div>
-      <a href="services.html" class="anim">Mais</a>
+      <a href="/services" class="anim">Mais</a>
     </div>
   </div>
   <div class="services-img">
