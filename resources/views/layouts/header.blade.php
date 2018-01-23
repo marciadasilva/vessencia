@@ -7,6 +7,7 @@
     <li><a class="expand_middle" href="#menus">Cardápios</a></li>
     <li><a class="expand_middle" href="#services">Serviços</a></li>
     <li><a class="expand_middle" href="#gallery">Galerias</a></li>
+    <li><a class="expand_middle" href="#news">Notícias</a></li>
     <li><a class="expand_middle" href="#contact">Contato</a></li>
     <li><a class="expand_middle" href="#">EN</a></li>
   </nav>
@@ -33,6 +34,7 @@
     <li><a class="expand_middle" href="/menus">Cardápios</a></li>
     <li><a class="expand_middle" href="/services">Serviços</a></li>
     <li><a class="expand_middle" href="/gallery-photos">Galerias</a></li>
+    <li><a class="expand_middle" href="#news">Notícias</a></li>    
     <li><a class="expand_middle" href="/contact">Contato</a></li>
     <li><a class="expand_middle" href="">EN</a></li>
   </nav>
