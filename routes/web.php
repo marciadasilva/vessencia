@@ -28,6 +28,8 @@ Route::get('/services/{service}', 'SiteController@service');
 
 Route::get('/gallery-photos', 'SiteController@galleryPhotos');
 
+Route::get('/gallery-recipes', 'SiteController@galleryRecipes');
+
 // Login Routes
 
 Route::get('/login', 'LoginController@login')->name('login');

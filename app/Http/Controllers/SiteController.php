@@ -95,4 +95,9 @@ class SiteController extends Controller
     $photos = $photosm->toBase()->merge($photost)->merge($photoss);
     return view('gallery-photo', compact('photos'));
   }
+
+  public function galleryRecipes(){
+    
+    return view('gallery-recipes');
+  }
 }

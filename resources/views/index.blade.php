@@ -8,8 +8,8 @@
 
 <section class="hero" id="hero">
   <div class="hero-content-area">
-    <a href="menus.html" class="btn">Cardápios</a>
-    <a href="#" class="btn">Serviços</a>
+    <a href="/categories" class="btn">Cardápios</a>
+    <a href="/services" class="btn">Serviços</a>
   </div>
   <div id="slider">
     <figure>
@@ -106,7 +106,7 @@
   <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem neque adipisci molestiae, quam repellendus eos molestias amet ducimus, cumque tempore. </p>
 
   <ul class="grid">
-  <a href="">
+  <a href="/gallery-recipes">
     <li>
       <i class=" fa fa-cutlery fa-4x"></i>
       <h4>Receitas</h4>

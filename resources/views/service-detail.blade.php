@@ -22,9 +22,9 @@
     <img src="{{asset($service->image)}}" alt="{{$service->name}}">
   </div>
   <div class="service-detail-text">
-    <h3 class="title">Buffet</h3>
+    <h3 class="title">{{$service->name}}</h3>
     <hr>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus nihil ut totam corporis rem pariatur fuga veritatis officiis beatae sed laboriosam iste error voluptatum numquam, harum molestias dolore debitis aspernatur repudiandae quam rerum eligendi itaque animi. Veniam similique quae magnam!</p>
+    <p>{{$service->description}}</p>
     <p class="click-here">Para contratar este serviço &nbsp<a href="#">Entre em Contato.</a></p >
   </div>
 
