@@ -27,9 +27,9 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus nihil ut totam corporis rem pariatur fuga veritatis officiis beatae sed laboriosam iste error voluptatum numquam, harum molestias dolore debitis aspernatur repudiandae quam rerum eligendi itaque animi. Veniam similique quae magnam!</p>
     <p class="click-here">Para contratar este serviço &nbsp<a href="#">Entre em Contato.</a></p >
   </div>
-  <div>
+
     <div class="related-news">
-      <h3 class="title"> Noticias relacionadas</h3>
+      <h3 class="title"> Notícias relacionadas</h3>
       <hr>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, a!</p>
 
@@ -58,7 +58,6 @@
           </a>
         </div>
       </div>
-      <div>
         <a href="#" class="anim">Mais</a>
       </div>
     </div>
