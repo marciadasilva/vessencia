@@ -26,6 +26,8 @@ Route::post('/contact', 'SiteController@store');
 Route::get('/services', 'SiteController@services');
 Route::get('/services/{service}', 'SiteController@service');
 
+Route::get('/gallery-photos', 'SiteController@galleryPhotos');
+
 // Login Routes
 
 Route::get('/login', 'LoginController@login')->name('login');

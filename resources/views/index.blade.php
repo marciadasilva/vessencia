@@ -113,10 +113,10 @@
       <p>Looking for the complete experience? Take a tour with one of our experts. They'll show you secrets that you're likely to miss otherwise.</p>
     </li>
   </a>
-  <a href="gallery-photo.html">
+  <a href="/gallery-photos">
     <li>
       <i class="fa fa-camera-retro fa-4x"></i>
-      <h4>Eventos</h4>
+      <h4>Fotos</h4>
       <p>Want to experience nature's beauty without all of that annoying exercise? Take a photo tour on one of our mountain buses.</p>
     </li>
   </a>

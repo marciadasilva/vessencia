@@ -87,4 +87,8 @@ class SiteController extends Controller
   public function service(Service $service){
     return view('service-detail', compact('service'));
   }
+
+  public function galleryPhotos(){
+    return view('gallery-photo');
+  }
 }
