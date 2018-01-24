@@ -97,7 +97,11 @@ class SiteController extends Controller
   }
 
   public function galleryRecipes(){
-    
+
     return view('gallery-recipes');
+  }
+
+  public function news(){
+    return view('news');
   }
 }
