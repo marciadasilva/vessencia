@@ -61,5 +61,50 @@ class NewsController extends Controller
       return view('admin.edit-news', compact(['admin', 'new']));
     }
 
+    public function storeUpdateNews(News $new){
+      Session::put('title-news-edit', request('title'));
+      Session::put('subtitle-news-edit', request('subtitle'));
+      Session::put('body-news-edit', request('body'));
+
+      $this->validate(request(), [
+        'title' => 'required',
+        'subtitle' => 'required',
+        'body' => 'required',
+        'image' => 'required',
+      ]);
+
+      $dados = request()->all();
+
+      if(request()->hasFile('image')){
+        $imagem = request()->file('image');
+        $num = rand(1111, 9999);
+        $dir = "img/news/";
+        $ex = $imagem->guessClientExtension();
+        $nomeImagem = "image_".$num.".".$ex;
+        $imagem->move($dir, $nomeImagem);
+
+        $imageToRemove = Category::where('id', $new->id)->first()->image;
+        unlink($imageToRemove);
+        $dados['image'] = $dir . "/" . $nomeImagem;
+      }else{
+        $imagedb = News::where('id', $new->id)->first()->image;
+        $dados['image'] = $imagedb;
+      }
+
+      $dados['user_id'] = auth()->user()->id;
+
+      News::where('id', $new->id)->update([
+        'title' => request('title'),
+        'subtitle' => request('subtitle'),
+        'body' => request('body'),
+        // 'category_id'=>request('category_id'),
+        'image' => $dados['image'],
+        // 'user_id' => $dados['user_id']
+      ]);
+
+      Alert::success('Notícia alterada com sucesso!', 'Sucesso')->persistent('Close');
+      return redirect()->route('news');
+    }
+
 
 }
