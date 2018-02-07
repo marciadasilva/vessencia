@@ -9,28 +9,53 @@
           onclick="window.location.href='/admin/news/create'">
             Nova Notícia
   </button>
-</main>
 
-<div class="show-card">
-  @foreach($news as $new)
-  <div class="card-items">
-    <img class="card_img" src="{{asset($new->image)}}" alt="{{$new->name}}">
-    <div class="card_description">
-      <h2>{{$new->title}}</h2>
-      <p>{{$new->subtitle}}</p>
-      <p>{{$new->body}}</p>
-      <p>{{isset($new->video)}}</p>
+
+  <div class="show-card">
+    @foreach($news as $new)
+    <div class="card-items">
+      <img class="card_img" src="{{asset($new->image)}}" alt="{{$new->title}}">
+      <div class="card_description">
+        <h2>{{$new->title}}</h2>
+        <p>{{$new->subtitle}}</p>
+        <p>{{$new->body}}</p>
+        <p>{{isset($new->video)}}</p>
+      </div>
+
+      <div class="card_buttons">
+        <a href="/admin/news/edit/{{$new->id}}">
+          <i class="fa fa-pencil"></i>
+        </a>
+
+        <a onclick="deleteItem({{$new->id}})">
+          <i class="fa fa-trash-o"></i>
+        </a>
+      </div>
     </div>
-
-    <div class="card_buttons">
-      <!-- <a href="/admin/news/edit/{{$news->id}}">
-        <i class="fa fa-pencil"></i>
-      </a> -->
-
-      <!-- <a onclick="deleteItem({{$news>id}})">
-        <i class="fa fa-trash-o"></i>
-      </a> -->
-    </div>
+    @endforeach
   </div>
-  @endforeach
-</div>
+
+  <div>
+    {{$news->links()}}
+  </div>
+
+  <script>
+      function deleteItem(id){
+          swal({
+              title:'Tem certeza que deseja excluir?',
+              text:'Não será possivel reverter a exclusão!',
+              icon:'warning',
+              buttons:["Cancelar", "Excluir"]
+          }).then((willDelete)=>{
+              if(willDelete){
+                  swal("A notícia será excluído.", {
+                      icon:'success',
+                      timer:10000
+                  });
+                  window.location.href="news/delete/"+id;
+              }
+          })
+      }
+  </script>
+
+</main>

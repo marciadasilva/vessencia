@@ -9,7 +9,7 @@
     <div class="caixa">
         <form action="/admin/news/create" method="post" enctype="multipart/form-data">
           {{ csrf_field() }}
-          <div class="form-group">
+          <div class="form-grupo">
             <div class="subir">
               <input
                 type="text"
@@ -17,9 +17,9 @@
                 id="title"
                 required
                 @if ($errors->any())
-                @if (Session::get('title-news'))
-                value="{{Session::get('title-news')}}"
-                @endif
+                  @if (Session::get('title-news'))
+                    value="{{Session::get('title-news')}}"
+                  @endif
                 @endif
               >
               <label for="title">Título</label>
@@ -38,9 +38,9 @@
                 id="subtitle"
                 required
                 @if ($errors -> any())
-                @if (Session::get('subtitle->news'))
-                value="{{Session::get('subtitle->news')}}"
-                @endif
+                  @if (Session::get('subtitle-news'))
+                    value="{{Session::get('subtitle-news')}}"
+                  @endif
                 @endif
               >
               <label for="subtitle">Sub-Título</label>
@@ -52,7 +52,50 @@
               @endif
             </div>
 
+            <div class="subir">
+              <textarea
+                name="body"
+                rows="8"
+                cols="80"
+                required
+                @if ($errors -> any())
+                  @if (Session::get('body-news'))
+                    value="{{Session::get('body-news')}}"
+                  @endif
+                @endif
+              ></textarea>
+              <label for="body">Texto</label>
+
+              @if ($errors->first('body'))
+                <div>
+                  <span>{{$errors->first('body')}}</span>
+                </div>
+              @endif
+            </div>
+
+            <div>
+              <label for="image" id="file">
+                <i class="fa fa-upload" aria-hidden="true"></i>
+                Imagem
+              </label>
+              <input
+                type="file"
+                name="image"
+                id="image"
+                onchange="readURL(this)";
+              >
+              <img id="file-selected" src="#" alt="Image" style="display: none" />
+
+              @if ($errors->first('image'))
+                <div>
+                  <span>Imagem não selecionada ou muito grande (max 2MB)</span>
+                </div>
+              @endif
+            </div>
           </div>
+
+
+          <button type="submit" name="button">Criar</button>
         </form>
     </div>
 </main>

@@ -16,9 +16,9 @@
                             id="name"
                             required
                             @if ($errors->any())
-                            value="{{Session::get('name-menu-edit')}}"
+                              value="{{Session::get('name-menu-edit')}}"
                             @else
-                            value="{{$menu->name}}"
+                              value="{{$menu->name}}"
                             @endif
                     >
                     <label for="name">Nome</label>
