@@ -23,69 +23,6 @@
             </a>
           </div>
 
-          <div class="recipes-item">
-            <a href="news-detail.html">
-              <img src="assets/img/peixe.jpg" alt="example">
-              <h4>Lorem ipsum dolor sit amet!</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </a>
-          </div>
-
-          <div class="recipes-item">
-            <a href="news-detail.html">
-              <img src="assets/img/peixe.jpg" alt="example">
-              <h4>Lorem ipsum dolor sit amet!</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </a>
-          </div>
-
-          <div class="recipes-item">
-            <a href="news-detail.html">
-              <img src="assets/img/peixe.jpg" alt="example">
-              <h4>Lorem ipsum dolor sit amet!</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </a>
-          </div>
-
-          <div class="recipes-item">
-            <a href="news-detail.html">
-              <img src="assets/img/peixe.jpg" alt="example">
-              <h4>Lorem ipsum dolor sit amet!</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </a>
-          </div>
-
-          <div class="recipes-item">
-            <a href="news-detail.html">
-              <img src="assets/img/peixe.jpg" alt="example">
-              <h4>Lorem ipsum dolor sit amet!</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </a>
-          </div>
-
-          <div class="recipes-item">
-            <a href="news-detail.html">
-              <img src="assets/img/peixe.jpg" alt="example">
-              <h4>Lorem ipsum dolor sit amet!</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </a>
-          </div>
-
-          <div class="recipes-item">
-            <a href="news-detail.html">
-              <img src="assets/img/peixe.jpg" alt="example">
-              <h4>Lorem ipsum dolor sit amet!</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </a>
-          </div>
-
-          <div class="recipes-item">
-            <a href="news-detail.html">
-              <img src="assets/img/peixe.jpg" alt="example">
-              <h4>Lorem ipsum dolor sit amet!</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </a>
-          </div>
         <!-- </div> -->
         <!-- <div class="more">
           <a href="#" class="anim">Mais</a>
