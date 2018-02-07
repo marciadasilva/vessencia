@@ -7,6 +7,7 @@ use App\Category;
 use App\Menu;
 use App\Service;
 use App\Company;
+use App\News;
 use Mail;
 use Session;
 use Alert;

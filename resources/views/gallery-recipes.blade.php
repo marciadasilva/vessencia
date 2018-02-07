@@ -8,7 +8,7 @@
 
     <section class="bread-crumbs">
       <div class="bread-crumbs-links">
-        <a href="index.html">Home /</a>
+        <a href="/">Home /</a>
         <a href="#" class="active"> Galeria de Receitas</a>
       </div>
     </section>

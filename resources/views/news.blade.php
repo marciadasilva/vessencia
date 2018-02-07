@@ -8,7 +8,7 @@
 
     <section class="bread-crumbs">
       <div class="bread-crumbs-links">
-        <a href="index.html">Home /</a>
+        <a href="/">Home /</a>
         <a href="#" class="active"> Notícias Recentes</a>
       </div>
     </section>
@@ -17,8 +17,8 @@
         <!-- <div class="recipes"> -->
           <div class="recipes-item">
             <a href="news-detail.html">
-              <img src="assets/img/peixe.jpg" alt="example">
-              <h4>Lorem ipsum dolor sit amet!</h4>
+              <img src="{{ asset('img/guardanapo.jpg')}}" alt="example">
+              <h4>Titulo da reportagem</h4>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
             </a>
           </div>

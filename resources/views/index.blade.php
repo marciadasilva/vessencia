@@ -131,7 +131,7 @@
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque aspernatur nostrum distinctio ipsam obcaecati amet. </p>
   <div class="thumbnail">
     <div class="card">
-      <a href=""><img src="{{ asset('img/guardanapo.jpg')}}" alt=""></a>
+      <a href="/news"><img src="{{ asset('img/guardanapo.jpg')}}" alt=""></a>
       <p>Title</p>
     </div>
     <div class="card">
