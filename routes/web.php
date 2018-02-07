@@ -70,3 +70,5 @@ Route::get('/admin/service/delete/{service}', 'ServiceController@deleteService')
 
 Route::get('/admin/company', 'CompanyController@company')->name('company');
 Route::post('/admin/company', 'CompanyController@storeCompany');
+
+Route::get('/admin/news', 'NewsController@showNews')->name('news');
