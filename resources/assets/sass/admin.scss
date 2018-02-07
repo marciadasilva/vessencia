@@ -46,6 +46,7 @@ $dark_red: var(--main-color);
   color: $dark_gray;
   padding: 8em 3em 0 3em;
   text-align: center;
+  min-height: 100vh;
 }
 
 .all-cards button{
@@ -169,7 +170,10 @@ $dark_red: var(--main-color);
 
 .create-form{
   background-image: url("../img/topography.svg"),
-  linear-gradient(110deg, $dark_red, $dark_gray);
+  //linear-gradient(110deg, #f93d66, #6d47d9);
+  //linear-gradient(110deg, #3e5151, #decba4);
+  // linear-gradient(110deg, $dark_gray, $dark_red);
+  linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   background-size: 340px, auto;
   min-height: calc(100vh - 100px);
   letter-spacing: -1px;
@@ -197,6 +201,7 @@ $dark_red: var(--main-color);
 
 .create-form .caixa form {
   color: $dark_gray;
+  background-color: rgba(0,0,0,.5);
   min-height: 50vh;
   min-width: 50vh;
   display: flex;
@@ -224,7 +229,8 @@ $dark_red: var(--main-color);
   padding: 2em;
   margin: 1em;
   width: 100%;
-  color: $dark_gray;
+  // color: $dark_gray;
+  color: #f5f5f5;
 
   a{
     text-decoration: none;

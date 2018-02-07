@@ -39,7 +39,7 @@
                             required
                             @if ($errors->any())
                             @if (Session::get('description-menu'))
-                            value="{{Session::get('description-men')}}"
+                            value="{{Session::get('description-menu')}}"
                             @endif
                             @endif
                     >
