@@ -75,3 +75,5 @@ Route::get('/admin/news', 'NewsController@showNews')->name('news');
 Route::get('/admin/news/create', 'NewsController@createNews');
 Route::post('/admin/news/create', 'NewsController@storeNews');
 Route::get('/admin/news/edit/{news}', 'NewsController@updateNews');
+Route::post('/admin/news/edit/{news}', 'NewsController@storeUpdateNews');
+Route::get('/admin/news/delete/{news}', 'NewsController@deleteNews');
