@@ -106,11 +106,11 @@ class NewsController extends Controller
       return redirect()->route('news');
     }
 
-    public function deleteNews(News $new) {
-      $imageToRemove = News::where('id', $new->id)->first()->image;
+    public function deleteNews(News $news) {
+      $imageToRemove = News::where('id', $news->id)->first()->image;
       unlink($imageToRemove);
 
-      News::find($new->id)->delete();
+      News::find($news->id)->delete();
       return redirect()->route('news');
     }
 

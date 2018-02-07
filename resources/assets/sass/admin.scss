@@ -294,6 +294,10 @@ $dark_red: var(--main-color);
     &:focus{
       border-bottom: 1px solid $dark_red;
     }
+
+    &:hover {
+      cursor: default;
+    }
   }
 
   textarea{
