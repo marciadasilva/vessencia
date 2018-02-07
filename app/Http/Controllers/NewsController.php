@@ -19,9 +19,7 @@ class NewsController extends Controller
 
     public function createNews(){
       $admin = true;
-      $news = News::latest()->get();
-
-      return view('admin.create-news', compact(['admin', 'categories']));
+      return view('admin.create-news', compact(['admin']));
     }
 
 

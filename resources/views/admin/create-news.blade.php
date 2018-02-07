@@ -9,7 +9,7 @@
     <div class="caixa">
         <form action="/admin/news/create" method="post" enctype="multipart/form-data">
           {{ csrf_field() }}
-          <div class="form-group">
+          <div class="form-grupo">
             <div class="subir">
               <input
                 type="text"
@@ -17,9 +17,9 @@
                 id="title"
                 required
                 @if ($errors->any())
-                @if (Session::get('title-news'))
-                value="{{Session::get('title-news')}}"
-                @endif
+                  @if (Session::get('title-news'))
+                    value="{{Session::get('title-news')}}"
+                  @endif
                 @endif
               >
               <label for="title">Título</label>

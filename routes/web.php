@@ -73,3 +73,4 @@ Route::post('/admin/company', 'CompanyController@storeCompany');
 
 Route::get('/admin/news', 'NewsController@showNews')->name('news');
 Route::get('/admin/news/create', 'NewsController@createNews');
+Route::post('/admin/news/create', 'NewsController@storeNews');
