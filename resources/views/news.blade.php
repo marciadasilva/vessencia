@@ -25,7 +25,10 @@
                 {{$n->title}} : {{$n->subtitle}}
               </h2>
               <p class="article-content">
-                {{$n->body}}
+                <!-- Tira as tags html, mantendo a formatação, porém não é seguro. -->
+                {!!$n->body!!}
+                <!-- Tira as tags html mas, também tira a formatação do texto -->
+                {{strip_tags($n->body)}}
               </p>
               <div class="data-info">
                 Data de publicação: {{$n->created_at}}
