@@ -13,15 +13,24 @@
       </div>
     </section>
 
-    <section class="recipes">
-        <!-- <div class="recipes"> -->
-          <div class="recipes-item">
-            <a href="news-detail.html">
+    <section class="news-section">
+        <!-- <div class="News"> -->
+          <a class="article">
+            <figure class="article-image">
               <img src="{{ asset('img/guardanapo.jpg')}}" alt="example">
-              <h4>Titulo da reportagem</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            </a>
-          </div>
+            </figure>
+            <div class="article-body">
+              <h2 class="article-title">
+                Título da Notícia
+              </h2>
+              <p class="article-content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto molestias illum, eius harum ratione doloremque.
+              </p>
+              <footer class="article-info">
+                data
+              </footer>
+            </div>
+          </a>
 
         <!-- </div> -->
         <!-- <div class="more">
