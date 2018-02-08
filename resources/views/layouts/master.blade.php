@@ -30,6 +30,12 @@
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="{{ asset('js/lightbox-plus-jquery.min.js')}}"></script>
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.7.1/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace( 'editor1' );
+    </script>
+
     @include('sweet::alert')
   </body>
 </html>

@@ -3,7 +3,6 @@
 @section('title', 'Criar nova Notícia - 5ª Essência')
 
 @include('layouts.header')
-
 <main class="create-form">
 
     <div class="caixa">
@@ -54,7 +53,7 @@
 
             <div class="subir">
               <textarea
-                name="body"
+                name="editor1"
                 rows="8"
                 cols="80"
                 required
@@ -64,7 +63,7 @@
                   @endif
                 @endif
               ></textarea>
-              <label for="body">Texto</label>
+              <!-- <label for="body">Texto</label> -->
 
               @if ($errors->first('body'))
                 <div>

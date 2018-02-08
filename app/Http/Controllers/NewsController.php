@@ -28,7 +28,7 @@ class NewsController extends Controller
     public function storeNews(){
       Session::put('title-news', request('title'));
       Session::put('subtitle-news', request('subtitle'));
-      Session::put('body-news', request('body'));
+      Session::put('body-news', request('editor1'));
 
       $this->validate(request(), [
         'title' => 'required',
