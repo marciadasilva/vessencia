@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\News;
 use Session;
 use Alert;
+use Purifier;
 
 class NewsController extends Controller
 {
@@ -37,7 +38,8 @@ class NewsController extends Controller
         'image' => 'required',
       ]);
 
-      $dados = request()->all();
+      // purifier this variable
+      $dados = Purifier::clean(request()->all());
 
       if(request()->hasFile('image')){
         $imagem = request()->file('image');
@@ -73,7 +75,7 @@ class NewsController extends Controller
         'image' => 'required',
       ]);
 
-      $dados = request()->all();
+      $dados = Purifier::clean(request()->all());
 
       if(request()->hasFile('image')){
         $imagem = request()->file('image');
