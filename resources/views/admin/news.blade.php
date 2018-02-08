@@ -18,7 +18,7 @@
       <div class="card_description">
         <h2>{{$new->title}}</h2>
         <p>{{$new->subtitle}}</p>
-        <p>{{$new->body}}</p>
+        <p>{!!$new->body!!}</p>
         <p>{{isset($new->video)}}</p>
       </div>
 
