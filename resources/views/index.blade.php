@@ -133,7 +133,8 @@
     @foreach($news as $n)
     <div class="card">
       <a href="/news"><img src="{{asset($n->image)}}" alt="{{asset($n->title)}}"></a>
-      <p>Title</p>
+      <p>{{$n->title}}</p>
+      <p>{{$n->subtitle}}</p>
     </div>
     @endforeach
 

@@ -9,7 +9,7 @@
 <section class="bread-crumbs">
   <div class="bread-crumbs-links">
     <a href="/">Home /</a>
-    <a href="/">Notícias /</a>
+    <a href="/news">Notícias /</a>
     <a href="#" class="active"> Título da Notícia</a>
   </div>
 </section>
