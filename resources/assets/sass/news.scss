@@ -8,26 +8,52 @@ h2, p{
   color: var(--main-color-dark);
 }
 
-.news-section {
+.news-section{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  padding: 0.5em;
+}
 
-  .article {
+.item-news{
+  width: 33%;
+  margin: .5em;
+  border: .5px solid var(--main-color-dark);
+}
+
+.item-news a{
+  display: flex;
+  flex-direction: column;
+
+  article {
     display: flex;
     flex-direction: column;
   }
 
-  .article-body {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
+  .article-title{
+    margin-bottom: .5em;
   }
 
-  .article-content {
-    flex: 1;
+  .article-content{
+
   }
 
-  .article-image img{
-    height: 30vh;
-    width: 30vw;
+  figure{
+    margin-bottom: 1em;
+  }
+
+  figure img{
+    height: 100%;
+    width: 100%;
+  }
+
+  .data-info{
+    color: #fff;
+    padding: .5em;
+    text-align: center;
+    background-color: var(--main-color-dark);
   }
 
 }

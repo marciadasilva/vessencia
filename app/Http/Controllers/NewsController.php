@@ -83,7 +83,7 @@ class NewsController extends Controller
         $nomeImagem = "image_".$num.".".$ex;
         $imagem->move($dir, $nomeImagem);
 
-        $imageToRemove = Category::where('id', $news->id)->first()->image;
+        $imageToRemove = News::where('id', $news->id)->first()->image;
         unlink($imageToRemove);
         $dados['image'] = $dir . "/" . $nomeImagem;
       }else{

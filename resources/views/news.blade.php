@@ -14,28 +14,26 @@
     </section>
 
     <section class="news-section">
-        <!-- <div class="News"> -->
-          <a class="article">
-            <figure class="article-image">
-              <img src="{{ asset('img/guardanapo.jpg')}}" alt="example">
+      @foreach ($news as $n)
+        <div class="item-news">
+          <a href="/news/{{$n->id}}">
+            <figure>
+              <img src="{{asset($n->image)}}" alt="example">
             </figure>
-            <div class="article-body">
+            <article>
               <h2 class="article-title">
-                Título da Notícia
+                {{$n->title}} : {{$n->subtitle}}
               </h2>
               <p class="article-content">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto molestias illum, eius harum ratione doloremque.
+                {{$n->body}}
               </p>
-              <footer class="article-info">
-                data
-              </footer>
-            </div>
+              <div class="data-info">
+                Data de publicação: {{$n->created_at}}
+              </div>
+            </article>
           </a>
-
-        <!-- </div> -->
-        <!-- <div class="more">
-          <a href="#" class="anim">Mais</a>
-        </div> -->
+        </div>
+      @endforeach
     </section>
 
 @endsection
