@@ -55,13 +55,13 @@ class NewsController extends Controller
       return redirect()->route('news');
     }
 
-    public function updateNews(News $new){
+    public function updateNews(News $news){
       $admin = true;
 
-      return view('admin.edit-news', compact(['admin', 'new']));
+      return view('admin.edit-news', compact(['admin', 'news']));
     }
 
-    public function storeUpdateNews(News $new){
+    public function storeUpdateNews(News $news){
       Session::put('title-news-edit', request('title'));
       Session::put('subtitle-news-edit', request('subtitle'));
       Session::put('body-news-edit', request('body'));
@@ -83,17 +83,17 @@ class NewsController extends Controller
         $nomeImagem = "image_".$num.".".$ex;
         $imagem->move($dir, $nomeImagem);
 
-        $imageToRemove = Category::where('id', $new->id)->first()->image;
+        $imageToRemove = Category::where('id', $news->id)->first()->image;
         unlink($imageToRemove);
         $dados['image'] = $dir . "/" . $nomeImagem;
       }else{
-        $imagedb = News::where('id', $new->id)->first()->image;
+        $imagedb = News::where('id', $news->id)->first()->image;
         $dados['image'] = $imagedb;
       }
 
       $dados['user_id'] = auth()->user()->id;
 
-      News::where('id', $new->id)->update([
+      News::where('id', $news->id)->update([
         'title' => request('title'),
         'subtitle' => request('subtitle'),
         'body' => request('body'),

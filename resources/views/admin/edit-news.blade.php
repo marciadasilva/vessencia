@@ -6,7 +6,7 @@
 
 <main class="create-form">
   <div class="caixa">
-    <form action="/admin/news/edit/{{$new->id}}" method="post" enctype="multipart/form-data">
+    <form action="/admin/news/edit/{{$news->id}}" method="post" enctype="multipart/form-data">
       {{ csrf_field() }}
       <div class="form-grupo">
         <div class="subir">
@@ -18,7 +18,7 @@
             @if ($errors->any())
               value="{{Session::get('title-news-edit')}}"
             @else
-              value="{{$new->title}}"
+              value="{{$news->title}}"
             @endif
           >
           <label for="title">Título</label>
@@ -36,10 +36,10 @@
             name="subtitle"
             id="subtitle"
             required
-            @if ($errors -> any())
-              @if (Session::get('subtitle-news'))
-                value="{{Session::get('subtitle-news')}}"
-              @endif
+            @if ($errors->any())
+              value="{{Session::get('subtitle-news-edit')}}"
+            @else
+                value="{{$news->subtitle}}"
             @endif
           >
           <label for="subtitle">Sub-Título</label>
@@ -57,12 +57,13 @@
             rows="8"
             cols="80"
             required
-            @if ($errors -> any())
-              @if (Session::get('body-news'))
-                value="{{Session::get('body-news')}}"
-              @endif
+          >
+            @if ($errors->any())
+              {{Session::get('body-news-edit')}}
+            @else
+              {{$news->body}}
             @endif
-          ></textarea>
+          </textarea>
           <label for="body">Texto</label>
 
           @if ($errors->first('body'))
@@ -73,23 +74,26 @@
         </div>
 
         <div>
-          <label for="image" id="file">
-            <i class="fa fa-upload" aria-hidden="true"></i>
-            Imagem
-          </label>
-          <input
-            type="file"
-            name="image"
-            id="image"
-            onchange="readURL(this)";
-          >
-          <img id="file-selected" src="#" alt="Image" style="display: none" />
+            <label for="image" id="file">
+                <i class="fa fa-upload" aria-hidden="true"></i>
+                Alterar Imagem
+            </label>
+            <input
+                type="file"
+                name="image"
+                id="image"
+                onchange="readURL(this)";
+            >
 
-          @if ($errors->first('image'))
-            <div>
-              <span>Imagem não selecionada ou muito grande (max 2MB)</span>
-            </div>
-          @endif
+            @if ($errors->first('image'))
+                <div class="error-message">
+                    <span>Imagem não selecionada ou muito grande (max 2MB)</span>
+                </div>
+            @endif
+        </div>
+
+        <div >
+            <img id="file-selected" src="{{asset($news->image)}}" alt="Imagem">
         </div>
       </div>
 
