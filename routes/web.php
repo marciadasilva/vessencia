@@ -31,6 +31,7 @@ Route::get('/gallery-photos', 'SiteController@galleryPhotos');
 Route::get('/gallery-recipes', 'SiteController@galleryRecipes');
 
 Route::get('/news', 'SiteController@news');
+Route::get('/news/detail/{news}', 'SiteController@newsDetail');
 
 // Login Routes
 

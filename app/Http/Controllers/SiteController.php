@@ -18,8 +18,9 @@ class SiteController extends Controller
     $menus = Menu::take(4)->get();
     $services = Service::take(4)->get();
     $companies = Company::take(1)->latest()->get();
+    $news = News::take(3)->latest()->get();
     $index = true;
-    return view('index', compact(['menus', 'services', 'companies', 'index']));
+    return view('index', compact(['menus', 'services', 'companies', 'news', 'index']));
   }
 
   public function chef(){
@@ -104,5 +105,9 @@ class SiteController extends Controller
   public function news(){
     $news = News::latest()->get();
     return view('news', compact('news'));
+  }
+
+  public function newsDetail(News $news) {
+    return view('news-detail', compact('news'));
   }
 }

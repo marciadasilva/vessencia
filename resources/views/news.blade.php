@@ -16,19 +16,22 @@
     <section class="news-section">
       @foreach ($news as $n)
         <div class="item-news">
-          <a href="/news/{{$n->id}}">
+          <a href="/news/detail/{{$n->id}}">
             <figure>
               <img src="{{asset($n->image)}}" alt="example">
             </figure>
             <article>
               <h2 class="article-title">
-                {{$n->title}} : {{$n->subtitle}}
+                {!!$n->title!!}
               </h2>
+              <h3 class="article-title">
+                {!!$n->subtitle!!}
+              </h3>
               <p class="article-content">
                 <!-- Tira as tags html, mantendo a formatação, porém não é seguro. -->
                 {!!$n->body!!}
                 <!-- Tira as tags html mas, também tira a formatação do texto -->
-                {{strip_tags($n->body)}}
+                <!-- {{strip_tags($n->body)}} -->
               </p>
               <div class="data-info">
                 Data de publicação: {{$n->created_at}}
