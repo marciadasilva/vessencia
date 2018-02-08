@@ -53,7 +53,7 @@
 
             <div class="subir">
               <textarea
-                name="editor1"
+                name="body"
                 rows="8"
                 cols="80"
                 required
