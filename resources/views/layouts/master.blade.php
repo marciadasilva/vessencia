@@ -34,7 +34,7 @@
     <script src="https://cdn.ckeditor.com/4.7.1/standard/ckeditor.js"></script>
     <script>
         CKEDITOR.replace( 'body' );
-        CKEDITOR.replace( 'instruction' );
+        CKEDITOR.replace( 'instructions' );
     </script>
 
     @include('sweet::alert')

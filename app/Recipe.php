@@ -9,7 +9,7 @@ class Recipe extends Model
     protected $fillable = [
       'title',
       'subtitle',
-      'ingredients',
+      'body',
       'instructions',
       'video',
       'image',

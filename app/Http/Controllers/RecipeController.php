@@ -33,13 +33,13 @@ class RecipeController extends Controller
       Session::put('category_id-recipe', request('category_id'));
       Session::put('time_preparation-recipe', request('time_preparation'));
       Session::put('yield-recipe', request('yield'));
-      Session::put('ingredients-recipe', request('editor1'));
-      Session::put('instructions-recipe', request('editor1'));
+      Session::put('ingredients-recipe', request('body'));
+      Session::put('instructions-recipe', request('instructions'));
 
       $this->validate(request(), [
         'title' => 'required',
         'subtitle' => 'required',
-        'ingredients' => 'required',
+        'body' => 'required', //ingredients
         'instructions' => 'required',
         'category_id' => 'required',
         'time_preparation' => 'required',
@@ -61,6 +61,6 @@ class RecipeController extends Controller
 
       Recipe::create($dados);
       Alert::success('A receita foi cadastrada com sucesso!', 'Sucesso')->persistent('Close');
-      return redirect()->route('recipe');
+      return redirect()->route('recipes');
     }
 }

@@ -17,13 +17,13 @@ class CreateRecipesTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('subtitle');
-            $table->longText('ingredients');
+            $table->longText('body');//ingredients
             $table->longText('instructions');
             $table->string('video')->nullable();
             $table->string('image')->nullable();
             $table->integer('category_id');
-            $table->integer('time_preparation');
-            $table->integer('yield');
+            $table->string('time_preparation');
+            $table->string('yield');
             $table->timestamps();
         });
     }

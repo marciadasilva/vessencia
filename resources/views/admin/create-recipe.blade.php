@@ -1,12 +1,12 @@
 @extends('layouts.master')
 
-@section('title', 'Criar novo Cardápio - 5ª Essência')
+@section('title', 'Criar nova receita - 5ª Essência')
 
 @include('layouts.header')
 
 <main class="create-form">
   <div class="caixa">
-    <form action="/admin/menu/create" method="post" enctype="multipart/form-data">
+    <form action="/admin/recipe/create" method="post" enctype="multipart/form-data">
       {{ csrf_field() }}
       <div class="form-grupo">
         <div class="subir">
@@ -138,12 +138,13 @@
             rows="8"
             cols="80"
             required
-            @if ($errors->any())
-              @if (Session::get('ingredients-recipe'))
-                value="{{ Session::get('ingredients-recipe') }}"
-              @endif
+          >
+          @if ($errors->any())
+            @if (Session::get('ingredients-recipe'))
+              {{ Session::get('ingredients-recipe') }}
             @endif
-          ></textarea>
+          @endif
+          </textarea>
           <label for="subtitle">Ingredientes</label>
 
           @if ($errors->first('ingredients'))
@@ -156,21 +157,22 @@
         <div class="subir">
           <textarea
             type="text"
-            name="instruction"
+            name="instructions"
             rows="8"
             cols="80"
             required
-            @if ($errors->any())
-              @if (Session::get('instructions-recipe'))
-                value="{{ Session::get('instructions-recipe') }}"
-              @endif
+          >
+          @if ($errors->any())
+            @if (Session::get('instructions-recipe'))
+              {{ Session::get('instructions-recipe') }}
             @endif
-          ></textarea>
+          @endif
+          </textarea>
           <label for="subtitle">Instruções</label>
 
-          @if ($errors->first('ingredients'))
+          @if ($errors->first('instructions'))
             <div>
-              <span>{{ $errors->first('ingredients') }}</span>
+              <span>{{ $errors->first('instructions') }}</span>
             </div>
           @endif
         </div>
