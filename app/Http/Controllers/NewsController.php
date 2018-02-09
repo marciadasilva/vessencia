@@ -72,7 +72,6 @@ class NewsController extends Controller
         'title' => 'required',
         'subtitle' => 'required',
         'body' => 'required',
-        'image' => 'required',
       ]);
 
       $dados = Purifier::clean(request()->all());
