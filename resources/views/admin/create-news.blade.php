@@ -63,7 +63,7 @@
               @endif
             @endif
           ></textarea>
-          <!-- <label for="body">Texto</label> -->
+          <!-- <label for="body">teste</label> -->
 
           @if ($errors->first('body'))
             <div>

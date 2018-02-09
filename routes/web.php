@@ -78,3 +78,7 @@ Route::post('/admin/news/create', 'NewsController@storeNews');
 Route::get('/admin/news/edit/{news}', 'NewsController@updateNews');
 Route::post('/admin/news/edit/{news}', 'NewsController@storeUpdateNews');
 Route::get('/admin/news/delete/{news}', 'NewsController@deleteNews');
+
+Route::get('/admin/recipe', 'RecipeController@showRecipe')->name('recipes');
+Route::get('/admin/recipe/create', 'RecipeController@createRecipe');
+Route::post('/admin/recipe/create', 'RecipeController@storeRecipe');

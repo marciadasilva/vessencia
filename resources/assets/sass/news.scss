@@ -21,12 +21,13 @@ h2, p{
   width: 30%;
   height: 30%;
   margin: .5em;
+  background-color: #fff;
 }
 
 .item-news a{
   display: flex;
   flex-direction: column;
-  border: .5px solid var(--main-color-dark);
+  // border: .5px solid var(--main-color-dark);
 
   article {
     display: flex;
@@ -53,10 +54,15 @@ h2, p{
   }
 
   .data-info{
-    color: #fff;
+    color: var(--main-color-dark);
     padding: .5em;
     text-align: center;
-    background-color: var(--main-color-dark);
+    background-color: rgba(0,0,0, 0.2);
+    transition-duration: 0.4s;
+
+    &:hover {
+      color: #f5f5f5;
+    }
   }
 
 }

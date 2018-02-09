@@ -20,7 +20,6 @@ class CreateMenusTable extends Migration
             $table->string('name');
             $table->string('image');
             $table->longText('description');
-
             $table->timestamps();
         });
     }

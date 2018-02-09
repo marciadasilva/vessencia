@@ -103,7 +103,7 @@ class SiteController extends Controller
   }
 
   public function news(){
-    $news = News::latest()->get();
+    $news = News::latest()->paginate(8);
     return view('news', compact('news'));
   }
 

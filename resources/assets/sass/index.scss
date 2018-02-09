@@ -469,6 +469,8 @@
   text-align: center;
   margin: 0 1em;
   transition: 0.4s;
+	background-color: #fff;
+	border-radius: 5px;
 }
 
 .news .thumbnail .card:hover{
@@ -482,10 +484,20 @@
 .news .thumbnail .card a img{
   width: 100%;
 	height: 100%;
+	border-radius: 5px 5px 0 0;
 }
 
 .news .thumbnail .card p{
-  margin-bottom: 0;
+  // margin-bottom: 0;
+}
+
+.news .thumbnail .card .news-card-title{
+	font-size: 1.2em;
+	font-weight: 600;
+}
+
+.news .thumbnail .card .news-card-subtitle{
+	font-size: 0.9em;
 }
 
 .news a.more{
