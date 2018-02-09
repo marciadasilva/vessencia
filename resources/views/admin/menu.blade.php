@@ -7,8 +7,8 @@
 <main class="all-cards">
 
     <button type="button" name="button"
-            onclick="window.location.href='/admin/menu/create'">
-                Novo Cardápio
+      onclick="window.location.href='/admin/menu/create'">
+        Novo Cardápio
     </button>
 
   <div class="show-card">

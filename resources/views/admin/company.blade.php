@@ -54,9 +54,9 @@
           <label for="phone">Telefone</label>
 
           @if ($errors->first('phone'))
-              <div>
-                  <span>{{$errors->first('phone')}}</span>
-              </div>
+            <div>
+              <span>{{$errors->first('phone')}}</span>
+            </div>
           @endif
         </div>
 
@@ -71,9 +71,9 @@
           <label for="facebook">Facebook</label>
 
           @if ($errors->first('facebook'))
-              <div>
-                  <span>{{$errors->first('facebook')}}</span>
-              </div>
+            <div>
+              <span>{{$errors->first('facebook')}}</span>
+            </div>
           @endif
         </div>
 
@@ -100,37 +100,37 @@
         </div>
 
         <div class="subir">
-            <input type="text" name="email" id="email" required
-              @foreach($companies as $company)
-               @if(isset($company->email))
-                 value="{{$company->email}}"
-               @endif
-             @endforeach
-            >
-            <label for="email">Email</label>
+          <input type="text" name="email" id="email" required
+            @foreach($companies as $company)
+             @if(isset($company->email))
+               value="{{$company->email}}"
+             @endif
+           @endforeach
+          >
+          <label for="email">Email</label>
 
-            @if ($errors->first('email'))
-              <div>
-                <span>{{$errors->first('email')}}</span>
-              </div>
-            @endif
+          @if ($errors->first('email'))
+            <div>
+              <span>{{$errors->first('email')}}</span>
+            </div>
+          @endif
         </div>
 
         <div class="subir">
-            <input type="text" name="address" id="address" required
-              @foreach($companies as $company)
-                @if(isset($company->address))
-                  value="{{$company->address}}"
-                @endif
-              @endforeach
-            >
-            <label for="email">Horário de Atendimento</label>
+          <input type="text" name="address" id="address" required
+            @foreach($companies as $company)
+              @if(isset($company->address))
+                value="{{$company->address}}"
+              @endif
+            @endforeach
+          >
+          <label for="email">Horário de Atendimento</label>
 
-            @if ($errors->first('address'))
-              <div>
-                <span>{{$errors->first('address')}}</span>
-              </div>
-            @endif
+          @if ($errors->first('address'))
+            <div>
+              <span>{{$errors->first('address')}}</span>
+            </div>
+          @endif
         </div>
 
       </div>

@@ -17,6 +17,7 @@
       <li><a href="/admin/category">Categorias</a></li>
       <li><a href="/admin/menu">Cardápios</a></li>
       <li><a href="/admin/service">Serviços</a></li>
+      <li><a href="/admin/news">Notícias</a></li>
       <li><a href="/admin/company">Empresa</a></li>
       <li><a href="/admin/help">Ajuda</a></li>
       <li><a href="/logout">Sair</a></li>
@@ -30,6 +31,7 @@
     <a href="/admin/category">Categorias</a>
     <a href="/admin/menu">Cardápios</a>
     <a href="/admin/service">Serviços</a>
+    <a href="/admin/news">Notícias</a>
     <a href="/admin/company">Empresa</a>
     <a href="/admin/help">Ajuda</a>
     <a href="/logout">Sair</a>

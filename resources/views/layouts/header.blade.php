@@ -1,5 +1,5 @@
 @if(isset($index))
-<header id="navbar">
+<header id="navbar" class="index-header">
   <h2><a href="/">5ª Essência</a></h2>
   <nav>
     <li><a class="expand_middle" href="#hero">Home</a></li>
@@ -20,8 +20,8 @@
     <li><a class="expand_middle" href="/admin/category">Categorias</a></li>
     <li><a class="expand_middle" href="/admin/menu">Cardápios</a></li>
     <li><a class="expand_middle" href="/admin/service">Serviços</a></li>
-    <li><a class="expand_middle" href="/admin/company">Empresa</a></li>
     <li><a class="expand_middle" href="/admin/news">Notícias</a></li>
+    <li><a class="expand_middle" href="/admin/company">Empresa</a></li>
     <li><a class="expand_middle" href="/admin/help">Ajuda</a></li>
     <li><a class="expand_middle" href="/logout">Sair</a></li>
   </nav>

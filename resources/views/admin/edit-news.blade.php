@@ -56,8 +56,7 @@
             name="body"
             rows="8"
             cols="80"
-            required
-          >
+            required>
             @if ($errors->any())
               {{Session::get('body-news-edit')}}
             @else
@@ -73,27 +72,27 @@
           @endif
         </div>
 
-        <div>
-            <label for="image" id="file">
-                <i class="fa fa-upload" aria-hidden="true"></i>
-                Alterar Imagem
-            </label>
-            <input
-                type="file"
-                name="image"
-                id="image"
-                onchange="readURL(this)";
-            >
+        <div class="centralizar-img">
+          <label for="image" id="file">
+            <i class="fa fa-upload" aria-hidden="true"></i>
+            Alterar Imagem
+          </label>
+          <input
+            type="file"
+            name="image"
+            id="image"
+            onchange="readURL(this)";
+          >
 
-            @if ($errors->first('image'))
-                <div class="error-message">
-                    <span>Imagem não selecionada ou muito grande (max 2MB)</span>
-                </div>
-            @endif
+          @if ($errors->first('image'))
+            <div class="error-message">
+              <span>Imagem não selecionada ou muito grande (max 2MB)</span>
+            </div>
+          @endif
         </div>
 
-        <div >
-            <img id="file-selected" src="{{asset($news->image)}}" alt="Imagem">
+        <div class="centralizar-img">
+          <img id="file-selected" src="{{asset($news->image)}}" alt="Imagem">
         </div>
       </div>
 

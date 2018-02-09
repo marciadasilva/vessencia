@@ -24,15 +24,15 @@
               <h2 class="article-title">
                 {!!$n->title!!}
               </h2>
-              <h3 class="article-title">
+              <div class="article-title">
                 {!!$n->subtitle!!}
-              </h3>
-              <p class="article-content">
+              </div>
+              <!-- <p class="article-content"> -->
                 <!-- Tira as tags html, mantendo a formatação, porém não é seguro. -->
-                {!!$n->body!!}
+                <!-- {!!$n->body!!} -->
                 <!-- Tira as tags html mas, também tira a formatação do texto -->
                 <!-- {{strip_tags($n->body)}} -->
-              </p>
+              <!-- </p> -->
               <div class="data-info">
                 Data de publicação: {{$n->created_at}}
               </div>

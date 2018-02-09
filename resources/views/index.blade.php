@@ -137,9 +137,10 @@
       <p>{{$n->subtitle}}</p>
     </div>
     @endforeach
-
-
   </div>
+  <!-- <div>
+    <a href="/news" class="anim">Mais</a>
+  </div> -->
   <a href="/news" class="more anim">Mais</a>
 </section>
 

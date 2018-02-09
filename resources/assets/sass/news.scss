@@ -18,8 +18,8 @@ h2, p{
 }
 
 .item-news{
-  width: 35vw;
-  height: 35vh;
+  width: 30%;
+  height: 30%;
   margin: .5em;
 }
 
@@ -34,7 +34,9 @@ h2, p{
   }
 
   .article-title{
+    color: var(--main-color-dark);
     margin-bottom: .5em;
+    text-align: center;
   }
 
   .article-content{
@@ -47,6 +49,7 @@ h2, p{
 
   figure img{
     width: 100%;
+    height: 50vh;
   }
 
   .data-info{
@@ -57,24 +60,6 @@ h2, p{
   }
 
 }
-
-// .recipes {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//
-//   .recipes-item {
-//     width: 20vw;
-//     height: 20vh;
-//     border: 1px solid red;
-//
-//     a img {
-//       width: 100%;
-//       height: 100%;
-//     }
-//   }
-// }
 
 
 /*  News Detail Page  */

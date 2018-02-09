@@ -9,8 +9,7 @@
           onclick="window.location.href='/admin/news/create'">
             Nova Notícia
   </button>
-
-
+  
   <div class="show-card">
     @foreach($news as $new)
     <div class="card-items">
