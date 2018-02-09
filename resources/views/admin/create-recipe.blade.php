@@ -54,7 +54,7 @@
         <div class="subir">
           <textarea
             type="text"
-            name="ingredients"
+            name="body"
             rows="8"
             cols="80"
             required
@@ -65,6 +65,28 @@
             @endif
           ></textarea>
           <label for="subtitle">Ingredientes</label>
+
+          @if ($errors->first('ingredients'))
+            <div>
+              <span>{{ $errors->first('ingredients') }}</span>
+            </div>
+          @endif
+        </div>
+
+        <div class="subir">
+          <textarea
+            type="text"
+            name="instruction"
+            rows="8"
+            cols="80"
+            required
+            @if ($errors->any())
+              @if (Session::get('instructions-recipe'))
+                value="{{ Session::get('instructions-recipe') }}"
+              @endif
+            @endif
+          ></textarea>
+          <label for="subtitle">Instruções</label>
 
           @if ($errors->first('ingredients'))
             <div>

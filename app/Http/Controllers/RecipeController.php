@@ -29,5 +29,6 @@ class RecipeController extends Controller
       Session::put('title-recipe', request('title'));
       Session::put('subtitle-recipe', request('subtitle'));
       Session::put('ingredients-recipe', request('editor1'));
+      Session::put('instructions-recipe', request('editor1'));
     }
 }
