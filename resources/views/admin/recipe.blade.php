@@ -12,12 +12,14 @@
   </button>
 
   <div class="show-card">
+    @foreach($recipes as $recipe)
     <div class="card-items">
-      <img class="card_img" src="#" alt="example">
+      <img class="card_img" src="{{ asset($recipe->image) }}" alt="{{ asset($recipe->title) }}">
       <div class="card_description">
-        <h2>Batata</h2>
-        <p>Batata recheada</p>
-        <p>Batata recheada com bastante queijo</p>
+        <h2>{{ $recipe->title }}</h2>
+        <p>{{ $recipe->subtitle }}</p>
+        <p>{!! $recipe->body !!}</p>
+        <!-- fazer o tratamendo com o Purifier -->
       </div>
 
       <div class="card_buttons">
@@ -31,50 +33,8 @@
       </div>
 
     </div>
+    @endforeach
   </div>
 
-  <div class="show-card">
-    <div class="card-items">
-      <img class="card_img" src="#" alt="example">
-      <div class="card_description">
-        <h2>Batata</h2>
-        <p>Batata recheada</p>
-        <p>Batata recheada com bastante queijo</p>
-      </div>
-
-      <div class="card_buttons">
-        <a href="#">
-          <i class="fa fa-pencil"></i>
-        </a>
-
-        <a href="#">
-          <i class="fa fa-trash-o"></i>
-        </a>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="show-card">
-    <div class="card-items">
-      <img class="card_img" src="#" alt="example">
-      <div class="card_description">
-        <h2>Batata</h2>
-        <p>Batata recheada</p>
-        <p>Batata recheada com bastante queijo</p>
-      </div>
-
-      <div class="card_buttons">
-        <a href="#">
-          <i class="fa fa-pencil"></i>
-        </a>
-
-        <a href="#">
-          <i class="fa fa-trash-o"></i>
-        </a>
-      </div>
-
-    </div>
-  </div>
 
 </main>
