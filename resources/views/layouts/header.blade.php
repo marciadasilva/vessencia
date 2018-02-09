@@ -21,6 +21,7 @@
     <li><a class="expand_middle" href="/admin/menu">Cardápios</a></li>
     <li><a class="expand_middle" href="/admin/service">Serviços</a></li>
     <li><a class="expand_middle" href="/admin/news">Notícias</a></li>
+    <li><a class="expand_middle" href="/admin/recipe">Receitas</a></li>
     <li><a class="expand_middle" href="/admin/company">Empresa</a></li>
     <li><a class="expand_middle" href="/admin/help">Ajuda</a></li>
     <li><a class="expand_middle" href="/logout">Sair</a></li>
@@ -34,7 +35,13 @@
     <li><a class="expand_middle" href="/chef">Chef</a></li>
     <li><a class="expand_middle" href="/menus">Cardápios</a></li>
     <li><a class="expand_middle" href="/services">Serviços</a></li>
-    <li><a class="expand_middle" href="/gallery-photos">Galerias</a></li>
+    <li>
+      <a class="expand_middle" href="/gallery-photos">Galerias</a>
+      <ul class="dropdown-menu">
+        <li>Fotos</li>
+        <li>Receitas</li>
+      </ul>
+    </li>
     <li><a class="expand_middle" href="/news">Notícias</a></li>
     <li><a class="expand_middle" href="/contact">Contato</a></li>
     <li><a class="expand_middle" href="">EN</a></li>

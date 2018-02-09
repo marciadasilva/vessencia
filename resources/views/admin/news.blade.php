@@ -9,14 +9,14 @@
           onclick="window.location.href='/admin/news/create'">
             Nova Notícia
   </button>
-  
+
   <div class="show-card">
     @foreach($news as $new)
     <div class="card-items">
       <img class="card_img" src="{{asset($new->image)}}" alt="{{$new->title}}">
       <div class="card_description">
-        <h2>{{$new->title}}</h2>
-        <p>{{$new->subtitle}}</p>
+        <h2>{!!$new->title!!}</h2>
+        <p>{!!$new->subtitle!!}</p>
         <p>{!!$new->body!!}</p>
         <p>{{isset($new->video)}}</p>
       </div>

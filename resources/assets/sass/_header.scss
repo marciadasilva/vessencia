@@ -59,6 +59,15 @@ header nav li a.expand_middle:before{
 header nav li a.expand_middle:hover:after{
   transform: scaleX(1);
 }
+
+.dropdown-menu {
+  display: none;
+}
+
+header nav li a:hover .dropdown-menu {
+  display: block;
+}
+
 /* Fim Border-box middle */
 
 @media (max-width: 1000px) {
