@@ -48,7 +48,7 @@ class RecipeController extends Controller
 
       $dados = request()->all();
 
-      if(request()->hasFile('image')){
+      if(request()->hasFile('image')) {
         $imagem = request()->file('image');
         $num = rand(1111, 9999);
         $dir = "img/recipe/";
@@ -62,5 +62,12 @@ class RecipeController extends Controller
       Recipe::create($dados);
       Alert::success('A receita foi cadastrada com sucesso!', 'Sucesso')->persistent('Close');
       return redirect()->route('recipes');
+    }
+
+    public function updateRecipe(Recipe $recipe) {
+      $admin = true;
+      $categories = Category::latest()->get();
+
+      return view('admin.edit-recipe', compact(['admin', 'recipe', 'categories']));
     }
 }

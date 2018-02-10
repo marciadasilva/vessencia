@@ -1,12 +1,12 @@
 @extends('layouts.master')
 
-@section('title', 'Criar nova receita - 5ª Essência')
+@section('title', 'Receitas - 5ª Essência')
 
 @include('layouts.header')
 
 <main class="create-form">
   <div class="caixa">
-    <form action="/admin/recipe/create" method="post" enctype="multipart/form-data">
+    <form action="/admin/recipe/edit/{{$recipe->id}}" method="post" enctype="multipart/form-data">
       {{ csrf_field() }}
       <div class="form-grupo">
         <div class="subir">
@@ -15,11 +15,11 @@
             name="title"
             id="title"
             required
-            @if ($errors->any())
-              @if (Session::get('title-recipe'))
-                value="{{Session::get('title-recipe')}}"
+              @if (Session::get('title-recipe-edit'))
+                value="{{Session::get('title-recipe-edit')}}"
+              @else
+                value="{{ $recipe->title }}"
               @endif
-            @endif
           >
           <label for="title">Título da Receita</label>
 
@@ -36,13 +36,13 @@
             name="subtitle"
             id="subtitle"
             required
-            @if ($errors->any())
-              @if (Session::get('subtitle-recipe'))
-                value="{{ Session::get('subtitle-recipe') }}"
+              @if (Session::get('subtitle-recipe-edit'))
+                value="{{Session::get('subtitle-recipe-edit')}}"
+              @else
+                value="{{ $recipe->subtitle }}"
               @endif
-            @endif
           >
-          <label for="subtitle">Subtitulo para a Receita</label>
+          <label for="subtitle">Subtítulo da Receita</label>
 
           @if ($errors->first('subtitle'))
             <div>
@@ -58,24 +58,30 @@
             id="category_id">
             @if ($errors->any())
               @foreach($categories as $category)
-                @if(Session::get('category_id-recipe') == $category->id)
+                @if(Session::get('category_id-recipe-edit') == $category->id)
                   <option value="{{$category->id}}"
                           name="category_id"
-                          selected>
-                          {{$category->name}}
+                          id="category_id"
+                          selected
+                  >{{$category->name}}
                   </option>
                 @else
-                  <option value="{{$category->id}}"
-                          name="category_id">{{$category->name}}
+                  <option name="category_id" value="{{$category->id}}">
+                    {{$category->name}}
                   </option>
                 @endif
               @endforeach
             @else
-              <option selected disabled> Escolher... </option>
               @foreach($categories as $category)
-                <option value="{{$category->id}}"
-                        name="category_id">{{$category->name}}
-                </option>
+                @if($recipe->category_id == $category->id)
+                  <option name="category_id" value="{{$category->id}}" selected>
+                    {{$category->name}}
+                  </option>
+                @else
+                  <option name="category_id" value="{{$category->id}}">
+                    {{$category->name}}
+                  </option>
+                @endif
               @endforeach
             @endif
           </select>
@@ -95,11 +101,11 @@
             name="time_preparation"
             id="time_preparation"
             required
-            @if ($errors->any())
-              @if (Session::get('time_preparation-recipe'))
-                value="{{ Session::get('time_preparation-recipe') }}"
+              @if (Session::get('time_preparation-recipe-edit'))
+                value="{{Session::get('time_preparation-recipe-edit')}}"
+              @else
+                value="{{ $recipe->time_preparation }}"
               @endif
-            @endif
           >
           <label for="time_preparation">Tempo de Preparo</label>
 
@@ -116,13 +122,13 @@
             name="yield"
             id="yield"
             required
-            @if ($errors->any())
-              @if (Session::get('yield-recipe'))
-                value="{{ Session::get('yield-recipe') }}"
+              @if (Session::get('yield-edit'))
+                value="{{Session::get('yield-edit')}}"
+              @else
+                value="{{ $recipe->yield }}"
               @endif
-            @endif
           >
-          <label for="subtitle">Rendimento</label>
+          <label for="yield">Rendimento</label>
 
           @if ($errors->first('yield'))
             <div>
@@ -133,46 +139,42 @@
 
         <div class="subir">
           <textarea
-            type="text"
             name="body"
             rows="8"
             cols="80"
-            required
-          >
-          @if ($errors->any())
-            @if (Session::get('ingredients-recipe'))
-              {{ Session::get('ingredients-recipe') }}
+            required>
+            @if ($errors->any())
+              {{Session::get('ingredients-recipe-edit')}}
+            @else
+              {{$recipe->body}}
             @endif
-          @endif
           </textarea>
-          <label for="subtitle">Ingredientes</label>
+          <label for="body">Ingredientes</label>
 
-          @if ($errors->first('ingredients'))
+          @if ($errors->first('body'))
             <div>
-              <span>{{ $errors->first('ingredients') }}</span>
+              <span>{{$errors->first('body')}}</span>
             </div>
           @endif
         </div>
 
         <div class="subir">
           <textarea
-            type="text"
             name="instructions"
             rows="8"
             cols="80"
-            required
-          >
-          @if ($errors->any())
-            @if (Session::get('instructions-recipe'))
-              {{ Session::get('instructions-recipe') }}
+            required>
+            @if ($errors->any())
+              {{Session::get('instructions-recipe-edit')}}
+            @else
+              {{$recipe->instructions}}
             @endif
-          @endif
           </textarea>
-          <label for="subtitle">Instruções</label>
+          <label for="body">Instruções</label>
 
           @if ($errors->first('instructions'))
             <div>
-              <span>{{ $errors->first('instructions') }}</span>
+              <span>{{$errors->first('instructions')}}</span>
             </div>
           @endif
         </div>
@@ -180,7 +182,7 @@
         <div class="centralizar-img">
           <label for="image" id="file">
             <i class="fa fa-upload" aria-hidden="true"></i>
-            Imagem
+            Alterar Imagem
           </label>
           <input
             type="file"
@@ -188,19 +190,21 @@
             id="image"
             onchange="readURL(this)";
           >
-          <img id="file-selected" src="#" alt="Image" style="display: none" />
 
           @if ($errors->first('image'))
-            <div>
+            <div class="error-message">
               <span>Imagem não selecionada ou muito grande (max 2MB)</span>
             </div>
           @endif
         </div>
 
-
-        <button type="submit" name="button">Criar</button>
+        <div class="centralizar-img">
+          <img id="file-selected" src="{{asset($recipe->image)}}" alt="Imagem">
+        </div>
       </div>
+
+      </div>
+      <button type="submit" name="button">Salvar</button>
     </form>
   </div>
-
 </main>

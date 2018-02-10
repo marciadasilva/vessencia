@@ -23,7 +23,7 @@
       </div>
 
       <div class="card_buttons">
-        <a href="#">
+        <a href="/admin/recipe/edit/{{ $recipe->id }}">
           <i class="fa fa-pencil"></i>
         </a>
 

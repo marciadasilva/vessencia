@@ -96,7 +96,7 @@
         </div>
       </div>
 
-      <button type="submit" name="button">Salvar Alterações</button>
+      <button type="submit" name="button">Salvar</button>
     </form>
 
   </div>
