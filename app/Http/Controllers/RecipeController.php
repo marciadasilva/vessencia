@@ -47,7 +47,15 @@ class RecipeController extends Controller
         'yield' => 'required',
       ]);
 
-      $dados = Purifier::clean(request()->all());
+      $dados['title'] = request('title');
+      $dados['subtitle'] = request('subtitle');
+      $dados['body'] = Purifier::clean(request('body'));
+      $dados['instructions'] = Purifier::clean(request('instructions'));
+      $dados['category_id'] = request('category_id');
+      $dados['time_preparation'] = request('time_preparation');
+      $dados['yield'] = request('yield');
+      // $dados[''] = Purifier::clean(request());
+      // $dados = Purifier::clean(request()->all());
 
       if(request()->hasFile('image')) {
         $imagem = request()->file('image');
@@ -58,6 +66,10 @@ class RecipeController extends Controller
         $imagem->move($dir, $nomeImagem);
 
         $dados['image'] = $dir . "/" . $nomeImagem;
+      }
+
+      if(request('video')){
+          $dados['video'] = request('video');
       }
 
       Recipe::create($dados);
@@ -109,6 +121,13 @@ class RecipeController extends Controller
         $dados['image'] = $imagedb;
       }
 
+      if(request('video')){
+          $dados['video'] = request('video');
+      } else{
+        $videodb = Recipe::where('id', $recipe->id)->first()->video;
+        $dados['video'] = $videodb;
+      }
+
       $dados['user_id'] = auth()->user()->id;
 
       Recipe::where('id', $recipe->id)->update([
@@ -117,6 +136,7 @@ class RecipeController extends Controller
         'body' => request('body'),
         // 'category_id'=>request('category_id'),
         'image' => $dados['image'],
+        'video' => $dados['video'],
         // 'user_id' => $dados['user_id']
       ]);
 

@@ -16,12 +16,21 @@
   <div class="show-card">
     @foreach($recipes as $recipe)
     <div class="card-items">
+      @if(isset($recipe->image))
       <img class="card_img" src="{{ asset($recipe->image) }}" alt="{{ asset($recipe->title) }}">
+      @elseif(isset($recipe->video))
+       <iframe
+          src="{{asset($recipe->video)}}">
+      </iframe>
+      @endif
       <div class="card_description">
         <h2>{{ $recipe->title }}</h2>
         <p>{{ $recipe->subtitle }}</p>
         <p>{!! $recipe->body !!}</p>
         <!-- fazer o tratamendo com o Purifier -->
+        @if(isset($recipe->video))
+          <p><a href="{{$recipe->video}}"> </a></p>
+        @endif
       </div>
 
       <div class="card_buttons">

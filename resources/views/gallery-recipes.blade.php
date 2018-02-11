@@ -15,13 +15,21 @@
 
     <section class="recipes">
         <!-- <div class="recipes"> -->
+        @foreach($recipes as $recipe)
           <div class="recipes-item">
             <a href="gallery-recipes-detail.html">
-              <img src="assets/img/peixe.jpg" alt="example">
-              <h4>Lorem ipsum dolor sit amet!</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              @if($recipe->image)
+                <img src="{{asset($recipe->image)}}" alt="{{$recipe->title}}">
+              @elseif($recipe->video)
+                <iframe
+                   src="{{asset($recipe->video)}}">
+               </iframe>
+              @endif
+              <h4>{{$recipe->title}}</h4>
+              <p>{{$recipe->subtitle}}</p>
             </a>
           </div>
+          @endforeach
         <!-- </div> -->
         <!-- <div class="more">
           <a href="#" class="anim">Mais</a>

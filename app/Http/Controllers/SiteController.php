@@ -8,6 +8,7 @@ use App\Menu;
 use App\Service;
 use App\Company;
 use App\News;
+use App\Recipe;
 use Mail;
 use Session;
 use Alert;
@@ -99,7 +100,8 @@ class SiteController extends Controller
   }
 
   public function galleryRecipes(){
-    return view('gallery-recipes');
+    $recipes = Recipe::latest()->get();
+    return view('gallery-recipes', compact('recipes'));
   }
 
   public function news(){

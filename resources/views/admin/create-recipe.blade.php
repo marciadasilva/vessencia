@@ -53,6 +53,26 @@
           @endif
         </div>
 
+        <div class="subir">
+          <input
+            type="text"
+            name="video"
+            id="video"
+            @if ($errors->any())
+              @if (Session::get('video-recipe'))
+                value="{{ Session::get('video-recipe') }}"
+              @endif
+            @endif
+          >
+          <label for="subtitle">Link do video para a Receita</label>
+
+          @if ($errors->first('video'))
+            <div>
+              <span>{{ $errors->first('video') }}</span>
+            </div>
+          @endif
+        </div>
+
         <div class="select">
           <label>Categoria</label>
           <select class="browser-default"

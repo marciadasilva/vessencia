@@ -53,6 +53,24 @@
           @endif
         </div>
 
+        <div class="subir">
+          <input
+            type="text"
+            name="video"
+            id="video"
+            @if (isset($recipe->video))
+              value="{{ $recipe->video }}"
+            @endif
+          >
+          <label for="subtitle">Link do video para a Receita</label>
+
+          @if ($errors->first('video'))
+            <div>
+              <span>{{ $errors->first('video') }}</span>
+            </div>
+          @endif
+        </div>
+
         <div class="select">
           <label>Categoria</label>
           <select class="browser-default"
