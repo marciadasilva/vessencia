@@ -2,6 +2,8 @@
 
 @section('title', 'Editar categoria - 5ª Essência')
 
+@section('content')
+
 @include('layouts.header')
 
 <main class="create-form">
@@ -79,3 +81,5 @@
     </form>
   </div>
 </main>
+
+@endsection

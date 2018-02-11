@@ -1,7 +1,9 @@
 @extends('layouts.master')
+
 @section('title', 'Contato - 5ª Essência')
 
 @section('content')
+
 @include('layouts.header')
 
 <main class="create-form contact-custom">

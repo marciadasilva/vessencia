@@ -1,6 +1,9 @@
 @extends('layouts.master')
 
 @section('title', 'Informações da Empresa - 5ª Essência')
+
+@section('content')
+
 @include('layouts.header')
 
 <main class="create-form company-custom">
@@ -139,3 +142,5 @@
     </form>
   </div>
 </main>
+
+@endsection

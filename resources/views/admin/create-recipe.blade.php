@@ -2,6 +2,8 @@
 
 @section('title', 'Criar nova receita - 5ª Essência')
 
+@section('content')
+
 @include('layouts.header')
 
 <main class="create-form">
@@ -204,3 +206,5 @@
   </div>
 
 </main>
+
+@endsection

@@ -2,6 +2,8 @@
 
 @section('title', 'Serviços - 5ª Essência')
 
+@section('content')
+
 @include('layouts.header')
 
 <main class="all-cards">
@@ -59,3 +61,5 @@
       }
   </script>
 </main>
+
+@endsection

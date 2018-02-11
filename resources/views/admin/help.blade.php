@@ -2,6 +2,8 @@
 
 @section('title', 'Ajuda - 5ª Essência')
 
+@section('content')
+
 @include('layouts.header')
 
 <main id="admin-page">
@@ -11,3 +13,5 @@
     <p>Email: marcia.dasilva1410@gmail.com</p>
   </div>
 </main>
+
+@endsection

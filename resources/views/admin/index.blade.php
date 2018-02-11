@@ -2,6 +2,8 @@
 
 @section('title', 'Administração - 5ª Essência')
 
+@section('content')
+
 @include('layouts.header')
 
 <section id="admin-page">
@@ -10,3 +12,5 @@
     <h2>Bem vindo a área administrativa!</h2>
   </div>
 </section>
+
+@endsection

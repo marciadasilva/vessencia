@@ -2,6 +2,8 @@
 
 @section('title', 'Editar cardápio - 5ª Essência')
 
+@section('content')
+
 @include('layouts.header')
 
 <main class="create-form">
@@ -102,3 +104,5 @@
   </div>
 
 </main>
+
+@endsection

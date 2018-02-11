@@ -2,6 +2,8 @@
 
 @section('title', 'Criar novo serviço - 5ª Essência')
 
+@section('content')
+
 @include('layouts.header')
 
 <main class="create-form">
@@ -76,3 +78,5 @@
     </form>
   </div>
 </main>
+
+@endsection

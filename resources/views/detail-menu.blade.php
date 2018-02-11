@@ -1,7 +1,9 @@
 @extends('layouts.master')
+
 @section('title', 'Cardápios - 5ª Essência')
 
 @section('content')
+
 @include('layouts.header')
 
     <section class="all-cards bread-crumbs">
