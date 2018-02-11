@@ -69,10 +69,14 @@ class RecipeController extends Controller
       }
 
       if(request('video')){
+        if (strpos(request('video'), 'embed') == true) {
+            $dados['video'] = request('video');
+        } else{
           $url = request('video');
           $urlExplode = explode('=', $url);
           $embed = 'https://www.youtube.com/embed/' . $urlExplode[1];
           $dados['video'] = $embed;
+        }
       }
 
       Recipe::create($dados);
@@ -125,7 +129,14 @@ class RecipeController extends Controller
       }
 
       if(request('video')){
-          $dados['video'] = request('video');
+        if (strpos(request('video'), 'embed') == true) {
+            $dados['video'] = request('video');
+        } else{
+          $url = request('video');
+          $urlExplode = explode('=', $url);
+          $embed = 'https://www.youtube.com/embed/' . $urlExplode[1];
+          $dados['video'] = $embed;
+        }
       } else{
         $videodb = Recipe::where('id', $recipe->id)->first()->video;
         $dados['video'] = $videodb;
