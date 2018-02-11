@@ -84,3 +84,4 @@ Route::get('/admin/recipe/create', 'RecipeController@createRecipe');
 Route::post('/admin/recipe/create', 'RecipeController@storeRecipe');
 Route::get('/admin/recipe/edit/{recipe}', 'RecipeController@updateRecipe');
 Route::post('/admin/recipe/edit/{recipe}', 'RecipeController@storeUpdateRecipe');
+Route::get('/admin/recipe/delete/{recipe}', 'RecipeController@deleteRecipe');

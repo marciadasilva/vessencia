@@ -29,7 +29,7 @@
           <i class="fa fa-pencil"></i>
         </a>
 
-        <a href="#">
+        <a onclick="deleteItem({{$recipe->id}})">
           <i class="fa fa-trash-o"></i>
         </a>
       </div>
@@ -37,6 +37,25 @@
     </div>
     @endforeach
   </div>
+
+  <script>
+      function deleteItem(id){
+          swal({
+              title:'Tem certeza que deseja excluir?',
+              text:'Não será possivel reverter a exclusão!',
+              icon:'warning',
+              buttons:["Cancelar", "Excluir"]
+          }).then((willDelete)=>{
+              if(willDelete){
+                  swal("A receita será excluído.", {
+                      icon:'success',
+                      timer:10000
+                  });
+                  window.location.href="recipe/delete/"+id;
+              }
+          })
+      }
+  </script>
 </main>
 
 @endsection

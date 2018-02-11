@@ -148,7 +148,7 @@
             @if ($errors->any())
               {{Session::get('ingredients-recipe-edit')}}
             @else
-              {{$recipe->body}}
+              {!!$recipe->body!!}
             @endif
           </textarea>
           <label for="body">Ingredientes</label>
@@ -169,7 +169,7 @@
             @if ($errors->any())
               {{Session::get('instructions-recipe-edit')}}
             @else
-              {{$recipe->instructions}}
+              {!!$recipe->instructions!!}
             @endif
           </textarea>
           <label for="body">Instruções</label>
@@ -205,7 +205,6 @@
         </div>
       </div>
 
-      </div>
       <button type="submit" name="button">Salvar</button>
     </form>
   </div>
