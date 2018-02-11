@@ -23,13 +23,17 @@
       <h3 class="title">{!! $recipe->title !!}</h3>
       <hr>
 
-      <iframe
-        width="560"
-        height="315"
-        src="{{ asset($recipe->video) }}"
-        frameborder="0"
-        allowfullscreen
-      ></iframe>
+      @if(isset($recipe->video))
+        <iframe
+          width="560"
+          height="315"
+          src="{{ asset($recipe->video) }}"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      @else
+        <!-- <img src="{{asset($recipe->image)}}" alt="{{asset($recipe->title)}}"> -->
+      @endif
 
       <div>
         <h4>Instruções</h4>
