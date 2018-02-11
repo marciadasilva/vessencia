@@ -29,6 +29,7 @@ Route::get('/services/{service}', 'SiteController@service');
 Route::get('/gallery-photos', 'SiteController@galleryPhotos');
 
 Route::get('/gallery-recipes', 'SiteController@galleryRecipes');
+Route::get('/gallery-recipes/detail/{recipe}', 'SiteController@galleryRecipeDetail');
 
 Route::get('/news', 'SiteController@news');
 Route::get('/news/detail/{news}', 'SiteController@newsDetail');

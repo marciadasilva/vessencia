@@ -104,6 +104,10 @@ class SiteController extends Controller
     return view('gallery-recipes', compact('recipes'));
   }
 
+  public function galleryRecipeDetail(Recipe $recipe) {
+    return view('gallery-recipes-detail', compact('recipe'));
+  }
+
   public function news(){
     $news = News::latest()->paginate(8);
     return view('news', compact('news'));

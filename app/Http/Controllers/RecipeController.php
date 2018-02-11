@@ -69,7 +69,10 @@ class RecipeController extends Controller
       }
 
       if(request('video')){
-          $dados['video'] = request('video');
+          $url = request('video');
+          $urlExplode = explode('=', $url);
+          $embed = 'https://www.youtube.com/embed/' . $urlExplode[1];
+          $dados['video'] = $embed;
       }
 
       Recipe::create($dados);
@@ -134,6 +137,7 @@ class RecipeController extends Controller
         'title' => request('title'),
         'subtitle' => request('subtitle'),
         'body' => request('body'),
+        'instructions' => request('instructions'),
         // 'category_id'=>request('category_id'),
         'image' => $dados['image'],
         'video' => $dados['video'],

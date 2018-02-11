@@ -17,16 +17,16 @@
         <!-- <div class="recipes"> -->
         @foreach($recipes as $recipe)
           <div class="recipes-item">
-            <a href="gallery-recipes-detail.html">
+            <a href="/gallery-recipes/detail/{{ $recipe->id }}">
               @if($recipe->image)
-                <img src="{{asset($recipe->image)}}" alt="{{$recipe->title}}">
+                <img src="{{ asset($recipe->image) }}" alt="{{ $recipe->title }}">
               @elseif($recipe->video)
                 <iframe
-                   src="{{asset($recipe->video)}}">
+                   src="{{ asset($recipe->video) }}">
                </iframe>
               @endif
-              <h4>{{$recipe->title}}</h4>
-              <p>{{$recipe->subtitle}}</p>
+              <h4>{{ $recipe->title }}</h4>
+              <p>{{ $recipe->subtitle }}</p>
             </a>
           </div>
           @endforeach
