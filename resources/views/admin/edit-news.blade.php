@@ -62,7 +62,7 @@
             @if ($errors->any())
               {{Session::get('body-news-edit')}}
             @else
-              {{$news->body}}
+              {!! $news->body !!}
             @endif
           </textarea>
           <label for="body">Texto</label>
