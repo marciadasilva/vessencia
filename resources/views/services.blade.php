@@ -9,7 +9,7 @@
 <section class="bread-crumbs">
   <div class="bread-crumbs-links">
     <a href="/">Home /</a>
-    <a href="/services" class="active">Serviços /</a>
+    <a href="/services" class="active">Serviços</a>
   </div>
   <div class="search">
     <span><i class="fa fa-search fa-2x"></i></span>
