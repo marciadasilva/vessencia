@@ -9,9 +9,9 @@
 <section class="bread-crumbs">
   <div class="bread-crumbs-links">
     <a href="/">Home /</a>
-    <a href="/menus">Cardápios /</a>
+    <a href="/menus">Cardápios </a>
     @if(isset($category))
-    <a href="#" class="active">{{$category->name}} /</a>
+    <a href="#" class="active">{{$category->name}} </a>
     @else
 
     @endif
