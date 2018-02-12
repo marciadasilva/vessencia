@@ -61,10 +61,10 @@ header nav li a.expand_middle:hover:after{
 }
 
 .dropdown-menu {
-  // display: none;
+   display: none;
 }
 
-header nav li a:hover .dropdown-menu {
+header nav .drop-pai:hover .dropdown-menu{
   display: block;
 }
 
