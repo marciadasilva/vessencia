@@ -7,6 +7,11 @@
 @include('layouts.header')
 
 <section class="recipe">
+  <div class="recipe-card">
+    <p>Tempo de Preparo: {{ $recipe->time_preparation }}</p>
+    <hr>
+    <p>Rendimento: {{ $recipe->yield }}</p>
+  </div>
   <div class="recipe-img">
     <img src="{{asset($recipe->image)}}" alt="{{asset($recipe->title)}}">
   </div>

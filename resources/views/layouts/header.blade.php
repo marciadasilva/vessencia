@@ -35,11 +35,11 @@
     <li><a class="expand_middle" href="/chef">Chef</a></li>
     <li><a class="expand_middle" href="/menus">Cardápios</a></li>
     <li><a class="expand_middle" href="/services">Serviços</a></li>
-    <li>
-      <a class="expand_middle" href="/gallery-photos">Galerias</a>
+    <li class="drop-pai">
+      <a class="expand_middle" href="#">Galerias</a>
       <ul class="dropdown-menu">
-        <li>Fotos</li>
-        <li>Receitas</li>
+        <li><a href="/gallery-photos">Fotos</a></li>
+        <li><a href="/gallery-recipes">Receitas</a></li>
       </ul>
     </li>
     <li><a class="expand_middle" href="/news">Notícias</a></li>
