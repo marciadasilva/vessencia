@@ -24,7 +24,7 @@
               <h2 class="article-title">
                 {!!$n->title!!}
               </h2>
-              <div class="article-title">
+              <div class="article-subtitle">
                 {!!$n->subtitle!!}
               </div>
               <!-- <p class="article-content"> -->
