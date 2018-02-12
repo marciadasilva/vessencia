@@ -95,8 +95,8 @@ section.recipe {
 }
 
 .recipe .recipe-content .recipe-content-ingredients hr{
-margin: 0 auto;
-margin-bottom: 35px;
+  margin: 0 auto;
+  margin-bottom: 35px;
 }
 
 .recipe .recipe-content .recipe-instructions{
@@ -110,4 +110,35 @@ margin-bottom: 35px;
 
 .recipe .recipe-content .recipe-instructions p{
   text-align: left;
+}
+
+@media (max-width: 900px) {
+  .recipe-content {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    justify-content: center;
+  }
+
+  .recipe .recipe-content .recipe-content-ingredients{
+    flex-basis: 100%;
+  }
+
+  .recipe .recipe-content .recipe-instructions{
+    flex-basis: 100%;
+
+    iframe {
+      width: 75%;
+    }
+  }
+
+  .recipe-card {
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    hr{
+      margin-bottom: 25px;
+    }
+  }
 }

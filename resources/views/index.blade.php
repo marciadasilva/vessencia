@@ -154,7 +154,7 @@
       <i class="fa fa-facebook-square fa-4x"></i> {{str_replace("https://www.", "",$company->facebook)}}</a>
     <a href="#"><i class="fa fa-whatsapp fa-4x"></i> {{$company->phone}}</a>
     <a href="#"><i class="fa fa-envelope-o fa-4x"></i> {{$company->email}}</a>
-    <a href="https://www.instagram.com/andrepinheiromachado/"><i class="fa fa-instagram  fa-4x" ></i></i> {{$company->instagram}}</a>
+    <a href="{{$company->instagram}}"><i class="fa fa-instagram  fa-4x" ></i></i>{{str_replace("https://www.", "",$company->instagram)}}</a>
     <!-- <a href="#"><i class="fa fa-commenting-o fa-4x"></i>Nos diga um Oi</a> -->
   </div>
 </section>

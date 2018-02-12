@@ -39,7 +39,11 @@ class NewsController extends Controller
       ]);
 
       // purifier this variable
-      $dados = Purifier::clean(request()->all());
+      // $dados = Purifier::clean(request()->all());
+
+      $dados['title'] = request('title');
+      $dados['subtitle'] = request('subtitle');
+      $dados['body'] = Purifier::clean(request('body'));
 
       if(request()->hasFile('image')){
         $imagem = request()->file('image');
