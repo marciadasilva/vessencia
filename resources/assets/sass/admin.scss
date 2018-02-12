@@ -233,7 +233,7 @@ $dark_red: var(--main-color);
   padding-left: 0.5em;
   padding-right: 0.5em;
 
-  button{
+  button {
     background: $dark_gray;
     color: #f5f5f5;
     padding: 0.5em;
@@ -242,9 +242,14 @@ $dark_red: var(--main-color);
     width: 50%;
     transition: all .35s ease-in-out;
 
-    &:hover{
+    &:hover {
       background: $dark_red;
     }
+  }
+
+  h1 {
+    color: $dark_gray;
+    margin-top: 1em;
   }
 }
 

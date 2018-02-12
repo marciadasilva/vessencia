@@ -6,8 +6,8 @@
 
 @include('layouts.header')
 
-<main class="create-form contact-custom">
-  <div class="caixa">
+<main class="create-form">
+  <div class="caixa contact">
     <form action="/contact" method="post" enctype="multipart/form-data">
         {{ csrf_field() }}
         <h1>Entre em contato conosco</h1>

@@ -45,6 +45,8 @@ h2, p{
     margin-bottom: .5em;
     text-align: center;
     font-size: 0.8em;
+    word-wrap: break-word;
+    overflow: hidden;
   }
 
   figure{
