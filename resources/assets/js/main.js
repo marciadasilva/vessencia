@@ -7,7 +7,7 @@ function header(){
   var url_atual = window.location.href;
 
   // ADMIN NAVBAR
-  if(items.length == 8){
+  if(items.length == 9){
       if (url_atual.search("category") != -1){
           items[1].setAttribute('class', 'item-checked')
       } else if (url_atual.search("menu") != -1){
@@ -16,24 +16,28 @@ function header(){
           items[3].setAttribute('class', 'item-checked')
       } else if (url_atual.search("news") != -1){
           items[4].setAttribute('class', 'item-checked')
-      } else if (url_atual.search("company") != -1){
+      } else if (url_atual.search("recipe") != -1){
           items[5].setAttribute('class', 'item-checked')
-      } else if (url_atual.search("help") != -1){
+      } else if (url_atual.search("company") != -1){
           items[6].setAttribute('class', 'item-checked')
+      }else if(url_atual.search("help") != -1){
+          items[7].setAttribute('class', 'item-checked')
       }else if (url_atual.search("admin") != -1){
           items[0].setAttribute('class', 'item-checked')
       }
   }
   // INDEX NAVBAR
-  else if (items.length == 5){
-      if (url_atual.search("menus") != -1){
-          items[1].setAttribute('class', 'item-checked')
-      } else if(url_atual.search("services") != -1){
-          items[2].setAttribute('class', 'item-checked')
-      } else if (url_atual.search("contact") != -1){
-          items[3].setAttribute('class', 'item-checked')
-      }
-  }
+  // else if (items.length == 10){
+  //     if (url_atual.search("chef") != -1){
+  //         items[1].setAttribute('class', 'item-checked')
+  //     } else if(url_atual.search("menus") != -1){
+  //         items[2].setAttribute('class', 'item-checked')
+  //     } else if (url_atual.search("services") != -1){
+  //         items[3].setAttribute('class', 'item-checked')
+  //     } else if (url_atual.search("gallery") != -1){
+  //         items[4].setAttribute('class', 'item-checked')
+  //     }
+  // }
 }
 
 //Get modal element

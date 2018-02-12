@@ -25,13 +25,13 @@ h2, p{
 }
 
 .item-news a{
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
   // border: .5px solid var(--main-color-dark);
 
   article {
-    display: flex;
-    flex-direction: column;
+    // display: flex;
+    // flex-direction: column;
   }
 
   .article-title{
@@ -73,6 +73,17 @@ h2, p{
 
 }
 
+@media (max-width: 850px) {
+  .item-news{
+    width: 45%;
+  }
+}
+
+@media (max-width: 550px) {
+  .item-news{
+    width: 80%;
+  }
+}
 
 /*  News Detail Page  */
 .news-detail .title-news hr{

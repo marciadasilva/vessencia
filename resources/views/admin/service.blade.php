@@ -31,8 +31,6 @@
             <i class="fa fa-trash-o"></i>
           </a>
         </div>
-
-
       </div>
     @endforeach
   </div>

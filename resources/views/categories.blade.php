@@ -22,12 +22,12 @@
     <hr>
     @foreach($categories as $category)
       <div class="card-title">
-        <div class="description-text">
-          <a href="/menus/{{$category->id}}">
-            <h3 class="title">{{$category->name}}</h3>
-            <p>{{$category->description}}</p>
-          </a>
-        </div>
+        <a href="/menus/{{$category->id}}">
+          <div class="description-text">
+              <h3 class="title">{{$category->name}}</h3>
+              <p>{{$category->description}}</p>
+          </div>
+        </a>
         <div class="image-text">
           <a href="/menus/{{$category->id}}">
             <img src="{{asset($category->image)}}" alt="{{$category->name}}">

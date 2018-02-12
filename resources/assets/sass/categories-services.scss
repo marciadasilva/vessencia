@@ -18,14 +18,12 @@
   flex-direction: row-reverse;
 }
 
-.categories-service .card-title .description-text{
+.categories-service .card-title a{
   flex-basis: 50%;
-  align-self: center;
-}
-
-.categories-service .card-title .description-text a{
-  padding: 100%;
   color: #555;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .categories-service .card-title .image-text{
@@ -37,18 +35,12 @@
   height: 100%;
 }
 
-@media (min-width: 700px) {
-  .categories-service .card-title{
-    height: 65vh;
-  }
-}
-
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .categories-service .card-title{
     flex-wrap: wrap;
   }
 
-  .categories-service .card-title .description-text{
+  .categories-service .card-title a{
     flex-basis: 100%;
   }
 

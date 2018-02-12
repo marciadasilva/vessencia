@@ -158,8 +158,20 @@ section p {
   border-bottom: 1px solid var(--main-color);
 }
 
+@media (max-width: 900px) {
+  .bread-crumbs{
+    padding-top: 7em;
+  }
+}
+
 @media (max-width: 800px) {
 	section {
 		padding: 50px 20px;
 	}
+}
+
+@media (max-width: 650px) {
+  .bread-crumbs{
+    padding-top: 8em;
+  }
 }

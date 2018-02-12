@@ -34,7 +34,7 @@
                 <!-- {{strip_tags($n->body)}} -->
               <!-- </p> -->
               <div class="data-info">
-                Data de publicação: {{$n->created_at}}
+                Data de publicação: {{$n->created_at->toFormattedDateString()}}
               </div>
             </article>
           </a>

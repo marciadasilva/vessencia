@@ -5,12 +5,6 @@ $dark_gray: #383838;
   flex-direction: row;
 }
 
-@media (max-width: 1100px) {
-	.contact {
-    flex-direction: column;
-  }
-}
-
 .contact-text {
   color: $dark_gray;
 
@@ -27,5 +21,11 @@ $dark_gray: #383838;
   hr {
     margin: 0 auto;
     margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 1100px) {
+	.contact-page {
+    flex-direction: column;
   }
 }

@@ -31,7 +31,8 @@
 </section>
 
 <section class="other-projects">
-  <p>Outros projetos</p>
+  <h3 class="title">Outros Projetos</h3>
+  <hr>
 </section>
 
 

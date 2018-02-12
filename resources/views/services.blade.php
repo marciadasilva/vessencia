@@ -22,12 +22,12 @@
     <hr>
     @foreach($services as $service)
       <div class="card-title">
-        <div class="description-text">
-          <a href="/services/{{$service->id}}">
+        <a href="/services/{{$service->id}}">
+          <div class="description-text">
             <h3 class="title">{{$service->name}}</h3>
             <p>{{$service->description}}</p>
-          </a>
-        </div>
+          </div>
+        </a>
         <div class="image-text">
           <a href="/services/{{$service->id}}">
             <img src="{{asset($service->image)}}" alt="{{$service->name}}">
