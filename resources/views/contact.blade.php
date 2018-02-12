@@ -7,7 +7,7 @@
 @include('layouts.header')
 
 <main class="create-form">
-  <div class="caixa contact">
+  <div class="caixa contact-page">
     <form action="/contact" method="post" enctype="multipart/form-data">
         {{ csrf_field() }}
         <h1>Entre em contato conosco</h1>
