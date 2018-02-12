@@ -26,6 +26,12 @@
  align-items: center;
 }
 
+@media(max-width: 1000px) {
+  .hero-chef-content{
+    display: none;
+  }
+}
+
 .hero-chef .hero-chef-content .name-chef{
   font-size: 2em;
 }

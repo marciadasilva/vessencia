@@ -161,47 +161,36 @@
 
 <script>
   if (document.documentElement.style.scrollBehavior === undefined) { smoothScroll.init(); }
-
   window.onscroll = function() {
     var greeting = document.getElementById("greeting");
     var greetingImg = document.querySelector(".greeting .greeting-img");
     var greetingPosition = greeting.offsetTop - 500;
     var greetingEnd = greeting.scrollHeight + greetingPosition + 300;
-
     slide(greetingImg, greetingPosition, greetingEnd);
-
     var services = document.getElementById("services");
     var servicesImg = document.querySelector(".services .services-img");
     var servicesPosition = services.offsetTop - 500;
     var servicesEnd = services.scrollHeight + servicesPosition + 300;
-
     slide(servicesImg, servicesPosition, servicesEnd);
-
     var menus = document.getElementById("menus");
     var menusImg = document.querySelector(".menus .menus-img");
     var menusPosition = menus.offsetTop - 500;
     var menusEnd = menus.scrollHeight + menusPosition + 300;
-
     slide(menusImg, menusPosition, menusEnd);
-
     navScroll();
   };
-
   function slide(element, elementPosition, elementEnd) {
     if (window.pageYOffset >= elementPosition) {
       element.classList.add("move")
     } else {
       element.classList.remove("move");
     }
-
     if (window.pageYOffset > elementEnd){
       element.classList.remove("move");
     }
   }
-
   function navScroll(){
     const menu = document.querySelector('#navbar');
-
     if (window.pageYOffset >= (window.innerHeight/2)){
       menu.classList.add("navbar-background");
     } else {

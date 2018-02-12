@@ -455,6 +455,10 @@
 		flex-basis: 100%;
 		padding: 20px;
 	}
+
+	.gallery-recipes li p{
+		display: none;
+	}
 }
 
 /* News Section */
@@ -520,6 +524,11 @@
 }
 
 /*Contact Section*/
+
+.contact {
+	display: flex;
+	flex-direction: column;
+}
 
 .contact .social {
   display: flex;
