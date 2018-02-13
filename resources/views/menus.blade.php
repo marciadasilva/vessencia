@@ -47,7 +47,7 @@
       @endforeach
     </div> -->
     <!--  pagination só mostra quando é para uma única categoria -->
-    <!-- {{ $menus->links() }} -->
+    {{ $menus->links() }}
   @else
   <!--  Caso onde é pra mostrar pratos de todas as categorias -->
     @foreach($categories as $category)
@@ -55,13 +55,15 @@
       <hr>
       <div class="menu-cards">
         @foreach($menus as $menu)
-          <div class="card">
-            <img src="{{asset($menu->image)}}" alt="">
-            <div class="card-content">
-              <h4>{{$menu->name}}</h4>
-              <p>{{$menu->description}}</p>
-            </div>
-        </div>
+          @if($menu->category_id === $category->id)
+            <div class="card">
+              <img src="{{asset($menu->image)}}" alt="">
+              <div class="card-content">
+                <h4>{{$menu->name}}</h4>
+                <p>{{$menu->description}}</p>
+              </div>
+          </div>
+          @endif
         @endforeach
       </div>
     @endforeach

@@ -36,7 +36,7 @@ class SiteController extends Controller
   public function menus(){
     $categories = Category::latest()->get();
     $menus = Menu::latest()->get();
-    return view('menus', compact('categories', 'menus'));
+    return view('menus', compact(['menus', 'categories']));
   }
 
   public function menu(Category $category){
