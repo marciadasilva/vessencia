@@ -33,7 +33,7 @@
   <nav>
     <li><a class="expand_middle" href="/">Home</a></li>
     <li><a class="expand_middle" href="/chef">Chef</a></li>
-    <li><a class="expand_middle" href="/menus">Cardápios</a></li>
+    <li><a class="expand_middle" href="/categories">Cardápios</a></li>
     <li><a class="expand_middle" href="/services">Serviços</a></li>
     <li class="drop-pai">
       <a class="expand_middle" href="#">Galerias</a>

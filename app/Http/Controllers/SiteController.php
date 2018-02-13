@@ -40,7 +40,7 @@ class SiteController extends Controller
   }
 
   public function menu(Category $category){
-    $menus = Menu::where('category_id', '=', $category->id)->latest()->paginate(8);
+    $menus = Menu::where('category_id', '=', $category->id)->latest()->paginate(50);
     return view('menus', compact(['menus', 'category']));
   }
 
