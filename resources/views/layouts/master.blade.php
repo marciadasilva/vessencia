@@ -36,7 +36,6 @@
         CKEDITOR.replace( 'body' );
         CKEDITOR.replace( 'instructions' );
     </script>
-
     @include('sweet::alert')
   </body>
 </html>

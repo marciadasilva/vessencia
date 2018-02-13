@@ -127,12 +127,12 @@ section p {
 .bread-crumbs{
   color: #383838;
   letter-spacing: 1px;
-  padding-top: 5em;
+  padding-top: 7em;
   padding-bottom: 1em;
-  font-size: 1em;
+  font-size: .7em;
   text-transform: uppercase;
   text-align: left;
-  word-spacing: 2px;
+  // word-spacing: 2px;
 
   display: flex;
   flex-direction: row;
@@ -147,7 +147,7 @@ section p {
 .bread-crumbs .bread-crumbs-links a{
   color: #383838;
   text-decoration: none;
-  padding: 1em;
+  padding: 0 .7em;
 }
 
 .bread-crumbs .bread-crumbs-links a:hover{
@@ -155,12 +155,14 @@ section p {
 }
 
 .bread-crumbs .active{
-  border-bottom: 1px solid var(--main-color);
+   border-bottom: 1px solid var(--main-color);
 }
 
-@media (max-width: 900px) {
+
+
+@media (max-width: 1050px) {
   .bread-crumbs{
-    padding-top: 7em;
+    padding-top: 8.5em;
   }
 }
 
@@ -172,6 +174,6 @@ section p {
 
 @media (max-width: 650px) {
   .bread-crumbs{
-    padding-top: 8em;
+    padding-top: 11em;
   }
 }

@@ -9,7 +9,7 @@
 <section class="bread-crumbs">
   <div class="bread-crumbs-links">
     <a href="/">Home /</a>
-    <a href="/services">Serviços </a>
+    <a href="/services">Serviços /</a>
     <a href="/services" class="active">{{$service->name}}</a>
   </div>
   <div class="search">
@@ -25,7 +25,10 @@
     <h3 class="title">{{$service->name}}</h3>
     <hr>
     <p>{{$service->description}}</p>
-    <p class="click-here">Para contratar este serviço &nbsp<a href="/contact">Entre em Contato.</a></p >
+    <p class="click-here">
+      <span>Para contratar este serviço &nbsp</span>
+      <a href="/contact">Entre em Contato.</a>
+    </p >
   </div>
 
     <div class="related-news">

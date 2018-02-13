@@ -70,13 +70,13 @@ header nav .drop-pai:hover .dropdown-menu{
 
 /* Fim Border-box middle */
 
-@media (max-width: 1000px) {
-  header{
-    padding: 15px 40px;
-  }
-}
+// @media (max-width: 900px) {
+//   header{
+//     padding: 15px 40px;
+//   }
+// }
 
-@media (max-width: 850px) {
+@media (max-width: 1050px) {
   header {
     padding: 10px 10px;
     flex-direction: column;
@@ -88,7 +88,7 @@ header nav .drop-pai:hover .dropdown-menu{
   }
 
  header nav{
-   align-items: center;
+   // align-items: center;
    justify-content: center;
  }
 

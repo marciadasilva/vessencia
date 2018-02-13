@@ -10,6 +10,8 @@
   padding: 2px 5px;
   border-radius: 5px;
   font-size: 1.2em;
+  text-align: center;
+  word-break: break-all;
 }
 
 .click-here a:hover {
@@ -143,6 +145,13 @@ section.service-detail p{
   font-size: 0.8em;
 }
 
+@media (max-width: 1120px) {
+  .click-here{
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
 @media (max-width: 900px) {
   .service-detail{
     padding: 50px 5px;
@@ -158,5 +167,28 @@ section.service-detail p{
 
   .service-detail .service-detail-text{
     order: 0;
+  }
+
+  .service-detail .related-news .related-news-items {
+    flex-wrap: wrap;
+  }
+
+  .service-detail .related-news .related-news-items .related-news-item{
+    flex-basis: 45%;
+  }
+
+  .click-here{
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .service-detail .related-news .related-news-items .related-news-item{
+    flex-basis: 80%;
+  }
+
+  .click-here{
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
