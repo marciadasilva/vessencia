@@ -165,9 +165,11 @@
             @if (Session::get('ingredients-recipe'))
               {{ Session::get('ingredients-recipe') }}
             @endif
+          @else
+            Ingredientes ...
           @endif
           </textarea>
-          <label for="subtitle">Ingredientes</label>
+          <!-- <label for="subtitle">Ingredientes</label> -->
 
           @if ($errors->first('ingredients'))
             <div>
@@ -188,9 +190,11 @@
             @if (Session::get('instructions-recipe'))
               {{ Session::get('instructions-recipe') }}
             @endif
+          @else
+            Instruções ...
           @endif
           </textarea>
-          <label for="subtitle">Instruções</label>
+          <!-- <label for="subtitle">Instruções</label> -->
 
           @if ($errors->first('instructions'))
             <div>
