@@ -29,7 +29,7 @@
         <p>{!! $recipe->body !!}</p>
         <!-- fazer o tratamendo com o Purifier -->
         @if(isset($recipe->video))
-          <p><a href="{{$recipe->video}}"> <i class="fab fa-youtube fa 5x"></i></a></p>
+          <p style="font-size: 2em;"><a href="{{$recipe->video}}"> <i class="fa fa-youtube-play"></i></a></p>
         @endif
       </div>
 
