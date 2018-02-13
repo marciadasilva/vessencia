@@ -12,13 +12,8 @@
       {{ csrf_field() }}
       <div class="form-grupo">
         <div class="subir">
-          <textarea type="text" name="description" id="description" rows="8" required>
-            @foreach($companies as $company)
-              @if(isset($company->description))
-                {{$company->description}}
-              @endif
-            @endforeach
-          </textarea>
+          <textarea type="text" name="description" id="description" rows="8" required>@foreach($companies as $company)@if(isset($company->description)){{$company->description}}@endif
+            @endforeach</textarea>
 
           <label for="description">Página inicial do site</label>
 
@@ -30,13 +25,8 @@
         </div>
 
         <div class="subir">
-          <textarea type="text" name="about" id="about" rows="8" required>
-            @foreach($companies as $company)
-              @if(isset($company->about))
-                {{$company->about}}
-              @endif
-            @endforeach
-          </textarea>
+          <textarea type="text" name="about" id="about" rows="8" required>@foreach($companies as $company)@if(isset($company->about)){{$company->about}}@endif
+            @endforeach</textarea>
           <label for="about">Sobre a empresa</label>
 
           @if ($errors->first('about'))

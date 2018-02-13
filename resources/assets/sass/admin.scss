@@ -214,7 +214,7 @@ $dark_red: var(--main-color);
   font-weight: 900;
   font-size: 10px;
   color: $dark_gray;
-  padding-top: 10em!important;
+  padding-top: 13em!important;
   padding-bottom: 2em!important;
 
   display: flex;
@@ -237,7 +237,7 @@ $dark_red: var(--main-color);
   color: $dark_gray;
   background-color: rgba(0,0,0,.5);
   min-height: 50vh;
-  min-width: 50vh;
+  min-width: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -436,6 +436,7 @@ $dark_red: var(--main-color);
   }
 
   .create-form{
+    padding-top: 10em!important;
     min-height: calc(100vh - 70px);
   }
 
