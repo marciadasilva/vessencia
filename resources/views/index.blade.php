@@ -48,7 +48,7 @@
 <section class="best-sellers" id="best-sellers">
   <h3 class="title">Alguns dos nossos best-sellers</h3>
   <hr>
-  <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id ipsum animi aut repellendus, deserunt quo libero praesentium tenetur soluta maiores!</p>
+  <p> Selecionamos alguns dos melhores pratos já feitos.</p>
 
   <ul class="grid">
     <li class="small" style="background-image: url({{ asset('img/shrimp.jpg')}});"></li>

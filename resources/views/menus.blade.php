@@ -91,10 +91,20 @@
       item.classList.add(sizes[random]);
     }
 
-    item.addEventListener('click', function (){
-      item.classList.toggle('item--full');
-    });
+    item.addEventListener('click', function () {
 
+      const full = Array.from(document.querySelectorAll('.item--full'));
+      full.forEach((f) => (removeFull(f, item)));
+      item.classList.toggle('item--full');
+   });
+
+    function removeFull(f, item) {
+      if(f !== item) {
+        f.classList.remove('item--full');
+      }
+    };
+
+  
   };
 
 </script>
