@@ -11,3 +11,9 @@ npm-debug.log
 yarn-error.log
 .env
 /resources/assets/node_modules
+/public/img/backup
+/public/img/categories
+/public/img/menus
+/public/img/news
+/public/img/recipe
+/public/img/services
