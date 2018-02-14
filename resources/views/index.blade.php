@@ -15,7 +15,7 @@
     <figure>
       <img src="{{ asset('img/vcover1.jpg')}}">
       <img src="{{ asset('img/vcover2.jpg')}}">
-      <img src="{{ asset('img/dinner-table.jpg')}}">
+      <img src="{{ asset('img/vcover3.jpg')}}">
       <img src="{{ asset('img/vcover4.jpg')}}">
       <img src="{{ asset('img/vcover1.jpg')}}">
     </figure>
