@@ -19,7 +19,7 @@
   <!-- <div class="search">
     <span><i class="fa fa-search fa-2x"></i></span>
   </div> -->
-  
+
   <div class="search">
     <input type="text" name="filter" id="filter">
     <label for="filter"> <i class="fa fa-search fa-2x"></i></label>
@@ -76,21 +76,25 @@
 </section>
 
 <script>
+  //
+  //
+  //
+  // console.log(filter);
 
-  const filter = document.querySelector('#filter');
+  window.onload = load();
 
-  console.log(filter);
+  function load(){
+    gallery();
+    //Load all event listeners
+    loadEventlisteners();
+  }
 
-  window.onload = gallery();
-
-  //Load all event listeners
-loadEventlisteners();
-
-//Load all event listeners
-function loadEventlisteners(){
-  // fILTER TASKS EVENT
-  filter.addEventListener('keyup', filterTasks);
-}
+  // //Load all event listeners
+  function loadEventlisteners(){
+    // fILTER TASKS EVENT
+    const filter = document.querySelector('#filter');
+    filter.addEventListener('keyup', filterTasks);
+  };
 
   function gallery() {
     const sizes = [
@@ -122,27 +126,43 @@ function loadEventlisteners(){
         f.classList.remove('item--full');
       }
     };
-
-  
   };
 
   function filterTasks(e){
-    console.log('teste');
+    const text = e.target.value.toLowerCase();
 
-  // const text = e.target.value.toLowerCase();
+    document.querySelectorAll('.item').forEach(function(item){
+      const span = document.querySelectorAll(`.item__details span`);
 
-  // document.querySelectorAll('.item').forEach(function(task){
-  //   const item = task.firstChild.textContent;
+      for(let i = 0; i < span.length; i++){
+        const data = span[i].innerText;
+        if(data.toLowerCase().match(text)){
+          item.style.display = 'flex'; //block
+        } else {
+          item.style.display = 'none';
+        }
+      }
 
-  //   console.log(item);
+    });
+  };
 
-    // if(item.toLowerCase().indexOf(text) != -1){
-    //   task.style.display = 'block';
-    // } else {
-    //   task.style.display = 'none';
-    // }
-  });
-}
+  // function filterTasks(e){
+  //   // console.log(e.target.value);
+  //
+  //   const text = e.target.value.toLowerCase();
+  //
+  //   document.querySelectorAll('.item').forEach(function(task){
+  //     const item = task.firstChild.textContent;
+  //
+  //     console.log(item);
+  //
+  //     if(item.toLowerCase().indexOf(text) != -1){
+  //       task.style.display = 'flex';
+  //     } else {
+  //       task.style.display = 'none';
+  //     }
+  //   });
+  // };
 
 </script>
 
