@@ -132,7 +132,7 @@
     const text = e.target.value.toLowerCase();
 
     document.querySelectorAll('.item').forEach(function(item){
-      const span = document.querySelectorAll(`.item__details span`);
+      const span = item.querySelectorAll(`.item__details span`);
 
       for(let i = 0; i < span.length; i++){
         const data = span[i].innerText;
