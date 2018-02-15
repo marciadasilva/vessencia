@@ -43,10 +43,19 @@
       <div>
         <h4>Instruções</h4>
         <p>{!! $recipe->instructions !!}</p>
-
       </div>
     </div>
   </div>
+
+  <iframe
+    src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2F159.65.65.38/gallery-recipes/detail/{{$recipe->id}}&layout=button_count&size=small&mobile_iframe=true&width=69&height=20&appId"
+    width="88"
+    height="20"
+    style="border:none;overflow:hidden;margin-bottom:1em;"
+    scrolling="no"
+    frameborder="0"
+    allowTransparency="true">
+  </iframe>
 </section>
 
 @endsection

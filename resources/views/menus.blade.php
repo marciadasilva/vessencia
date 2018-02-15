@@ -76,10 +76,6 @@
 </section>
 
 <script>
-  //
-  //
-  //
-  // console.log(filter);
 
   window.onload = load();
 
