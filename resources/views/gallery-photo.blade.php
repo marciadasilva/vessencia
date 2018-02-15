@@ -22,7 +22,12 @@
         class="example-image-link"
         id="lightbox-img"
         data-lightbox="example-set"
-        data-title="{{$photo->description}}">
+        data-title="
+        @if($photo->description)
+          {{$photo->description}}
+        @else
+          {{$photo->title}}
+        @endif">
         <i class="fa fa-camera"></i>
       </a>
     </div>

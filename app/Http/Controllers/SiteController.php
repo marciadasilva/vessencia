@@ -95,7 +95,9 @@ class SiteController extends Controller
     $photosm = Menu::latest()->get(['image','description']);
     $photost = Category::latest()->get(['image','description']);
     $photoss = Service::latest()->get(['image', 'description']);
-    $photos = $photosm->toBase()->merge($photost)->merge($photoss);
+    $photosn = News::latest()->get(['image', 'title']);
+    $photosr = Recipe::latest()->get(['image', 'title']);
+    $photos = $photosm->toBase()->merge($photost)->merge($photoss)->merge($photosn)->merge($photosr);
     return view('gallery-photo', compact('photos'));
   }
 
