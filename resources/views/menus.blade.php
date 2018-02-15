@@ -148,6 +148,11 @@
 
   function showInputSearch(){
     const filter = document.getElementById('filter');
+    if(filter.value.length > 0){
+      document.querySelectorAll('.item').forEach(function(item){
+        item.style.display = 'flex';
+      });
+    }
     filter.classList.toggle('show-input-filter');
   };
 
