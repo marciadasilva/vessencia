@@ -16,8 +16,13 @@
       <a href="/menus" class="active">Cardápios </a>
     @endif
   </div>
-  <div class="search">
+  <!-- <div class="search">
     <span><i class="fa fa-search fa-2x"></i></span>
+  </div> -->
+  
+  <div class="search">
+    <input type="text" name="filter" id="filter">
+    <label for="filter"> <i class="fa fa-search fa-2x"></i></label>
   </div>
 </section>
 
@@ -71,7 +76,21 @@
 </section>
 
 <script>
+
+  const filter = document.querySelector('#filter');
+
+  console.log(filter);
+
   window.onload = gallery();
+
+  //Load all event listeners
+loadEventlisteners();
+
+//Load all event listeners
+function loadEventlisteners(){
+  // fILTER TASKS EVENT
+  filter.addEventListener('keyup', filterTasks);
+}
 
   function gallery() {
     const sizes = [
@@ -106,6 +125,24 @@
 
   
   };
+
+  function filterTasks(e){
+    console.log('teste');
+
+  // const text = e.target.value.toLowerCase();
+
+  // document.querySelectorAll('.item').forEach(function(task){
+  //   const item = task.firstChild.textContent;
+
+  //   console.log(item);
+
+    // if(item.toLowerCase().indexOf(text) != -1){
+    //   task.style.display = 'block';
+    // } else {
+    //   task.style.display = 'none';
+    // }
+  });
+}
 
 </script>
 

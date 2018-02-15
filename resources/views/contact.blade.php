@@ -81,6 +81,7 @@
                         type="text"
                         name="message"
                         id="message"
+                        rows="8"
                         required>
                     @if ($errors->any())
                         @if (Session::get('message-company'))
