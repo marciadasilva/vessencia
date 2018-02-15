@@ -153,6 +153,14 @@ section p {
   flex-direction: row;
 }
 
+.search #filter{
+  margin-right: 1em;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #383838;
+}
+
 .bread-crumbs .bread-crumbs-links a {
   color: #383838;
   text-decoration: none;
@@ -168,15 +176,15 @@ section p {
 }
 
 .bread-crumbs .search {
-  input[type=search] { 
+  input[type=search] {
     background-color: transparent;
     border: none;
   }
 
   input[type=search]:hover {
-    
+
   }
-  
+
   input[type=search]:focus {
 
   }
@@ -184,10 +192,15 @@ section p {
   input:-moz-placeholder {
     color: transparent;
   }
- 
+
   input::-webkit-input-placeholder {
     color: transparent;
   }
+}
+
+.show-input-filter{
+  opacity: 0;
+  // transition: opacity 0.7s ease 0s;
 }
 
 .message {

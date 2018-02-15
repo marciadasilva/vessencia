@@ -21,8 +21,8 @@
   </div> -->
 
   <div class="search">
-    <input type="text" name="filter" id="filter">
-    <label for="filter"> <i class="fa fa-search fa-2x"></i></label>
+    <input type="text" name="filter" id="filter" class="show-input-filter">
+    <label for="filter"> <span onclick="showInputSearch()"><i class="fa fa-search fa-2x"></i></span></label>
   </div>
 </section>
 
@@ -146,23 +146,10 @@
     });
   };
 
-  // function filterTasks(e){
-  //   // console.log(e.target.value);
-  //
-  //   const text = e.target.value.toLowerCase();
-  //
-  //   document.querySelectorAll('.item').forEach(function(task){
-  //     const item = task.firstChild.textContent;
-  //
-  //     console.log(item);
-  //
-  //     if(item.toLowerCase().indexOf(text) != -1){
-  //       task.style.display = 'flex';
-  //     } else {
-  //       task.style.display = 'none';
-  //     }
-  //   });
-  // };
+  function showInputSearch(){
+    const filter = document.getElementById('filter');
+    filter.classList.toggle('show-input-filter');
+  };
 
 </script>
 
