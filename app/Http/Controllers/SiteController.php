@@ -98,6 +98,7 @@ class SiteController extends Controller
     $photosn = News::latest()->get(['image', 'title']);
     $photosr = Recipe::latest()->get(['image', 'title']);
     $photos = $photosm->toBase()->merge($photost)->merge($photoss)->merge($photosn)->merge($photosr);
+    $photos = $photos->shuffle();
     return view('gallery-photo', compact('photos'));
   }
 
