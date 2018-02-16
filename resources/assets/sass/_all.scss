@@ -231,12 +231,15 @@ section p {
 }
 
 .share-social{
-  // display: -webkit-box;
-  // display: -ms-flexbox;
-  // display: flex;
-     // -webkit-box-pack: end;
-     //    -ms-flex-pack: end;
-     //  justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+     -webkit-box-pack: end;
+        -ms-flex-pack: end;
+      justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .message {
@@ -261,10 +264,35 @@ section p {
 	section {
 		padding: 50px 20px;
 	}
+
+  .share-social{
+       -webkit-box-pack: center;
+       -ms-flex-pack: center;
+       justify-content: center;
+  }
 }
 
 @media (max-width: 650px) {
   .bread-crumbs{
     padding-top: 11em;
+  }
+
+  .search {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .share-social{
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 330px) {
+  .bread-crumbs{
+    padding-top: 20em;
+    font-size: .5em;
   }
 }
