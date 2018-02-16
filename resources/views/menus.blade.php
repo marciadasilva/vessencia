@@ -36,6 +36,26 @@
         <div class="item" style="background-image: url({{asset($menu->image)}});">
           <div class="item__details">
             <span>{{$menu->name}}</span>
+            <div class="share-social">
+            <!-- <div class="share-class"> -->
+              <iframe
+                src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2F159.65.65.38%2Fmenus%2F{{$menu->id}}&layout=button_count&size=small&mobile_iframe=true&width=69&height=20&appId"
+                width="88"
+                height="20"
+                style="border:none;overflow:hidden;margin-bottom:1em;"
+                scrolling="no"
+                frameborder="0"
+                allowTransparency="true">
+              </iframe>
+
+              <iframe
+                src="https://platform.twitter.com/widgets/tweet_button.html?size=l&url=http%3A%2F%2F159.65.65.38/menus/{{$menu->id}}&via=vessencia&related=twitterapi%2Ctwitter&text=Cardápio {{$menu->name}}&hashtags={{str_replace(" ","_","$menu->name")}}%2Cvessencia"
+                width="140"
+                height="40"
+                title="5ª Essência - {{$menu->name}} "
+                style="border: 0; overflow: hidden;">
+              </iframe>
+            </div>
           </div>
         </div>
       @endforeach
@@ -113,8 +133,10 @@
     item.addEventListener('click', function () {
 
       const full = Array.from(document.querySelectorAll('.item--full'));
+      // const social = item.querySelectorAll(`.item__details .share-class`);
       full.forEach((f) => (removeFull(f, item)));
       item.classList.toggle('item--full');
+      // social[0].classList.toggle('share-social');
    });
 
     function removeFull(f, item) {

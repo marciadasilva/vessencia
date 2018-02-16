@@ -203,6 +203,16 @@ section p {
   // transition: opacity 0.7s ease 0s;
 }
 
+.share-class{
+  display: none;
+}
+
+.share-social{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .message {
   border: 1px solid #d2d0d0;
   padding: 2em;
