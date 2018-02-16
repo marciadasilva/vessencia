@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Galeria de Fotos')
+@section('title', 'Galeria de Fotos - 5ª Essência')
 
 @section('content')
 
