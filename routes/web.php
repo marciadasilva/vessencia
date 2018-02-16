@@ -39,8 +39,8 @@ Route::get('/news/detail/{news}', 'SiteController@newsDetail');
 Route::get('/login', 'LoginController@login')->name('login');
 Route::post('/login', 'LoginController@signIn');
 
-Route::get('/register', 'LoginController@create');
-Route::post('/register', 'LoginController@store');
+// Route::get('/register', 'LoginController@create');
+// Route::post('/register', 'LoginController@store');
 
 Route::get('/logout', 'LoginController@destroy');
 
