@@ -38,10 +38,11 @@
             <span>{{$menu->name}}</span>
             <div class="share-social">
             <!-- <div class="share-class"> -->
+
               <iframe
-                src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2F159.65.65.38%2Fmenus%2F{{$menu->id}}&layout=button_count&size=small&mobile_iframe=true&width=69&height=20&appId"
-                width="88"
-                height="20"
+                src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2F159.65.65.38%2Fmenus%2F{{$category->id}}&layout=button&size=large&mobile_iframe=true&width=117&height=28&appId"
+                width="117"
+                height="28"
                 style="border:none;overflow:hidden;margin-bottom:1em;"
                 scrolling="no"
                 frameborder="0"
@@ -51,7 +52,7 @@
             <p style="opacity: 0;">.</p>
 
               <iframe
-                src="https://platform.twitter.com/widgets/tweet_button.html?size=l&url=http%3A%2F%2F159.65.65.38/menus/{{$menu->id}}&via=vessencia&related=twitterapi%2Ctwitter&text=Cardápio {{$menu->name}}&hashtags={{str_replace(" ","_","$menu->name")}}%2Cvessencia"
+                src="https://platform.twitter.com/widgets/tweet_button.html?size=l&url=http%3A%2F%2F159.65.65.38/menus/{{$category->id}}&via=vessencia&related=twitterapi%2Ctwitter&text=Cardápio {{$menu->name}}&hashtags={{str_replace(" ","_","$menu->name")}}%2Cvessencia"
                 width="140"
                 height="40"
                 title="5ª Essência - {{$menu->name}} "
