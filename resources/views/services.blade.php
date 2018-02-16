@@ -11,9 +11,9 @@
     <a href="/">Home /</a>
     <a href="/services" class="active">Serviços</a>
   </div>
-  <div class="search">
+  <!-- <div class="search">
     <span><i class="fa fa-search fa-2x"></i></span>
-  </div>
+  </div> -->
 </section>
 
 <section>

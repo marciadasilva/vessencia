@@ -47,8 +47,8 @@
                 frameborder="0"
                 allowTransparency="true">
               </iframe>
-
-            <span style="opacity: 0;"><p>.</p></span>
+<!-- 
+            <span style="opacity: none;"><p>.</p></span> -->
 
               <iframe
                 src="https://platform.twitter.com/widgets/tweet_button.html?size=l&url=http%3A%2F%2F159.65.65.38/menus/{{$menu->id}}&via=vessencia&related=twitterapi%2Ctwitter&text=Cardápio {{$menu->name}}&hashtags={{str_replace(" ","_","$menu->name")}}%2Cvessencia"
