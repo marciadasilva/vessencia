@@ -2,8 +2,13 @@
 
 .hero-chef{
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   background-color: #e5c7a7;
   background-image: url("../img/fresh-snow.png");
 }
@@ -21,9 +26,16 @@
 
 .hero-chef .hero-chef-content{
  // flex-basis: 50%;
+ display: -webkit-box;
+ display: -ms-flexbox;
  display: flex;
- flex-direction: column;
- align-items: center;
+ -webkit-box-orient: vertical;
+ -webkit-box-direction: normal;
+     -ms-flex-direction: column;
+         flex-direction: column;
+ -webkit-box-align: center;
+     -ms-flex-align: center;
+         align-items: center;
 }
 
 @media(max-width: 1000px) {
@@ -43,12 +55,19 @@
 }
 
 .introduction {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .introduction h3{
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .introduction hr{
@@ -94,17 +113,24 @@
 @media (max-width: 700px) {
 
   .hero-chef{
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .hero-chef .photo-introduction{
     padding-top: 0;
-    order: 1;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
   }
 
   .hero-chef .hero-chef-content{
     padding-top: 8em;
-    order: 0;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
   }
 
   .hero-chef .hero-chef-content .name-chef{

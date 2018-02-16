@@ -1,6 +1,11 @@
 #login-body{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-height: 100vh;
   background: url('../img/menu.jpeg');
   background-position: center;
@@ -11,7 +16,9 @@
   background-color: rgba(0,0,0,0.7);
   min-height: 100vh;
   padding: 0;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #login-body #card-login form{
@@ -19,16 +26,28 @@
   background-color: rgba(255,255,255,0.5);
   width: 100vh;
   height: 75vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0 2em;
 }
 
 #login-body #card-login form{
   width: 100vh;
 
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+
+  -webkit-box-direction: normal;
+
+      -ms-flex-direction: column;
+
+          flex-direction: column;
 
   div:not(.btn-custom){
     width: 100%;

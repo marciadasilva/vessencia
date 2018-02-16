@@ -3,22 +3,43 @@ $dark_red: var(--main-color);
 
 #admin-page{
   background-image: url("../img/topography.svg"),
+  -webkit-linear-gradient(330deg, #fdfbfb 0%, #ebedee 100%);
+  background-image: url("../img/topography.svg"),
+  -o-linear-gradient(330deg, #fdfbfb 0%, #ebedee 100%);
+  background-image: url("../img/topography.svg"),
   linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   min-height: 100vh;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #admin-page .panel{
   background: rgba(0,0,0,.7);
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 
  h1{
    color:#f5f5f5;
@@ -44,10 +65,14 @@ $dark_red: var(--main-color);
 }
 
 .all-cards{
+  //linear-gradient(110deg, #f93d66, #6d47d9);
+  //linear-gradient(110deg, #3e5151, #decba4);
+  // linear-gradient(110deg, $dark_gray, $dark_red);
+  background-image: url("../img/topography.svg"),
+  -webkit-linear-gradient(330deg, #fdfbfb 0%, #ebedee 100%);
 	background-image: url("../img/topography.svg"),
-	//linear-gradient(110deg, #f93d66, #6d47d9);
-	//linear-gradient(110deg, #3e5151, #decba4);
-	// linear-gradient(110deg, $dark_gray, $dark_red);
+  -o-linear-gradient(330deg, #fdfbfb 0%, #ebedee 100%);
+	background-image: url("../img/topography.svg"),
   linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
 	background-size: 340px, auto;
 	min-height: calc(100vh - 100px);
@@ -55,6 +80,7 @@ $dark_red: var(--main-color);
 	letter-spacing: -1px;
   /* border-box box model allows add padding and border to our
     elements without increasing their size */
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07);
   font-weight: 900;
@@ -71,6 +97,8 @@ $dark_red: var(--main-color);
   background-color: $dark_red;
   color: #f5f5f5;
   font-size: 1.5em;
+  -webkit-transition: all .35s ease-in-out;
+  -o-transition: all .35s ease-in-out;
   transition: all .35s ease-in-out;
 
   a{
@@ -84,40 +112,53 @@ $dark_red: var(--main-color);
 }
 
 .all-cards .show-card {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   grid-gap: 20px;
   padding: 2em;
 
   .card-service:nth-child(odd){
-    grid-template-areas:
+        grid-template-areas:
             "description image";
   }
 }
 
 .all-cards .show-card .card-items {
   // background: rgba(255, 255, 255, 0.2);
-  background: rgba(0,0,0,0.5);
   // box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  background: rgba(0,0,0,0.5);
   padding: 1em;
   color: white;
   font-weight: 100;
   font-size: 1.5em;
 
+  display: -ms-grid;
+
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas:
           "image"
           "description"
           "buttons";
   grid-gap: 1em;
-  align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+          align-items: center;
 
-  transition-duration: .2s;
+  -webkit-transition-duration: .2s;
+
+  -o-transition-duration: .2s;
+
+          transition-duration: .2s;
 
   &:hover{
     // box-shadow: 0 0 1em rgba(255, 255, 255, 0.5);
-    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+        -ms-transform: scale(1.03);
+            transform: scale(1.03);
   }
 }
 
@@ -129,7 +170,8 @@ $dark_red: var(--main-color);
   grid-area: image;
   width: 100%;
   height: 150px;
-  justify-self: center;
+  -ms-grid-column-align: center;
+    justify-self: center;
   //width: 200px;
 }
 
@@ -160,8 +202,15 @@ $dark_red: var(--main-color);
   border-top: 1px solid $dark_gray;
   padding-top: 1em;
 
+  display: -ms-grid;
+
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+
+  -webkit-transition: all .35s ease-in-out;
+
+  -o-transition: all .35s ease-in-out;
 
   transition: all .35s ease-in-out;
 
@@ -169,7 +218,8 @@ $dark_red: var(--main-color);
     padding: 1em;
 
     &:hover{
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+              box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     }
 
     i{
@@ -200,6 +250,10 @@ $dark_red: var(--main-color);
 .item-checked{
   padding-bottom: 0.1em !important;
   border-bottom: 5px solid $dark_red;
+  -webkit-transition:
+          border-bottom 500ms cubic-bezier(0.420, -0.405, 0.300, 1.590);
+  -o-transition:
+          border-bottom 500ms cubic-bezier(0.420, -0.405, 0.300, 1.590);
   transition:
           border-bottom 500ms cubic-bezier(0.420, -0.405, 0.300, 1.590);
 }
@@ -207,10 +261,14 @@ $dark_red: var(--main-color);
 // Create
 
 .create-form{
-  background-image: url("../img/topography.svg"),
   //linear-gradient(110deg, #f93d66, #6d47d9);
   //linear-gradient(110deg, #3e5151, #decba4);
   // linear-gradient(110deg, $dark_gray, $dark_red);
+  background-image: url("../img/topography.svg"),
+  -webkit-linear-gradient(330deg, #fdfbfb 0%, #ebedee 100%);
+  background-image: url("../img/topography.svg"),
+  -o-linear-gradient(330deg, #fdfbfb 0%, #ebedee 100%);
+  background-image: url("../img/topography.svg"),
   linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
   background-size: 340px, auto;
   min-height: calc((100vh - 70px)* 1.2);
@@ -222,19 +280,33 @@ $dark_red: var(--main-color);
   padding-top: 16em!important;
   padding-bottom: 2em!important;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+          align-items: center;
   padding: 0 10em;
 }
 
 .create-form .caixa {
   background: rgba(255, 255, 255, 0.7);
+  -webkit-transition: all .35s ease-in-out;
+  -o-transition: all .35s ease-in-out;
   transition: all .35s ease-in-out;
 
   &:hover{
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
   }
 }
 
@@ -243,10 +315,19 @@ $dark_red: var(--main-color);
   background-color: rgba(0,0,0,.5);
   min-height: 50vh;
   min-width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+          flex-direction: column;
   padding-left: 0.5em;
   padding-right: 0.5em;
 
@@ -257,6 +338,8 @@ $dark_red: var(--main-color);
     margin: 0.5em;
     font-size: 1.5em;
     width: 50%;
+    -webkit-transition: all .35s ease-in-out;
+    -o-transition: all .35s ease-in-out;
     transition: all .35s ease-in-out;
 
     &:hover {
@@ -310,11 +393,14 @@ $dark_red: var(--main-color);
     padding: 0.5em 4em;
     font-size: 1.5em;
     letter-spacing: 1px;
+    -webkit-transition: all .35s ease-in-out;
+    -o-transition: all .35s ease-in-out;
     transition: all .35s ease-in-out;
 
     &:hover{
       background-color: $dark_gray;
-      box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+      -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
+              box-shadow: 1px 1px 3px rgba(0,0,0,0.4);
     }
   }
 
@@ -328,9 +414,13 @@ $dark_red: var(--main-color);
     padding: 0.5em 0;
     font-size: 1.5em;
     outline: 0 none;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
-    box-sizing: border-box;
-    box-shadow: none;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-box-shadow: none;
+            box-shadow: none;
 
     &:focus{
       border-bottom: 1px solid $dark_red;
@@ -372,10 +462,19 @@ $dark_red: var(--main-color);
 }
 
 .create-form .caixa form .form-grupo .centralizar-img{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .create-form .caixa form .form-grupo .subir{
@@ -387,6 +486,8 @@ $dark_red: var(--main-color);
     top: 0;
     left: 0;
     color: $dark_gray;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s;
     pointer-events: none;
     font-size: 1.5em;
@@ -409,7 +510,9 @@ $dark_red: var(--main-color);
 .company-custom{
   padding-top: 1em;
   padding-bottom: 1em;
-  align-items: stretch;
+  -webkit-box-align: stretch;
+     -ms-flex-align: stretch;
+        align-items: stretch;
 }
 
 .company-custom {
@@ -424,17 +527,23 @@ $dark_red: var(--main-color);
 
   .all-cards .show-card {
     //grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 
     .card-items{
+      display: -ms-grid;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas:
+      -ms-grid-columns: 1fr 1fr;
+          grid-template-columns: 1fr 1fr;
+          grid-template-areas:
                       "image description"
                       "buttons buttons";
       height: 60vh;
 
       .card_img {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
         grid-area: image;
         height: 30vh;
       }
